@@ -18,12 +18,11 @@ export function Founder({
     <section className="bg-white">
       <div className="mx-auto flex max-w-[1180px] flex-wrap items-center gap-10 px-6 py-14 md:gap-14 md:py-[60px]">
         <div className="relative w-full max-w-[340px] flex-none overflow-hidden rounded-[18px] shadow-[0_16px_40px_rgba(13,34,66,0.14)]">
-          {/* TODO: ganti dengan foto resolusi tinggi (file sekarang 260 px). */}
           <Image
-            src="/images/nicx.jpg"
+            src="/images/nicx.webp"
             alt={`${site.founder.name}, Founder dan Principal Consultant Atrahdis`}
-            width={260}
-            height={260}
+            width={640}
+            height={640}
             className="block aspect-square w-full object-cover"
           />
           <div className="flex flex-col gap-0.5 bg-navy px-[22px] py-4">

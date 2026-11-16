@@ -12,13 +12,15 @@ export const tampilDurasi = true;
 export type Klien = { nama: string; logo?: string; tinggi?: number };
 
 // Klien tanpa file logo ditampilkan sebagai teks. Taruh file di public/images/klien/.
+// Catatan: studi kasus menyebut "PT Sumitomo Electric", jadi logonya Sumitomo Electric,
+// bukan Sumitomo Corporation (perusahaan berbeda). TODO tim: pastikan klien yang benar.
 export const klien: Klien[] = [
   { nama: "Waskita Karya", logo: "/images/klien/waskita.png", tinggi: 64 },
-  { nama: "Korindo", logo: "/images/klien/korindo.png", tinggi: 52 },
+  { nama: "Korindo", logo: "/images/klien/korindo.webp", tinggi: 36 },
   { nama: "Sumitomo Electric", logo: "/images/klien/sumitomo-electric.svg", tinggi: 30 },
-  { nama: "Sanggar Sarana Baja" }, // TODO: logo belum ada di repo
-  { nama: "Synkrona Enjiniring Nusantara" }, // TODO: logo belum ada di repo
-  { nama: "Elsewedy Electric" }, // TODO: logo belum ada di repo
+  { nama: "Sanggar Sarana Baja", logo: "/images/klien/sanggar-sarana-baja.webp", tinggi: 30 },
+  { nama: "Synkrona Enjiniring Nusantara", logo: "/images/klien/synkrona.webp", tinggi: 46 },
+  { nama: "Elsewedy Electric", logo: "/images/klien/elsewedy.webp", tinggi: 52 },
 ];
 
 export const studiKasus = [

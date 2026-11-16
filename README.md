@@ -65,8 +65,7 @@ docs/                keputusan-tertunda.md
 - **Form** membuka WhatsApp dengan pesan terisi (termasuk sumber iklan). Belum menyimpan ke Google Sheet "Leads Atrahdis".
 - **GTM dan Meta Pixel belum dipasang**, jadi preview ini jangan dipakai sebagai tujuan iklan.
 - **Artikel blog** baru judul; halaman artikel menaut ke artikel asli di atrahdis.id.
-- **Gambar yang belum ada di repo:** logo Sanggar Sarana Baja, Synkrona, Elsewedy (tampil sebagai teks),
-  foto Dimas (tampil inisial), foto Nicx resolusi tinggi, gambar sampul artikel.
+- **Gambar yang belum ada di repo:** foto Dimas (tampil inisial) dan gambar sampul artikel.
 - **Foto hero adalah gambar buatan AI**, bukan foto kantor. Ganti dengan foto asli bila sudah ada.
 - **Checklist PDF** (SBU, SKK, perpanjangan) yang dijanjikan di form belum dibuat.
 - Keputusan tim yang masih menggantung: lihat `docs/keputusan-tertunda.md`.
