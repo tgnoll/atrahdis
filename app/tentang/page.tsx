@@ -74,8 +74,8 @@ export default function Tentang() {
       <Founder eyebrow="Founder" judul={`Dimulai dari berkas yang ${site.founder.name} tangani sendiri`}>
         <p className="text-base leading-relaxed text-teks-muted">
           Atrahdis berawal dari pengurusan SBU konstruksi yang {site.founder.name} tangani sendiri
-          pada 2016, lalu berdiri sebagai {site.legalName} pada 2017. Sampai sekarang, setiap berkas
-          klien ia periksa dan setujui sendiri sebelum diajukan.
+          pada 2016, lalu berdiri sebagai {site.legalName} pada 2017. Hingga kini, setiap pengajuan tetap melalui pemeriksaan akhir dan persetujuan langsung
+          dari {site.founder.name} sebelum disampaikan ke LPJK.
         </p>
         <p className="text-base leading-relaxed text-teks-muted">
           Dari pengalaman itu kami melihat pola yang sama berulang: pengajuan tertahan bukan karena

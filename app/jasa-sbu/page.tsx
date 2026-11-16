@@ -95,9 +95,9 @@ export default function JasaSbu() {
       <Founder eyebrow="Founder Atrahdis" judul="Berkas SBU Anda diaudit langsung oleh founder kami">
         <p className="text-base leading-relaxed text-teks-muted">
           Sejak 2016, {site.founder.name} menangani pengurusan{" "}
-          <strong className="text-navy">SBU konstruksi</strong> secara langsung. Setiap berkas ia
-          periksa dan setujui sendiri sebelum diajukan, supaya NIB, KBLI, akta, SKK, dan data
-          keuangan sudah saling cocok.
+          <strong className="text-navy">SBU konstruksi</strong> secara langsung. Setiap berkas melalui pemeriksaan
+          akhir dan persetujuannya sebelum diajukan, untuk memastikan NIB, KBLI, akta, SKK, dan data
+          keuangan telah selaras.
         </p>
         <CheckList
           className="text-base font-semibold leading-snug"

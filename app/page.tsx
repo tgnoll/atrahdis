@@ -123,8 +123,8 @@ export default function Beranda() {
       <Founder eyebrow="Tentang Atrahdis" judul="Konsultan SBU Konstruksi yang Menangani Berkas Langsung Sejak 2016">
         <p className="text-base leading-relaxed text-teks-muted">
           Atrahdis berawal dari pengurusan SBU konstruksi yang {site.founder.name} tangani sendiri
-          pada 2016, lalu berdiri sebagai {site.legalName} pada 2017. Sampai sekarang, setiap berkas
-          klien ia periksa dan setujui sendiri sebelum diajukan.
+          pada 2016, lalu berdiri sebagai {site.legalName} pada 2017. Hingga kini, setiap pengajuan tetap melalui pemeriksaan akhir dan persetujuan langsung
+          dari {site.founder.name} sebelum disampaikan ke LPJK.
         </p>
         <div className="flex flex-wrap gap-3.5 self-stretch">
           {linimasa.map((t) => (
