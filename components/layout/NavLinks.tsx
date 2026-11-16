@@ -11,14 +11,14 @@ export const menu = [
   { href: "/perpanjangan-sbu", label: "Perpanjangan SBU" },
 ];
 
-/** Tautan setelah dropdown "Semua Layanan". */
+/** Tautan setelah dropdown "Layanan". */
 export const menuAkhir = [
   { href: "/tentang", label: "Tentang" },
   { href: "/blog", label: "Blog" },
   { href: "/kontak", label: "Kontak" },
 ];
 
-/** Isi dropdown "Semua Layanan". */
+/** Isi dropdown "Layanan". */
 export const menuLayanan: { href: string; label: string; ringkas: string; ikon: IconName }[] = [
   {
     href: "/jasa-sbu",
@@ -53,7 +53,7 @@ function useAktif() {
 
 const warna = (aktif: boolean) => (aktif ? "text-oranye-teks" : "text-navy");
 
-/** Menu desktop: 3 tautan + dropdown "Semua Layanan". */
+/** Menu desktop: 3 tautan + dropdown "Layanan". */
 export function NavLinks() {
   const { pathname, aktif, layananAktif } = useAktif();
   const [buka, setBuka] = useState(false);
@@ -116,7 +116,7 @@ export function NavLinks() {
           onClick={() => setBuka((b) => (mouseDiDalam.current ? true : !b))}
           className={`flex items-center gap-1 font-semibold ${warna(layananAktif)}`}
         >
-          Semua Layanan
+          Layanan
           <svg
             width="16"
             height="16"
@@ -174,7 +174,7 @@ export function NavLinks() {
   );
 }
 
-/** Menu HP/tablet: tautan biasa, sub-layanan ditampilkan menjorok di bawah "Semua Layanan". */
+/** Menu HP/tablet: tautan biasa, sub-layanan ditampilkan menjorok di bawah "Layanan". */
 export function NavLinksMobile() {
   const { aktif, layananAktif } = useAktif();
   const kelas = "rounded-lg px-4 py-3 no-underline hover:bg-latar-muda";
@@ -190,7 +190,7 @@ export function NavLinksMobile() {
           {m.label}
         </Link>
       ))}
-      <span className={`px-4 pb-1 pt-3 ${warna(layananAktif)}`}>Semua Layanan</span>
+      <span className={`px-4 pb-1 pt-3 ${warna(layananAktif)}`}>Layanan</span>
       {menuLayanan.map((l) => (
         <Link
           key={l.href}
