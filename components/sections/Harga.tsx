@@ -1,48 +1,5 @@
-import Link from "next/link";
-import { HARGA_DISEMBUNYIKAN, hargaTampil, layanan, paketSbu, tampilHarga } from "@/content/layanan";
-import { CheckList, Icon, IconBox } from "@/components/ui/Icon";
-
-/** Panel "Pilih kebutuhan Anda": 4 kartu layanan yang menumpuk di tepi bawah hero beranda. */
-export function PilihKebutuhan() {
-  return (
-    <section aria-label="Pilih kebutuhan" className="relative bg-white">
-      <div className="relative mx-auto -mt-24 max-w-[1180px] px-6">
-        <div className="flex flex-col gap-3.5 rounded-2xl bg-white px-[22px] pb-[18px] pt-[22px] shadow-[0_18px_44px_rgba(13,34,66,0.16)]">
-          <span className="text-[13px] font-extrabold tracking-[1.5px]">PILIH KEBUTUHAN ANDA</span>
-          <div className="flex flex-wrap gap-3">
-            {layanan.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="flex min-w-0 flex-[1_1_420px] items-center gap-3.5 rounded-xl border border-garis bg-white px-[18px] py-3.5 no-underline transition-colors hover:border-oranye"
-              >
-                <span className="hidden sm:block">
-                  <IconBox name={l.ikon} size={46} />
-                </span>
-                <span className="flex min-w-0 flex-1 flex-col gap-0.5">
-                  <span className="font-extrabold text-navy">{l.nama}</span>
-                  <span className="text-[13px] leading-snug text-teks-muted">{l.ringkas}</span>
-                </span>
-                <span className="flex flex-none flex-col items-end gap-0.5">
-                  <span className="text-[11px] text-teks-muted">
-                    {tampilHarga && l.harga ? l.labelHarga : "biaya"}
-                  </span>
-                  <span className={`font-extrabold text-oranye-teks ${tampilHarga && l.harga ? "text-base" : "text-sm"}`}>
-                    {hargaTampil(l)}
-                  </span>
-                </span>
-                <Icon name="panah" size={18} stroke={2} className="hidden text-navy sm:block" />
-              </Link>
-            ))}
-          </div>
-          <span className="text-xs leading-normal text-teks-muted">
-            Biaya final ditulis di kontrak setelah audit berkas gratis.
-          </span>
-        </div>
-      </div>
-    </section>
-  );
-}
+import { HARGA_DISEMBUNYIKAN, paketSbu, tampilHarga } from "@/content/layanan";
+import { CheckList } from "@/components/ui/Icon";
 
 /** Tiga paket SBU (Kecil/Menengah/Besar) di atas latar separuh navy. */
 export function PaketSbu({

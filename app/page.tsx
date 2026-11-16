@@ -6,7 +6,7 @@ import { Bagian, Eyebrow, JudulBagian, Tombol } from "@/components/ui/Bagian";
 import { Icon, IconBox, type IconName } from "@/components/ui/Icon";
 import { LogoKlien, StudiKasus } from "@/components/sections/Bukti";
 import { FAQ } from "@/components/sections/FAQ";
-import { PaketSbu, PilihKebutuhan } from "@/components/sections/Harga";
+import { PaketSbu } from "@/components/sections/Harga";
 import { KartuArtikel, Langkah } from "@/components/sections/Kartu";
 import { Konsultasi } from "@/components/sections/Konsultasi";
 import { Founder, Kutipan, PetaLokasi } from "@/components/sections/Profil";
@@ -75,7 +75,7 @@ export default function Beranda() {
   return (
     <>
       <section className="hero-foto">
-        <div className="mx-auto flex min-h-[420px] max-w-[1180px] items-center px-6 pb-40 pt-20 md:pt-24">
+        <div className="mx-auto flex min-h-[420px] max-w-[1180px] items-center px-6 py-20 md:py-24">
           <div className="flex max-w-[560px] flex-col gap-5">
             <span className="self-start border-b-2 border-oranye pb-1.5 text-[13px] font-extrabold tracking-[2px] text-white">
               KONSULTAN SBU &amp; SKK KONSTRUKSI SEJAK {site.stats.sejak}
@@ -97,8 +97,6 @@ export default function Beranda() {
           </div>
         </div>
       </section>
-
-      <PilihKebutuhan />
 
       <LogoKlien judul="Dipercaya Kontraktor Nasional untuk Pengurusan SBU Konstruksi" />
 
