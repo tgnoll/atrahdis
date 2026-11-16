@@ -60,7 +60,7 @@ export function Header() {
 
         <nav
           aria-label="Navigasi utama"
-          className="hidden items-center gap-7 text-[15px] font-semibold lg:flex"
+          className="hidden items-center gap-5 text-[15px] font-semibold xl:flex"
         >
           <Suspense>
             <NavLinks />
@@ -75,7 +75,7 @@ export function Header() {
           </div>
 
           {/* Menu HP/tablet: <details> supaya jalan tanpa JavaScript. */}
-          <details className="relative lg:hidden">
+          <details className="relative xl:hidden">
             <summary
               aria-label="Buka menu"
               className="flex h-11 w-11 items-center justify-center rounded-lg border border-garis"

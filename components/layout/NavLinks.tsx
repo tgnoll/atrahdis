@@ -11,7 +11,14 @@ export const menu = [
   { href: "/perpanjangan-sbu", label: "Perpanjangan SBU" },
 ];
 
-/** Isi dropdown "Semua Layanan". Tentang, Blog, Kontak tetap ada di footer. */
+/** Tautan setelah dropdown "Semua Layanan". */
+export const menuAkhir = [
+  { href: "/tentang", label: "Tentang" },
+  { href: "/blog", label: "Blog" },
+  { href: "/kontak", label: "Kontak" },
+];
+
+/** Isi dropdown "Semua Layanan". */
 export const menuLayanan: { href: string; label: string; ringkas: string; ikon: IconName }[] = [
   {
     href: "/jasa-sbu",
@@ -152,6 +159,17 @@ export function NavLinks() {
           </div>
         </div>
       </div>
+
+      {menuAkhir.map((m) => (
+        <Link
+          key={m.href}
+          href={m.href}
+          aria-current={aktif(m.href) ? "page" : undefined}
+          className={`no-underline ${warna(aktif(m.href))}`}
+        >
+          {m.label}
+        </Link>
+      ))}
     </>
   );
 }
@@ -180,6 +198,16 @@ export function NavLinksMobile() {
           className={`ml-4 rounded-r-lg border-l-2 border-garis px-4 py-2.5 text-[14px] text-navy no-underline hover:bg-latar-muda`}
         >
           {l.label}
+        </Link>
+      ))}
+      {menuAkhir.map((m) => (
+        <Link
+          key={m.href}
+          href={m.href}
+          aria-current={aktif(m.href) ? "page" : undefined}
+          className={`${kelas} ${warna(aktif(m.href))}`}
+        >
+          {m.label}
         </Link>
       ))}
     </>
