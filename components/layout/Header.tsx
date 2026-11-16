@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { site, waLink } from "@/content/site";
 import { Tombol } from "@/components/ui/Bagian";
-import { NavLinks } from "./NavLinks";
+import { NavLinks, NavLinksMobile } from "./NavLinks";
 
 export function TopBar() {
   return (
@@ -60,7 +60,7 @@ export function Header() {
 
         <nav
           aria-label="Navigasi utama"
-          className="hidden items-center gap-5 text-[15px] font-semibold xl:flex"
+          className="hidden items-center gap-7 text-[15px] font-semibold lg:flex"
         >
           <Suspense>
             <NavLinks />
@@ -75,7 +75,7 @@ export function Header() {
           </div>
 
           {/* Menu HP/tablet: <details> supaya jalan tanpa JavaScript. */}
-          <details className="relative xl:hidden">
+          <details className="relative lg:hidden">
             <summary
               aria-label="Buka menu"
               className="flex h-11 w-11 items-center justify-center rounded-lg border border-garis"
@@ -89,7 +89,7 @@ export function Header() {
               className="absolute right-0 top-[52px] flex w-64 flex-col rounded-xl border border-garis bg-white p-2 text-[15px] font-semibold shadow-xl"
             >
               <Suspense>
-                <NavLinks className="rounded-lg px-4 py-3 hover:bg-latar-muda" />
+                <NavLinksMobile />
               </Suspense>
             </nav>
           </details>
