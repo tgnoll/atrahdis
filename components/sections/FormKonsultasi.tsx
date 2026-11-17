@@ -242,7 +242,8 @@ export function FormKonsultasi({
 
           <div className="flex flex-col gap-2.5">
             <button type="button" onClick={lanjut} className={`${kelasTombol} bg-biru text-white hover:bg-biru-gelap`}>
-              LANJUT, TINGGAL 1 LANGKAH →
+              {/* HP: dua baris supaya tidak terpotong. */}
+              <span className="block sm:inline">LANJUT,</span> <span className="block sm:inline">TINGGAL 1 LANGKAH →</span>
             </button>
             <span className="text-center text-[13px] text-teks-muted">
               Butuh sekitar 30 detik. Gratis dan tanpa kewajiban lanjut.

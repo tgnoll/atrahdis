@@ -10,7 +10,7 @@ import { FormKonsultasi } from "./FormKonsultasi";
  * Latar: putih di atas (menyambung section sebelumnya), gradasi ke abu muda mulai setengah ke bawah.
  */
 export function Konsultasi({
-  eyebrow = "AUDIT BERKAS GRATIS",
+  eyebrow = "FORMULIR AUDIT BERKAS GRATIS",
   judul,
   sorot,
   pengantar,
@@ -33,7 +33,7 @@ export function Konsultasi({
           <span className="text-[13px] font-extrabold tracking-[2px] text-biru md:text-sm">
             {eyebrow}
           </span>
-          <h2 className="text-[27px] font-extrabold leading-[1.2] text-navy md:text-[40px]">
+          <h2 className="text-[28px] font-extrabold leading-tight text-navy md:text-[34px]">
             {judul}
             {sorot && (
               <>
