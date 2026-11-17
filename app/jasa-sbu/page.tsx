@@ -135,43 +135,8 @@ export default function JasaSbu() {
         </div>
       </Bagian>
 
-      <PaketSbu
-        id="paket"
-        eyebrow="Pilihan kualifikasi"
-        judul="Jasa Pembuatan SBU sesuai Kualifikasi Perusahaan"
-        pengantar="Biaya final mengikuti jumlah subklasifikasi dan kondisi berkas, ditulis di penawaran setelah audit."
-      />
-
-      <Konsultasi
-        judul="Tahu Berkas SBU Anda Siap Diajukan atau Belum,"
-        sorot="Sebelum Keluar Biaya Sepeser Pun"
-        pengantar="Jawab 3 pertanyaan singkat. Kami cek kecocokan NIB, KBLI, akta, dan SKK dengan syarat SBU yang Anda tuju, lalu kirim hasilnya lewat WhatsApp. Kami bantu tanpa biaya!"
-        form={{
-          pesanPembuka: "Halo Atrahdis, saya ingin konsultasi pembuatan SBU.",
-          pertanyaan: [
-            {
-              label: "Kualifikasi SBU yang dituju",
-              ringkas: "Kualifikasi",
-              opsi: ["Kecil (K)", "Menengah (M)", "Besar (B)", "Belum tahu"],
-              wajib: true,
-            },
-            {
-              label: "Klasifikasi pekerjaan",
-              ringkas: "Klasifikasi",
-              opsi: [
-                "Bangunan gedung (rumah, ruko, kantor, sekolah)",
-                "Bangunan sipil (jalan, jembatan, irigasi, drainase)",
-                "Spesialis (pekerjaan khusus, misalnya pondasi atau konstruksi baja)",
-                "Belum yakin, mohon dibantu",
-              ],
-            },
-            { label: "Kapan dibutuhkan?", ringkas: "Waktu", opsi: ["Segera, ada tender < 1 bulan", "1–3 bulan lagi", "Baru cari info"] },
-          ],
-        }}
-      />
-
       <section className="bg-white">
-        <div className="mx-auto flex max-w-[1180px] flex-col gap-3.5 px-6 py-16">
+        <div className="mx-auto flex max-w-[1180px] flex-col gap-3.5 px-6 pb-16 pt-0">
           <div className="flex flex-wrap items-center gap-8 rounded-[18px] bg-latar-muda p-7 md:gap-10 md:p-10">
             <div className="flex min-w-0 flex-[1_1_420px] flex-col gap-3.5">
               <h2 className="text-2xl font-extrabold leading-tight md:text-[28px]">
@@ -221,8 +186,43 @@ export default function JasaSbu() {
         </div>
       </section>
 
+      <PaketSbu
+        id="paket"
+        eyebrow="Pilihan kualifikasi"
+        judul="Jasa Pembuatan SBU sesuai Kualifikasi Perusahaan"
+        pengantar="Biaya final mengikuti jumlah subklasifikasi dan kondisi berkas, ditulis di penawaran setelah audit."
+      />
+
+      <Konsultasi
+        judul="Tahu Berkas SBU Anda Siap Diajukan atau Belum,"
+        sorot="Sebelum Keluar Biaya Sepeser Pun"
+        pengantar="Jawab 3 pertanyaan singkat. Kami cek kecocokan NIB, KBLI, akta, dan SKK dengan syarat SBU yang Anda tuju, lalu kirim hasilnya lewat WhatsApp. Kami bantu tanpa biaya!"
+        form={{
+          pesanPembuka: "Halo Atrahdis, saya ingin konsultasi pembuatan SBU.",
+          pertanyaan: [
+            {
+              label: "Kualifikasi SBU yang dituju",
+              ringkas: "Kualifikasi",
+              opsi: ["Kecil (K)", "Menengah (M)", "Besar (B)", "Belum tahu"],
+              wajib: true,
+            },
+            {
+              label: "Klasifikasi pekerjaan",
+              ringkas: "Klasifikasi",
+              opsi: [
+                "Bangunan gedung (rumah, ruko, kantor, sekolah)",
+                "Bangunan sipil (jalan, jembatan, irigasi, drainase)",
+                "Spesialis (pekerjaan khusus, misalnya pondasi atau konstruksi baja)",
+                "Belum yakin, mohon dibantu",
+              ],
+            },
+            { label: "Kapan dibutuhkan?", ringkas: "Waktu", opsi: ["Segera, ada tender < 1 bulan", "1–3 bulan lagi", "Baru cari info"] },
+          ],
+        }}
+      />
+
       <section id="syarat" className="scroll-mt-24 bg-white">
-        <div className="mx-auto flex max-w-[1180px] flex-wrap items-start gap-10 px-6 pb-16">
+        <div className="mx-auto flex max-w-[1180px] flex-wrap items-start gap-10 px-6 py-16">
           <div className="flex min-w-0 flex-[1_1_280px] flex-col items-start gap-3.5">
             <Icon name="daftar" size={36} className="text-oranye" />
             <h2 className="text-2xl font-extrabold leading-tight md:text-[28px]">
