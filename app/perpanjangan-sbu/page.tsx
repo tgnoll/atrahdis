@@ -190,11 +190,6 @@ export default function PerpanjanganSbu() {
         judul="Cek Gratis: SBU Anda Masih Aman atau"
         sorot="Perlu Segera Diperpanjang?"
         pengantar="Jawab 3 pertanyaan singkat. Kami cek sisa masa berlaku SBU, status KSWP, SKK, dan data OSS perusahaan Anda, lalu kirim hasilnya lewat WhatsApp."
-        poin={[
-          { ikon: "cari", judul: "Cek status SBU", isi: "Masa berlaku, KSWP, SKK, dan data OSS dicek satu per satu" },
-          { ikon: "daftar", judul: "Checklist perpanjangan", isi: "Dokumen yang perlu diperbarui sesuai kondisi SBU Anda" },
-          { ikon: "jam", judul: "Estimasi tertulis", isi: "Biaya dan timeline dikirim lewat WhatsApp" },
-        ]}
         form={{
           pesanPembuka: "Halo Atrahdis, saya ingin konsultasi perpanjangan SBU.",
           judulLangkah1: "Ceritakan kondisi SBU Anda",

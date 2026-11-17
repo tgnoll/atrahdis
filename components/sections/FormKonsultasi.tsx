@@ -141,7 +141,7 @@ export function FormKonsultasi({
       onSubmit={kirim}
       noValidate
       aria-label="Form audit berkas gratis"
-      className="flex w-full max-w-[620px] scroll-mt-28 flex-col gap-[22px] rounded-[20px] border-t-[6px] border-oranye bg-white p-5 text-left shadow-[0_16px_40px_rgba(13,34,66,0.10)] sm:p-8"
+      className="flex w-full max-w-[620px] scroll-mt-28 flex-col gap-[22px] rounded-[20px] border-t-[6px] border-biru bg-white p-5 text-left shadow-[0_16px_40px_rgba(13,34,66,0.10)] sm:p-8"
     >
       {langkah < 3 && (
         <div className="flex flex-col gap-2.5">
@@ -152,8 +152,8 @@ export function FormKonsultasi({
             <span className="text-[13px] font-bold text-teks-muted">Langkah {langkah} dari 2</span>
           </div>
           <div aria-hidden="true" className="flex gap-1.5">
-            <span className="h-1.5 flex-1 rounded-full bg-oranye" />
-            <span className={`h-1.5 flex-1 rounded-full ${langkah === 2 ? "bg-oranye" : "bg-garis"}`} />
+            <span className="h-1.5 flex-1 rounded-full bg-biru" />
+            <span className={`h-1.5 flex-1 rounded-full ${langkah === 2 ? "bg-biru" : "bg-garis"}`} />
           </div>
         </div>
       )}
@@ -176,11 +176,11 @@ export function FormKonsultasi({
                       onClick={() => pilih(p.ringkas, o)}
                       className={`flex min-h-11 cursor-pointer items-center gap-1.5 rounded-full border-[1.5px] px-4 py-2.5 text-sm text-navy transition-colors ${
                         aktif
-                          ? "border-oranye bg-oranye-muda font-extrabold"
+                          ? "border-biru bg-biru-muda font-extrabold"
                           : "border-garis-input bg-white font-semibold hover:border-navy"
                       }`}
                     >
-                      {aktif && <Icon name="centang" size={16} stroke={3} className="text-oranye-teks" />}
+                      {aktif && <Icon name="centang" size={16} stroke={3} className="text-biru" />}
                       {o}
                     </button>
                   );
@@ -215,7 +215,7 @@ export function FormKonsultasi({
             <button
               type="button"
               onClick={() => setLangkah(1)}
-              className="min-h-11 flex-none cursor-pointer px-1 text-sm font-bold text-oranye-teks underline"
+              className="min-h-11 flex-none cursor-pointer px-1 text-sm font-bold text-biru underline"
             >
               Ubah
             </button>
@@ -255,7 +255,7 @@ export function FormKonsultasi({
             </p>
           )}
 
-          <button type="submit" className={`${kelasTombol} mt-1 bg-oranye text-navy hover:bg-oranye-gelap`}>
+          <button type="submit" className={`${kelasTombol} mt-1 bg-biru text-white hover:bg-biru-gelap`}>
             {tombolKirim}
           </button>
           <span className="flex items-start justify-center gap-2 text-center text-[13px] leading-normal text-teks-muted">

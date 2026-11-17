@@ -185,11 +185,6 @@ export default function JasaSkk() {
         judul="Cek Gratis Jenjang SKK yang"
         sorot="Dibutuhkan Perusahaan Anda"
         pengantar="Jawab 3 pertanyaan singkat. Kami petakan jenjang dan subklasifikasi SKK yang cocok dengan SBU perusahaan Anda, lalu kirim hasilnya lewat WhatsApp."
-        poin={[
-          { ikon: "cari", judul: "Pemetaan jenjang", isi: "Jenjang dan subklasifikasi SKK dicocokkan dengan SBU Anda" },
-          { ikon: "daftar", judul: "Checklist SKK", isi: "Dokumen tenaga ahli yang perlu disiapkan" },
-          { ikon: "jam", judul: "Estimasi tertulis", isi: "Biaya dan timeline dikirim lewat WhatsApp" },
-        ]}
         form={{
           pesanPembuka: "Halo Atrahdis, saya ingin konsultasi SKK konstruksi.",
           judulLangkah1: "Ceritakan kebutuhan SKK Anda",
