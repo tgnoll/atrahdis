@@ -261,7 +261,7 @@ export function FormKonsultasi({
               <span className="block sm:inline">LANJUT,</span> <span className="block sm:inline">TINGGAL 1 LANGKAH →</span>
             </button>
             <span className="text-center text-[13px] text-teks-muted">
-              Butuh sekitar 30 detik. Gratis dan tanpa kewajiban lanjut.
+              Isi form sekitar 30 detik. Gratis dan tanpa kewajiban lanjut.
             </span>
           </div>
         </>

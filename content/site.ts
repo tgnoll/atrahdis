@@ -59,7 +59,7 @@ export const site = {
     sejak: "2016",
     sertifikat: "280+",
     perusahaan: "118+",
-    klienLainnya: "80+", // dipakai di kalimat "dan 80+ perusahaan lainnya"
+    klienLainnya: "118+", // dipakai di kalimat "dan 118+ perusahaan lainnya"; sama dengan jumlah perusahaan
   },
 
   sisterSite: { label: "VerityX: KITAS & IMTA", href: "https://verityx.id" },
