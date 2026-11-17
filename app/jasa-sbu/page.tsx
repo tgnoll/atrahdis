@@ -179,8 +179,9 @@ export default function JasaSbu() {
               </h2>
               <div className="flex flex-wrap gap-x-10 gap-y-4">
                 <p className="min-w-0 flex-[1_1_380px] text-base leading-relaxed text-teks-muted">
-                  Penyebab pengajuan tertahan biasanya bukan berkas kurang, tapi data yang tidak saling
-                  cocok. Karena itu setiap berkas kami audit sebelum diajukan.
+                  Banyak pengajuan SBU tertahan karena data antardokumen tidak cocok, misalnya KBLI di NIB
+                  berbeda dengan subklasifikasi yang diajukan, atau SKK tenaga ahli tidak sesuai. Karena itu
+                  setiap berkas kami audit sebelum diajukan.
                 </p>
                 <p className="min-w-0 flex-[1_1_380px] text-base leading-relaxed text-teks-muted">
                   Biaya ditulis di penawaran, tanpa tagihan di luar kesepakatan. Kalau pengajuan ditolak
