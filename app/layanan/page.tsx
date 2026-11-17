@@ -5,6 +5,7 @@ import { CheckList, IconBox } from "@/components/ui/Icon";
 import { LogoKlien } from "@/components/sections/Bukti";
 import { KartuIkon, type ItemIkon } from "@/components/sections/Kartu";
 import { Konsultasi } from "@/components/sections/Konsultasi";
+import { ATURAN_KEBUTUHAN } from "@/components/sections/FormKonsultasi";
 import { PageHero } from "@/components/sections/PageHero";
 import { meta } from "@/lib/seo";
 
@@ -145,6 +146,7 @@ export default function Layanan() {
               ringkas: "Kebutuhan",
               opsi: ["SBU baru", "Perpanjangan SBU", "Naik kualifikasi", "SKK tenaga ahli", "Dokumen pendukung tender", "Belum yakin"],
               wajib: true,
+              ...ATURAN_KEBUTUHAN,
             },
             { label: "Target kualifikasi SBU", ringkas: "Kualifikasi", opsi: ["Kecil (K)", "Menengah (M)", "Besar (B)", "Belum tahu"] },
             { label: "Kapan dibutuhkan?", ringkas: "Waktu", opsi: ["Segera, ada tender < 1 bulan", "1–3 bulan lagi", "Baru cari info"] },

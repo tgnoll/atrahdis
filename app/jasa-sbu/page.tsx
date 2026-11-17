@@ -218,7 +218,7 @@ export default function JasaSbu() {
       <Konsultasi
         judul="Tahu Berkas SBU Anda Siap Diajukan atau Belum,"
         sorot="Sebelum Keluar Biaya Sepeser Pun"
-        pengantar="Jawab 3 pertanyaan singkat. Kami cek kecocokan NIB, KBLI, akta, dan SKK dengan syarat SBU yang Anda tuju, lalu kirim hasilnya lewat WhatsApp. Kalau berkas belum siap, kami jelaskan apa yang kurang."
+        pengantar="Jawab 3 pertanyaan singkat. Kami cek kecocokan NIB, KBLI, akta, dan SKK dengan syarat SBU yang Anda tuju, lalu kirim hasilnya lewat WhatsApp. Kami bantu tanpa biaya!"
         form={{
           pesanPembuka: "Halo Atrahdis, saya ingin konsultasi pembuatan SBU.",
           pertanyaan: [

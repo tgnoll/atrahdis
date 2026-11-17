@@ -169,7 +169,7 @@ export default function Beranda() {
       <Konsultasi
         judul="Cek Gratis Kebutuhan SBU dan SKK Perusahaan Anda,"
         sorot="Sebelum Keluar Biaya Sepeser Pun"
-        pengantar="Jawab 3 pertanyaan singkat. Kami cek kesiapan NIB, KBLI, akta, dan SKK perusahaan Anda, lalu kirim hasilnya lewat WhatsApp. Kalau berkas belum siap, kami jelaskan apa yang kurang."
+        pengantar="Jawab 3 pertanyaan singkat. Kami cek kesiapan NIB, KBLI, akta, dan SKK perusahaan Anda, lalu kirim hasilnya lewat WhatsApp. Kami bantu tanpa biaya!"
       />
 
       <StudiKasus />

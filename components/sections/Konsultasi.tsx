@@ -28,7 +28,7 @@ export function Konsultasi({
       id="konsultasi"
       className="scroll-mt-24 border-b border-garis bg-[linear-gradient(180deg,#ffffff_0%,#ffffff_45%,#f1f5fa_100%)]"
     >
-      <div className="mx-auto flex max-w-[1180px] flex-col items-center gap-7 px-5 py-14 md:gap-9 md:px-6 md:py-20">
+      <div className="mx-auto flex max-w-[1180px] flex-col items-center gap-7 px-5 pb-14 pt-6 md:gap-9 md:px-6 md:pb-20 md:pt-8">
         <div className="flex max-w-[800px] flex-col items-center gap-4 text-center">
           <span className="text-[13px] font-extrabold tracking-[2px] text-biru md:text-sm">
             {eyebrow}

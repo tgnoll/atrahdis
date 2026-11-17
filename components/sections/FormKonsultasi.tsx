@@ -14,6 +14,19 @@ export type Pertanyaan = {
   opsi: string[];
   /** Wajib dipilih sebelum lanjut ke langkah 2. */
   wajib?: boolean;
+  /** Boleh pilih lebih dari satu, sampai jumlah ini. Kosong = satu pilihan saja. */
+  maks?: number;
+  /** Pasangan pilihan yang tidak boleh dipilih bersamaan; memilih satu mengganti pasangannya. */
+  bentrok?: [string, string][];
+  /** Pilihan yang harus berdiri sendiri (mis. "Belum yakin"). */
+  sendiri?: string[];
+};
+
+/** Aturan pilihan kebutuhan: maks 2, SBU baru tidak bisa bersama perpanjangan, "Belum yakin" berdiri sendiri. */
+export const ATURAN_KEBUTUHAN = {
+  maks: 2,
+  bentrok: [["SBU baru", "Perpanjangan SBU"]] as [string, string][],
+  sendiri: ["Belum yakin"],
 };
 
 export const PERTANYAAN_UMUM: Pertanyaan[] = [
@@ -22,6 +35,7 @@ export const PERTANYAAN_UMUM: Pertanyaan[] = [
     ringkas: "Kebutuhan",
     opsi: ["SBU baru", "Perpanjangan SBU", "Naik kualifikasi", "SKK tenaga ahli", "Belum yakin"],
     wajib: true,
+    ...ATURAN_KEBUTUHAN,
   },
   {
     label: "Target kualifikasi SBU",
@@ -63,7 +77,7 @@ export function FormKonsultasi({
 }) {
   const id = useId();
   const [langkah, setLangkah] = useState<1 | 2 | 3>(1);
-  const [jawaban, setJawaban] = useState<Record<string, string>>({});
+  const [jawaban, setJawaban] = useState<Record<string, string[]>>({});
   const [galat, setGalat] = useState("");
   const [linkWa, setLinkWa] = useState("");
   const judulRef = useRef<HTMLHeadingElement>(null);
@@ -82,21 +96,40 @@ export function FormKonsultasi({
     judulRef.current?.focus();
   }, [langkah]);
 
-  const ringkasan = pertanyaan
-    .map((p) => jawaban[p.ringkas])
-    .filter(Boolean)
-    .join(" · ");
+  const teks = (p: Pertanyaan) => (jawaban[p.ringkas] ?? []).join(" + ");
+  const ringkasan = pertanyaan.map(teks).filter(Boolean).join(" · ");
+  const dataEvent = () =>
+    Object.fromEntries(pertanyaan.map((p) => [p.ringkas, teks(p)]).filter(([, v]) => v));
 
-  function pilih(kunci: string, nilai: string) {
-    setJawaban((j) => ({ ...j, [kunci]: nilai }));
+  const bentrok = (p: Pertanyaan, a: string, b: string) =>
+    (p.bentrok ?? []).some(([x, y]) => (x === a && y === b) || (x === b && y === a));
+
+  /** Pilihan yang masih bisa ditambah tanpa mengganti apa pun saat batas maks sudah tercapai = tidak ada. */
+  function terkunci(p: Pertanyaan, o: string) {
+    const kini = jawaban[p.ringkas] ?? [];
+    if (!p.maks || p.maks < 2 || kini.includes(o) || kini.length < p.maks) return false;
+    if (p.sendiri?.includes(o)) return false;
+    return !kini.some((x) => bentrok(p, o, x) || p.sendiri?.includes(x));
+  }
+
+  function pilih(p: Pertanyaan, o: string) {
     setGalat("");
+    setJawaban((j) => {
+      const kini = j[p.ringkas] ?? [];
+      if (!p.maks || p.maks < 2) return { ...j, [p.ringkas]: [o] };
+      if (kini.includes(o)) return { ...j, [p.ringkas]: kini.filter((x) => x !== o) };
+      if (p.sendiri?.includes(o)) return { ...j, [p.ringkas]: [o] };
+      const sisa = kini.filter((x) => !p.sendiri?.includes(x) && !bentrok(p, o, x));
+      if (sisa.length >= p.maks) return j;
+      return { ...j, [p.ringkas]: [...sisa, o] };
+    });
   }
 
   function lanjut() {
-    const kurang = pertanyaan.find((p) => p.wajib && !jawaban[p.ringkas]);
+    const kurang = pertanyaan.find((p) => p.wajib && !(jawaban[p.ringkas] ?? []).length);
     if (kurang) return setGalat(`Pilih dulu: ${kurang.label.replace(/\?$/, "").toLowerCase()}.`);
     setGalat("");
-    kirimEvent("form_langkah_1", { ...jawaban, halaman: window.location.pathname });
+    kirimEvent("form_langkah_1", { ...dataEvent(), halaman: window.location.pathname });
     setLangkah(2);
   }
 
@@ -118,13 +151,13 @@ export function FormKonsultasi({
       `Nama: ${nama}`,
       `Perusahaan: ${d.get("bentuk")} ${pt}`,
       `No. WhatsApp: ${wa}`,
-      ...pertanyaan.map((p) => (jawaban[p.ringkas] ? `${p.ringkas}: ${jawaban[p.ringkas]}` : "")),
+      ...pertanyaan.map((p) => (teks(p) ? `${p.ringkas}: ${teks(p)}` : "")),
       sumber ? `Sumber: ${sumber}` : "",
     ].filter((b, i) => b !== "" || i === 1);
 
     const link = waLink(baris.join("\n"));
     setLinkWa(link);
-    kirimEvent("form_kirim", { ...jawaban, halaman: window.location.pathname }, true);
+    kirimEvent("form_kirim", { ...dataEvent(), halaman: window.location.pathname }, true);
     window.open(link, "_blank", "noopener");
     setLangkah(3);
   }
@@ -164,20 +197,27 @@ export function FormKonsultasi({
             <fieldset key={p.ringkas} className="m-0 min-w-0 border-0 p-0">
               <legend className="mb-2.5 p-0 text-[15px] font-extrabold text-navy">
                 {i + 1}. {p.label}
+                {p.maks && p.maks > 1 && (
+                  <span className="font-semibold text-teks-muted"> (boleh pilih {p.maks})</span>
+                )}
               </legend>
               <div className="flex flex-wrap gap-2">
                 {p.opsi.map((o) => {
-                  const aktif = jawaban[p.ringkas] === o;
+                  const aktif = (jawaban[p.ringkas] ?? []).includes(o);
+                  const kunci = terkunci(p, o);
                   return (
                     <button
                       key={o}
                       type="button"
                       aria-pressed={aktif}
-                      onClick={() => pilih(p.ringkas, o)}
-                      className={`flex min-h-11 cursor-pointer items-center gap-1.5 rounded-full border-[1.5px] px-4 py-2.5 text-sm text-navy transition-colors ${
+                      aria-disabled={kunci || undefined}
+                      onClick={() => !kunci && pilih(p, o)}
+                      className={`flex min-h-11 items-center gap-1.5 rounded-full border-[1.5px] px-4 py-2.5 text-sm text-navy transition-colors ${
                         aktif
-                          ? "border-biru bg-biru-muda font-extrabold"
-                          : "border-garis-input bg-white font-semibold hover:border-navy"
+                          ? "cursor-pointer border-biru bg-biru-muda font-extrabold"
+                          : kunci
+                            ? "cursor-not-allowed border-garis bg-white font-semibold opacity-45"
+                            : "cursor-pointer border-garis-input bg-white font-semibold hover:border-navy"
                       }`}
                     >
                       {aktif && <Icon name="centang" size={16} stroke={3} className="text-biru" />}
@@ -186,6 +226,11 @@ export function FormKonsultasi({
                   );
                 })}
               </div>
+              {p.maks && p.maks > 1 && (jawaban[p.ringkas] ?? []).length >= p.maks && (
+                <p className="mt-2 text-[13px] text-teks-muted">
+                  Sudah {p.maks} pilihan. Klik pilihan yang aktif untuk mengganti.
+                </p>
+              )}
             </fieldset>
           ))}
 
