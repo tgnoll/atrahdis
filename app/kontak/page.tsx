@@ -17,7 +17,7 @@ const kartu: { ikon: IconName; label: string; judul: string; isi: string; href: 
     ikon: "chat",
     label: "WHATSAPP",
     judul: site.whatsapp.display,
-    isi: "Dibalas dalam 15 menit di jam kerja",
+    isi: "Dibalas dalam 5 menit di jam kerja",
     href: waLink("Halo Atrahdis, saya ingin konsultasi SBU/SKK konstruksi."),
     aksi: "Chat sekarang →",
   },
@@ -43,7 +43,7 @@ const faq = [
   { q: "Apakah konsultasinya berbayar?", a: "Tidak. Konsultasi dan audit berkas awal gratis, tanpa komitmen." },
   {
     q: "Berapa lama pertanyaan saya dibalas?",
-    a: `Pertanyaan di WhatsApp dibalas dalam 15 menit selama jam kerja, ${site.hours.panjang}.`,
+    a: `Pertanyaan di WhatsApp dibalas dalam 5 menit selama jam kerja, ${site.hours.panjang}.`,
   },
   {
     q: "Apakah saya harus datang ke kantor?",
@@ -81,14 +81,9 @@ export default function Kontak() {
       />
 
       <Konsultasi
-        judul="Kirim Pertanyaan Anda, Kami Hubungi Lewat WhatsApp"
-        pengantar="Isi data singkat supaya konsultasi langsung membahas kebutuhan perusahaan Anda."
-        penawaran="Gratis audit berkas + Checklist Dokumen SBU 2026"
-        poin={[
-          "Cek kecocokan NIB, KBLI, akta, dan SKK perusahaan Anda",
-          "Checklist dokumen dikirim lewat WhatsApp",
-          "Estimasi biaya dan timeline tertulis, dibalas dalam 15 menit di jam kerja",
-        ]}
+        judul="Kirim Pertanyaan Anda,"
+        sorot="Kami Hubungi Lewat WhatsApp"
+        pengantar="Jawab 3 pertanyaan singkat supaya konsultasi langsung membahas kebutuhan perusahaan Anda."
       />
 
       <PetaLokasi />

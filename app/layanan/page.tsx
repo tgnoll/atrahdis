@@ -58,7 +58,7 @@ export default function Layanan() {
         eyebrow="Semua layanan Atrahdis"
         judul="Layanan Pengurusan SBU, SKK, dan Dokumen Tender Konstruksi"
         pengantar="Dari SBU konstruksi dan SKK tenaga ahli sampai dokumen pendukung tender, diurus dalam satu alur dengan satu penanggung jawab. Setiap berkas diaudit dulu sebelum diajukan."
-        cta={{ href: "#form-konsultasi", label: "KONSULTASI GRATIS" }}
+        cta={{ href: "#konsultasi", label: "KONSULTASI GRATIS" }}
         cta2={{ href: "#pendukung", label: "DOKUMEN TENDER" }}
       />
 
@@ -136,13 +136,20 @@ export default function Layanan() {
 
       <Konsultasi
         judul="Belum Yakin Layanan Mana yang Dibutuhkan?"
-        pengantar="Isi data singkat dan ceritakan rencana tender Anda. Kami petakan dokumen apa saja yang perlu disiapkan, lalu menghubungi lewat WhatsApp."
-        penawaran="Gratis audit berkas + Checklist Dokumen SBU 2026"
-        poin={[
-          "Pemetaan SBU, SKK, dan dokumen tender yang Anda butuhkan",
-          "Checklist dokumen dikirim lewat WhatsApp",
-          "Estimasi biaya dan timeline tertulis, dibalas dalam 15 menit di jam kerja",
-        ]}
+        sorot="Kami Petakan Gratis"
+        pengantar="Jawab 3 pertanyaan singkat. Kami petakan SBU, SKK, dan dokumen tender yang perlu disiapkan, lalu kirim hasilnya lewat WhatsApp."
+        form={{
+          pertanyaan: [
+            {
+              label: "Apa yang ingin diurus?",
+              ringkas: "Kebutuhan",
+              opsi: ["SBU baru", "Perpanjangan SBU", "Naik kualifikasi", "SKK tenaga ahli", "Dokumen pendukung tender", "Belum yakin"],
+              wajib: true,
+            },
+            { label: "Target kualifikasi SBU", ringkas: "Kualifikasi", opsi: ["Kecil (K)", "Menengah (M)", "Besar (B)", "Belum tahu"] },
+            { label: "Kapan dibutuhkan?", ringkas: "Waktu", opsi: ["Segera, ada tender < 1 bulan", "1–3 bulan lagi", "Baru cari info"] },
+          ],
+        }}
       />
     </>
   );

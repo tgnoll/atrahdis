@@ -6,7 +6,7 @@ import { CheckList, Icon, type IconName } from "@/components/ui/Icon";
 import { JsonLd, schemaLayanan } from "@/components/seo/JsonLd";
 import { LogoKlien, StudiKasus } from "@/components/sections/Bukti";
 import { FAQ } from "@/components/sections/FAQ";
-import { FormKonsultasi } from "@/components/sections/FormKonsultasi";
+import { Konsultasi } from "@/components/sections/Konsultasi";
 import { PaketSbu } from "@/components/sections/Harga";
 import { Langkah } from "@/components/sections/Kartu";
 import { PageHero } from "@/components/sections/PageHero";
@@ -86,7 +86,7 @@ export default function JasaSbu() {
             terbit. Berkas diaudit dulu, supaya NIB, KBLI, akta, SKK, dan keuangan saling cocok.
           </>
         }
-        cta={{ href: "#form-konsultasi", label: "KONSULTASI GRATIS" }}
+        cta={{ href: "#konsultasi", label: "KONSULTASI GRATIS" }}
         cta2={{ href: "#syarat", label: "CEK PERSYARATAN" }}
       />
 
@@ -215,25 +215,24 @@ export default function JasaSbu() {
         </p>
       </FAQ>
 
-      <section className="bg-navy-terang">
-        <div className="mx-auto flex max-w-[880px] flex-col items-center gap-3.5 px-6 py-16 text-center">
-          <h2 className="text-[26px] font-extrabold leading-tight text-white md:text-[32px]">
-            Mau urus SBU perusahaan Anda?
-          </h2>
-          <p className="text-base leading-relaxed text-teks-terang">
-            Konsultasi gratis soal syarat, biaya, dan kesiapan berkas. Keputusan tetap di tangan Anda.
-          </p>
-          <div className="mt-4 flex w-full justify-center">
-            <FormKonsultasi
-              judul="Isi 5 data singkat, kami hubungi lewat WhatsApp"
-              keterangan="Supaya konsultasi langsung membahas kebutuhan perusahaan Anda."
-              tombol="KIRIM & LANJUT KE WHATSAPP"
-              kebutuhan={["SBU baru", "Perpanjangan SBU", "Naik kualifikasi", "Belum yakin"]}
-              tanyaKualifikasi
-            />
-          </div>
-        </div>
-      </section>
+      <Konsultasi
+        judul="Tahu Berkas SBU Anda Siap Diajukan atau Belum,"
+        sorot="Sebelum Keluar Biaya Sepeser Pun"
+        pengantar="Jawab 3 pertanyaan singkat. Kami cek kecocokan NIB, KBLI, akta, dan SKK dengan syarat SBU yang Anda tuju, lalu kirim hasilnya lewat WhatsApp. Kalau berkas belum siap, kami jelaskan apa yang kurang."
+        form={{
+          pesanPembuka: "Halo Atrahdis, saya ingin konsultasi pembuatan SBU.",
+          pertanyaan: [
+            {
+              label: "Kualifikasi SBU yang dituju",
+              ringkas: "Kualifikasi",
+              opsi: ["Kecil (K)", "Menengah (M)", "Besar (B)", "Belum tahu"],
+              wajib: true,
+            },
+            { label: "Untuk tender apa?", ringkas: "Tender", opsi: ["Pemerintah (LPSE)", "BUMN", "Swasta", "Belum ada tender"] },
+            { label: "Kapan dibutuhkan?", ringkas: "Waktu", opsi: ["Segera, ada tender < 1 bulan", "1–3 bulan lagi", "Baru cari info"] },
+          ],
+        }}
+      />
     </>
   );
 }

@@ -109,7 +109,7 @@ export function CtaStrip({
   judul,
   isi,
   tombol,
-  href = "/kontak#form-konsultasi",
+  href = "/kontak#konsultasi",
 }: {
   judul: string;
   isi: string;

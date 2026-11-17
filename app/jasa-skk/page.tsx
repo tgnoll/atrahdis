@@ -103,7 +103,7 @@ export default function JasaSkk() {
             bersamaan dengan SBU.
           </>
         }
-        cta={{ href: "#form-konsultasi", label: "KONSULTASI GRATIS" }}
+        cta={{ href: "#konsultasi", label: "KONSULTASI GRATIS" }}
         cta2={{ href: "#biaya", label: "LIHAT BIAYA" }}
         samping={
           <div className="flex flex-col rounded-2xl bg-white p-6">
@@ -167,7 +167,7 @@ export default function JasaSkk() {
               <span className="font-extrabold">{h.jenjang}</span>
               <strong className="text-[26px] font-extrabold">{harga(h.harga)}</strong>
               <a
-                href="#form-konsultasi"
+                href="#konsultasi"
                 className="mt-2 rounded-lg bg-navy p-3 text-sm font-extrabold text-white no-underline hover:text-white"
               >
                 Konsultasi {h.jenjang}
@@ -182,17 +182,24 @@ export default function JasaSkk() {
       </Bagian>
 
       <Konsultasi
-        judul="Konsultasi Gratis Pembuatan SKK Konstruksi"
-        pengantar="Kirim data singkat, kami cek jenjang dan subklasifikasi SKK yang dibutuhkan tenaga ahli Anda, lalu menghubungi lewat WhatsApp."
-        penawaran="Gratis pemetaan jenjang SKK + Checklist Dokumen SKK"
+        judul="Cek Gratis Jenjang SKK yang"
+        sorot="Dibutuhkan Perusahaan Anda"
+        pengantar="Jawab 3 pertanyaan singkat. Kami petakan jenjang dan subklasifikasi SKK yang cocok dengan SBU perusahaan Anda, lalu kirim hasilnya lewat WhatsApp."
         poin={[
-          "Cek jenjang dan subklasifikasi SKK yang cocok dengan SBU Anda",
-          "Checklist dokumen SKK dikirim lewat WhatsApp",
-          "Estimasi biaya dan timeline tertulis, dibalas dalam 15 menit di jam kerja",
+          { ikon: "cari", judul: "Pemetaan jenjang", isi: "Jenjang dan subklasifikasi SKK dicocokkan dengan SBU Anda" },
+          { ikon: "daftar", judul: "Checklist SKK", isi: "Dokumen tenaga ahli yang perlu disiapkan" },
+          { ikon: "jam", judul: "Estimasi tertulis", isi: "Biaya dan timeline dikirim lewat WhatsApp" },
         ]}
         form={{
-          judul: "Klaim pemetaan jenjang gratis",
-          kebutuhan: ["SKK tenaga ahli", "SKK + SBU baru", "Perpanjangan SKK", "Belum yakin"],
+          pesanPembuka: "Halo Atrahdis, saya ingin konsultasi SKK konstruksi.",
+          judulLangkah1: "Ceritakan kebutuhan SKK Anda",
+          judulLangkah2: "Ke mana hasil pemetaan dikirim?",
+          tombolKirim: "KIRIM & TERIMA HASIL PEMETAAN DI WHATSAPP",
+          pertanyaan: [
+            { label: "Untuk jabatan apa?", ringkas: "Jabatan", opsi: ["PJBU", "PJTBU", "PJSKBU", "Belum tahu"], wajib: true },
+            { label: "Jenjang yang dibutuhkan", ringkas: "Jenjang", opsi: ["Jenjang 5–6", "Jenjang 7", "Jenjang 8–9", "Belum tahu"] },
+            { label: "Berapa orang tenaga ahli?", ringkas: "Jumlah", opsi: ["1 orang", "2–5 orang", "Lebih dari 5"] },
+          ],
         }}
       />
 

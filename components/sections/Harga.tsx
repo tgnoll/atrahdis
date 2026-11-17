@@ -42,7 +42,7 @@ export function PaketSbu({
               </span>
               <span className="text-center text-sm text-teks-muted">{p.untuk}</span>
               <a
-                href="#form-konsultasi"
+                href="#konsultasi"
                 className={`rounded-lg p-3.5 text-center text-[15px] font-extrabold no-underline ${
                   p.unggulan ? "bg-oranye text-navy hover:text-navy" : "bg-navy text-white hover:text-white"
                 }`}

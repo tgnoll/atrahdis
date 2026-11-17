@@ -69,7 +69,7 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <div className="hidden sm:block">
-            <Tombol href="/kontak#form-konsultasi" kecil>
+            <Tombol href="/kontak#konsultasi" kecil>
               Konsultasi Gratis
             </Tombol>
           </div>
