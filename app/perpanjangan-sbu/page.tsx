@@ -105,7 +105,7 @@ export default function PerpanjanganSbu() {
             saat tender.
           </>
         }
-        cta={{ href: "#form-konsultasi", label: "KONSULTASI GRATIS" }}
+        cta={{ href: "#konsultasi", label: "KONSULTASI GRATIS" }}
         cta2={{ href: "#biaya", label: "LIHAT BIAYA" }}
         samping={
           <div className="flex flex-col rounded-2xl bg-white p-6">
@@ -187,21 +187,26 @@ export default function PerpanjanganSbu() {
       </Bagian>
 
       <Konsultasi
-        judul="Konsultasi Gratis Perpanjangan SBU Konstruksi"
-        pengantar="Kirim data singkat, kami cek sisa masa berlaku SBU dan dokumen yang perlu diperbarui, lalu menghubungi lewat WhatsApp."
-        penawaran="Gratis audit berkas perpanjangan + Checklist Dokumen Perpanjangan SBU"
+        judul="Cek Gratis: SBU Anda Masih Aman atau"
+        sorot="Perlu Segera Diperpanjang?"
+        pengantar="Jawab 3 pertanyaan singkat. Kami cek sisa masa berlaku SBU, status KSWP, SKK, dan data OSS perusahaan Anda, lalu kirim hasilnya lewat WhatsApp."
         poin={[
-          "Cek status KSWP, SKK, dan data OSS perusahaan Anda",
-          "Checklist dokumen perpanjangan dikirim lewat WhatsApp",
-          "Estimasi biaya dan timeline tertulis, dibalas dalam 15 menit di jam kerja",
+          { ikon: "cari", judul: "Cek status SBU", isi: "Masa berlaku, KSWP, SKK, dan data OSS dicek satu per satu" },
+          { ikon: "daftar", judul: "Checklist perpanjangan", isi: "Dokumen yang perlu diperbarui sesuai kondisi SBU Anda" },
+          { ikon: "jam", judul: "Estimasi tertulis", isi: "Biaya dan timeline dikirim lewat WhatsApp" },
         ]}
         form={{
-          kebutuhan: [
-            "Perpanjangan SBU",
-            "Perpanjangan + naik kualifikasi",
-            "SBU sudah expired",
-            "SKK tenaga ahli",
-            "Belum yakin",
+          pesanPembuka: "Halo Atrahdis, saya ingin konsultasi perpanjangan SBU.",
+          judulLangkah1: "Ceritakan kondisi SBU Anda",
+          pertanyaan: [
+            {
+              label: "Kapan SBU Anda habis?",
+              ringkas: "Masa berlaku",
+              opsi: ["Sudah habis", "Kurang dari 3 bulan", "3–6 bulan lagi", "Belum tahu"],
+              wajib: true,
+            },
+            { label: "Kualifikasi SBU saat ini", ringkas: "Kualifikasi", opsi: ["Kecil (K)", "Menengah (M)", "Besar (B)", "Belum tahu"] },
+            { label: "Sekalian naik kualifikasi?", ringkas: "Naik kualifikasi", opsi: ["Ya", "Tidak", "Belum tahu"] },
           ],
         }}
       />

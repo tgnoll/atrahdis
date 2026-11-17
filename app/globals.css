@@ -14,6 +14,8 @@
   --color-oranye-teks: #a8570a; /* oranye yang lolos kontras untuk teks di latar putih */
   --color-oranye-muda: #fdf0e1;
   --color-hijau: #1f9d55;
+  --color-biru: #1e56b8; /* tombol "Lanjut" di form 2 langkah, teks putih */
+  --color-biru-gelap: #17458f;
   --color-teks-muted: #4a5568;
   --color-teks-terang: #dce4ee;
   --color-teks-redup: #c9d3e0;

@@ -25,7 +25,7 @@ const keunggulan: { ikon: IconName; judul: string; isi: string }[] = [
     isi: "NIB, KBLI, akta, SKK, dan keuangan dicocokkan dulu, supaya pengajuan SBU ke LPJK tidak bolak-balik.",
   },
   { ikon: "garansi", judul: "Garansi tertulis", isi: "Biaya, timeline, dan garansi ada di kontrak sebelum pekerjaan dimulai." },
-  { ikon: "jam", judul: "Respons 15 menit", isi: "Pertanyaan di WhatsApp dibalas dalam 15 menit selama jam kerja." },
+  { ikon: "jam", judul: "Respons 5 menit", isi: "Pertanyaan di WhatsApp dibalas dalam 5 menit selama jam kerja." },
   { ikon: "bendera", judul: "Update tiap milestone", isi: "Progres pengurusan dikabari rutin, tanpa perlu Anda menanyakan." },
   {
     ikon: "orang",
@@ -89,7 +89,7 @@ export default function Beranda() {
               NIB, KBLI, akta, dan SKK sesuai syarat LPJK.
             </p>
             <div className="mt-1 flex flex-wrap gap-3">
-              <Tombol href="#form-konsultasi">KONSULTASI GRATIS</Tombol>
+              <Tombol href="#konsultasi">KONSULTASI GRATIS</Tombol>
               <Tombol href="#cara-kerja" varian="garis-putih">
                 LIHAT CARA KERJA
               </Tombol>
@@ -167,14 +167,9 @@ export default function Beranda() {
       />
 
       <Konsultasi
-        judul="Konsultasi Gratis Pengurusan SBU dan SKK Konstruksi"
-        pengantar="Isi data singkat, kami cek kebutuhan SBU konstruksi atau SKK perusahaan Anda dan menghubungi lewat WhatsApp. Keputusan tetap di tangan Anda."
-        penawaran="Gratis audit berkas + Checklist Dokumen SBU 2026"
-        poin={[
-          "Cek kecocokan NIB, KBLI, akta, dan SKK perusahaan Anda",
-          "Checklist dokumen SBU K, M, B dikirim lewat WhatsApp",
-          "Estimasi biaya dan timeline tertulis, dibalas dalam 15 menit di jam kerja",
-        ]}
+        judul="Cek Gratis Kebutuhan SBU dan SKK Perusahaan Anda,"
+        sorot="Sebelum Keluar Biaya Sepeser Pun"
+        pengantar="Jawab 3 pertanyaan singkat. Kami cek kesiapan NIB, KBLI, akta, dan SKK perusahaan Anda, lalu kirim hasilnya lewat WhatsApp. Kalau berkas belum siap, kami jelaskan apa yang kurang."
       />
 
       <StudiKasus />

@@ -38,3 +38,28 @@ export function labelSumber(s: Sumber): string {
   if (s.utm_source) return [s.utm_source, s.utm_medium, s.utm_campaign].filter(Boolean).join(" / ");
   return "";
 }
+
+type Pelacak = {
+  fbq?: (...args: unknown[]) => void;
+  gtag?: (...args: unknown[]) => void;
+  dataLayer?: unknown[];
+};
+
+/**
+ * Kirim event form ke Meta Pixel / Google tag kalau sudah terpasang. Tanpa pixel, tidak melakukan apa-apa.
+ * `lead = true` juga mengirim event standar "Lead" (Meta) dan "generate_lead" (Google).
+ */
+export function kirimEvent(nama: string, data: Record<string, string> = {}, lead = false) {
+  try {
+    const w = window as unknown as Pelacak;
+    w.fbq?.("trackCustom", nama, data);
+    w.gtag?.("event", nama, data);
+    w.dataLayer?.push({ event: nama, ...data });
+    if (lead) {
+      w.fbq?.("track", "Lead", data);
+      w.gtag?.("event", "generate_lead", data);
+    }
+  } catch {
+    // Pelacakan tidak boleh menghentikan form.
+  }
+}

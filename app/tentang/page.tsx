@@ -53,7 +53,7 @@ export default function Tentang() {
         eyebrow="Tentang Atrahdis"
         judul="Konsultan SBU dan SKK Konstruksi yang Mengaudit Berkas Sebelum Mengajukan"
         pengantar={`Atrahdis adalah nama layanan ${site.legalName}. Sejak ${site.stats.sejak} kami membantu kontraktor menyiapkan, mengecek, dan mengajukan SBU serta SKK sampai terbit.`}
-        cta={{ href: "/kontak#form-konsultasi", label: "KONSULTASI GRATIS" }}
+        cta={{ href: "/kontak#konsultasi", label: "KONSULTASI GRATIS" }}
         cta2={{ href: "#perjalanan", label: "PERJALANAN KAMI" }}
         bawah={
           <dl className="flex w-full flex-wrap gap-4">
