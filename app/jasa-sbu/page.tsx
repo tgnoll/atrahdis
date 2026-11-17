@@ -141,8 +141,27 @@ export default function JasaSbu() {
         pengantar="Biaya final mengikuti jumlah subklasifikasi dan kondisi berkas, ditulis di penawaran setelah audit."
       />
 
+      <Konsultasi
+        judul="Tahu Berkas SBU Anda Siap Diajukan atau Belum,"
+        sorot="Sebelum Keluar Biaya Sepeser Pun"
+        pengantar="Jawab 3 pertanyaan singkat. Kami cek kecocokan NIB, KBLI, akta, dan SKK dengan syarat SBU yang Anda tuju, lalu kirim hasilnya lewat WhatsApp. Kami bantu tanpa biaya!"
+        form={{
+          pesanPembuka: "Halo Atrahdis, saya ingin konsultasi pembuatan SBU.",
+          pertanyaan: [
+            {
+              label: "Kualifikasi SBU yang dituju",
+              ringkas: "Kualifikasi",
+              opsi: ["Kecil (K)", "Menengah (M)", "Besar (B)", "Belum tahu"],
+              wajib: true,
+            },
+            { label: "Untuk tender apa?", ringkas: "Tender", opsi: ["Pemerintah (LPSE)", "BUMN", "Swasta", "Belum ada tender"] },
+            { label: "Kapan dibutuhkan?", ringkas: "Waktu", opsi: ["Segera, ada tender < 1 bulan", "1–3 bulan lagi", "Baru cari info"] },
+          ],
+        }}
+      />
+
       <section className="bg-white">
-        <div className="mx-auto flex max-w-[1180px] flex-col gap-3.5 px-6 pb-16">
+        <div className="mx-auto flex max-w-[1180px] flex-col gap-3.5 px-6 py-16">
           <div className="flex flex-col gap-3.5 rounded-[18px] bg-latar-muda p-7 md:p-10">
             <h2 className="text-2xl font-extrabold leading-tight md:text-[28px]">
               Kenapa kontraktor mengurus SBU di Atrahdis
@@ -214,25 +233,6 @@ export default function JasaSbu() {
           <Link href="/blog/biaya-sbu-konstruksi-2026">Biaya SBU 2026</Link>
         </p>
       </FAQ>
-
-      <Konsultasi
-        judul="Tahu Berkas SBU Anda Siap Diajukan atau Belum,"
-        sorot="Sebelum Keluar Biaya Sepeser Pun"
-        pengantar="Jawab 3 pertanyaan singkat. Kami cek kecocokan NIB, KBLI, akta, dan SKK dengan syarat SBU yang Anda tuju, lalu kirim hasilnya lewat WhatsApp. Kami bantu tanpa biaya!"
-        form={{
-          pesanPembuka: "Halo Atrahdis, saya ingin konsultasi pembuatan SBU.",
-          pertanyaan: [
-            {
-              label: "Kualifikasi SBU yang dituju",
-              ringkas: "Kualifikasi",
-              opsi: ["Kecil (K)", "Menengah (M)", "Besar (B)", "Belum tahu"],
-              wajib: true,
-            },
-            { label: "Untuk tender apa?", ringkas: "Tender", opsi: ["Pemerintah (LPSE)", "BUMN", "Swasta", "Belum ada tender"] },
-            { label: "Kapan dibutuhkan?", ringkas: "Waktu", opsi: ["Segera, ada tender < 1 bulan", "1–3 bulan lagi", "Baru cari info"] },
-          ],
-        }}
-      />
     </>
   );
 }
