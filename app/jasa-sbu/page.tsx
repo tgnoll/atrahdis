@@ -154,7 +154,16 @@ export default function JasaSbu() {
               opsi: ["Kecil (K)", "Menengah (M)", "Besar (B)", "Belum tahu"],
               wajib: true,
             },
-            { label: "Untuk tender apa?", ringkas: "Tender", opsi: ["Pemerintah (LPSE)", "BUMN", "Swasta", "Belum ada tender"] },
+            {
+              label: "Klasifikasi pekerjaan",
+              ringkas: "Klasifikasi",
+              opsi: [
+                "Bangunan gedung (rumah, ruko, kantor, sekolah)",
+                "Bangunan sipil (jalan, jembatan, irigasi, drainase)",
+                "Spesialis (pekerjaan khusus, misalnya pondasi atau konstruksi baja)",
+                "Belum yakin, mohon dibantu",
+              ],
+            },
             { label: "Kapan dibutuhkan?", ringkas: "Waktu", opsi: ["Segera, ada tender < 1 bulan", "1–3 bulan lagi", "Baru cari info"] },
           ],
         }}
@@ -206,7 +215,7 @@ export default function JasaSbu() {
               Setiap badan usaha perlu memenuhi syarat sesuai klasifikasi dan kualifikasinya. Belum
               lengkap? Kirim yang ada, kami bantu petakan sisanya.
             </p>
-            <Tombol href={waLink("Halo Atrahdis, saya ingin berkas SBU saya dicek.")} kecil>
+            <Tombol href="#konsultasi" kecil>
               Cek berkas saya
             </Tombol>
             <Link href="/blog/dokumen-sbu-konstruksi-checklist" className="text-sm font-bold">

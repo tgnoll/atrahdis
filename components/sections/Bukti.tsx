@@ -75,7 +75,7 @@ export function StudiKasus({ latar = "putih" }: { latar?: "putih" | "muda" }) {
                 alt={`${testimoni.nama}, ${testimoni.jabatan}`}
                 width={60}
                 height={60}
-                className="h-[60px] w-[60px] flex-none rounded-full border-[3px] border-oranye object-cover"
+                className="h-[60px] w-[60px] flex-none rounded-full border-[3px] border-oranye object-cover object-[center_25%]"
               />
             ) : (
               <span aria-hidden="true" className="flex h-[60px] w-[60px] flex-none items-center justify-center rounded-full border-[3px] border-oranye bg-navy-terang text-xl font-extrabold text-white">

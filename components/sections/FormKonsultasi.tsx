@@ -49,6 +49,9 @@ export const PERTANYAAN_UMUM: Pertanyaan[] = [
   },
 ];
 
+/** Pilihan panjang berketerangan dalam kurung, mis. "Bangunan gedung (rumah, ruko, kantor, sekolah)". */
+const POLA_KET = /^(.*?) \((.+)\)$/;
+
 const kelasDasar =
   "min-h-[50px] rounded-[10px] border-[1.5px] border-garis-input bg-white px-3.5 py-3 text-base text-navy placeholder:text-teks-muted/70";
 const kelasLabel = "text-sm font-bold text-navy";
@@ -204,6 +207,9 @@ export function FormKonsultasi({
               <div className="flex flex-wrap gap-2">
                 {p.opsi.map((o) => {
                   const aktif = (jawaban[p.ringkas] ?? []).includes(o);
+                  // Pilihan berketerangan, mis. "Bangunan gedung (rumah, ruko, ...)", tampil sebagai kartu selebar form.
+                  const [, utama, ket] = (o.length > 30 && o.match(POLA_KET)) || [o, o, ""];
+                  const kartu = p.opsi.some((x) => x.length > 30 && POLA_KET.test(x));
                   const kunci = terkunci(p, o);
                   return (
                     <button
@@ -212,7 +218,9 @@ export function FormKonsultasi({
                       aria-pressed={aktif}
                       aria-disabled={kunci || undefined}
                       onClick={() => !kunci && pilih(p, o)}
-                      className={`flex min-h-11 items-center gap-1.5 rounded-full border-[1.5px] px-4 py-2.5 text-sm text-navy transition-colors ${
+                      className={`flex min-h-11 items-center gap-1.5 border-[1.5px] px-4 py-2.5 text-sm text-navy transition-colors ${
+                        kartu ? "w-full rounded-xl text-left" : "rounded-full"
+                      } ${
                         aktif
                           ? "cursor-pointer border-biru bg-biru-muda font-extrabold"
                           : kunci
@@ -221,7 +229,14 @@ export function FormKonsultasi({
                       }`}
                     >
                       {aktif && <Icon name="centang" size={16} stroke={3} className="text-biru" />}
-                      {o}
+                      {ket ? (
+                        <span className="flex flex-col">
+                          <span>{utama}</span>
+                          <span className="text-[13px] font-medium text-teks-muted">{ket}</span>
+                        </span>
+                      ) : (
+                        o
+                      )}
                     </button>
                   );
                 })}

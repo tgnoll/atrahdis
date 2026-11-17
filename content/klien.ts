@@ -47,5 +47,5 @@ export const testimoni = {
     "Mas Nicky tidak hanya membawa solusi perizinan inovatif ke industri konstruksi, tetapi juga membantu klien menavigasi regulasi yang kompleks secara mulus dan efisien!",
   nama: "Dimas",
   jabatan: "Direktur, PT. Harapan Nusantara Djaya",
-  foto: "", // TODO: foto belum ada di repo; kosong = inisial
+  foto: "/images/dimas.webp",
 };
