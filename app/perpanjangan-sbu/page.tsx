@@ -192,7 +192,7 @@ export default function PerpanjanganSbu() {
         pengantar="Jawab 3 pertanyaan singkat. Kami cek sisa masa berlaku SBU, status KSWP, SKK, dan data OSS perusahaan Anda, lalu kirim hasilnya lewat WhatsApp."
         form={{
           pesanPembuka: "Halo Atrahdis, saya ingin konsultasi perpanjangan SBU.",
-          judulLangkah1: "Ceritakan kondisi SBU Anda",
+          judul: "Ceritakan kondisi SBU Anda",
           pertanyaan: [
             {
               label: "Kapan SBU Anda habis?",

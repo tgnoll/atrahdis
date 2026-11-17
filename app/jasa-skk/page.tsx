@@ -187,8 +187,8 @@ export default function JasaSkk() {
         pengantar="Jawab 3 pertanyaan singkat. Kami petakan jenjang dan subklasifikasi SKK yang cocok dengan SBU perusahaan Anda, lalu kirim hasilnya lewat WhatsApp."
         form={{
           pesanPembuka: "Halo Atrahdis, saya ingin konsultasi SKK konstruksi.",
-          judulLangkah1: "Ceritakan kebutuhan SKK Anda",
-          judulLangkah2: "Ke mana hasil pemetaan dikirim?",
+          judul: "Ceritakan kebutuhan SKK Anda",
+          judulKontak: "Ke mana hasil pemetaan dikirim?",
           tombolKirim: "KIRIM & TERIMA HASIL PEMETAAN DI WHATSAPP",
           pertanyaan: [
             { label: "Untuk jabatan apa?", ringkas: "Jabatan", opsi: ["PJBU", "PJTBU", "PJSKBU", "Belum tahu"], wajib: true },
