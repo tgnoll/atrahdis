@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { langkahSbu } from "@/content/layanan";
 import { site, waLink } from "@/content/site";
@@ -171,35 +172,50 @@ export default function JasaSbu() {
 
       <section className="bg-white">
         <div className="mx-auto flex max-w-[1180px] flex-col gap-3.5 px-6 py-16">
-          <div className="flex flex-col gap-3.5 rounded-[18px] bg-latar-muda p-7 md:p-10">
-            <h2 className="text-2xl font-extrabold leading-tight md:text-[28px]">
-              Kenapa kontraktor mengurus SBU di Atrahdis
-            </h2>
-            <div className="flex flex-wrap gap-x-10 gap-y-4">
-              <p className="min-w-0 flex-[1_1_380px] text-base leading-relaxed text-teks-muted">
-                Penyebab pengajuan tertahan biasanya bukan berkas kurang, tapi data yang tidak saling
-                cocok. Karena itu setiap berkas kami audit sebelum diajukan.
-              </p>
-              <p className="min-w-0 flex-[1_1_380px] text-base leading-relaxed text-teks-muted">
-                Biaya ditulis di penawaran, tanpa tagihan di luar kesepakatan. Kalau pengajuan ditolak
-                karena kelalaian kami, perbaikannya kami tanggung sesuai kontrak.
-              </p>
+          <div className="flex flex-wrap items-center gap-8 rounded-[18px] bg-latar-muda p-7 md:gap-10 md:p-10">
+            <div className="flex min-w-0 flex-[1_1_420px] flex-col gap-3.5">
+              <h2 className="text-2xl font-extrabold leading-tight md:text-[28px]">
+                Kenapa kontraktor mengurus SBU di Atrahdis
+              </h2>
+              <div className="flex flex-wrap gap-x-10 gap-y-4">
+                <p className="min-w-0 flex-[1_1_380px] text-base leading-relaxed text-teks-muted">
+                  Penyebab pengajuan tertahan biasanya bukan berkas kurang, tapi data yang tidak saling
+                  cocok. Karena itu setiap berkas kami audit sebelum diajukan.
+                </p>
+                <p className="min-w-0 flex-[1_1_380px] text-base leading-relaxed text-teks-muted">
+                  Biaya ditulis di penawaran, tanpa tagihan di luar kesepakatan. Kalau pengajuan ditolak
+                  karena kelalaian kami, perbaikannya kami tanggung sesuai kontrak.
+                </p>
+              </div>
+              <div className="mt-1 flex flex-wrap items-end gap-x-10 gap-y-4">
+                {[
+                  [site.stats.sertifikat, "sertifikat diproses"],
+                  [site.stats.perusahaan, "perusahaan"],
+                  [site.stats.sejak, "mulai beroperasi"],
+                ].map(([angka, ket]) => (
+                  <span key={ket} className="flex flex-col">
+                    <strong className="text-[26px] font-extrabold">{angka}</strong>
+                    <span className="text-[13px] text-teks-muted">{ket}</span>
+                  </span>
+                ))}
+                <Tombol href="/tentang" varian="navy" kecil>
+                  TENTANG KAMI
+                </Tombol>
+              </div>
             </div>
-            <div className="mt-1 flex flex-wrap items-end gap-x-10 gap-y-4">
-              {[
-                [site.stats.sertifikat, "sertifikat diproses"],
-                [site.stats.perusahaan, "perusahaan"],
-                [site.stats.sejak, "mulai beroperasi"],
-              ].map(([angka, ket]) => (
-                <span key={ket} className="flex flex-col">
-                  <strong className="text-[26px] font-extrabold">{angka}</strong>
-                  <span className="text-[13px] text-teks-muted">{ket}</span>
-                </span>
-              ))}
-              <Tombol href="/tentang" varian="navy" kecil className="ml-auto">
-                TENTANG KAMI
-              </Tombol>
-            </div>
+            <figure className="m-0 flex min-w-0 flex-[1_1_440px] flex-col gap-2">
+              <Image
+                src="/images/kolase-sertifikat-klien.webp"
+                alt="Kolase klien Atrahdis bersama SBU, SKK, dan kartu anggota yang sudah terbit"
+                width={1400}
+                height={1120}
+                sizes="(min-width: 1024px) 540px, 100vw"
+                className="h-auto w-full rounded-[14px] border border-garis shadow-[0_12px_32px_rgba(13,34,66,0.10)]"
+              />
+              <figcaption className="text-[13px] text-teks-muted">
+                Sebagian SBU, SKK, dan kartu anggota klien yang kami urus. Data pribadi disamarkan.
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
