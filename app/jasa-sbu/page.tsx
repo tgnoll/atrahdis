@@ -93,23 +93,6 @@ export default function JasaSbu() {
 
       <LogoKlien judul="Dipercaya oleh Kontraktor Nasional dan Multinasional" />
 
-      <section className="bg-white">
-        <div className="mx-auto max-w-[880px] px-6 pb-2 pt-8">
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-4 rounded-[14px] border border-garis px-6 py-5">
-            <Icon name="perpanjang" size={36} className="shrink-0 text-oranye" />
-            <div className="flex min-w-0 flex-[1_1_320px] flex-col gap-1">
-              <h2 className="text-lg font-extrabold leading-snug">SBU sudah ada dan mau diperpanjang?</h2>
-              <p className="text-[15px] leading-relaxed text-teks-muted">
-                Syarat dan prosesnya berbeda dari pembuatan SBU baru.
-              </p>
-            </div>
-            <Tombol href="/perpanjangan-sbu" varian="navy" kecil>
-              JASA PERPANJANGAN SBU
-            </Tombol>
-          </div>
-        </div>
-      </section>
-
       <Founder eyebrow="Founder Atrahdis" judul="Berkas SBU Anda diaudit langsung oleh founder kami">
         <p className="text-base leading-relaxed text-teks-muted">
           Sejak 2016, {site.founder.name} menangani pengurusan{" "}
@@ -153,6 +136,23 @@ export default function JasaSbu() {
       </Bagian>
 
       <KenapaAtrahdis />
+
+      <section className="bg-white">
+        <div className="mx-auto -mt-8 max-w-[880px] px-6 pb-16 pt-0">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-4 rounded-[14px] border border-garis px-6 py-5">
+            <Icon name="perpanjang" size={36} className="shrink-0 text-oranye" />
+            <div className="flex min-w-0 flex-[1_1_320px] flex-col gap-1">
+              <h2 className="text-lg font-extrabold leading-snug">SBU sudah ada dan mau diperpanjang?</h2>
+              <p className="text-[15px] leading-relaxed text-teks-muted">
+                Syarat dan prosesnya berbeda dari pembuatan SBU baru.
+              </p>
+            </div>
+            <Tombol href="/perpanjangan-sbu" varian="navy" kecil>
+              JASA PERPANJANGAN SBU
+            </Tombol>
+          </div>
+        </div>
+      </section>
 
       <PaketSbu
         id="paket"
