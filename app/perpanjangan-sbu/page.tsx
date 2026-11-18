@@ -6,6 +6,7 @@ import { JsonLd, schemaLayanan } from "@/components/seo/JsonLd";
 import { FAQ } from "@/components/sections/FAQ";
 import { BacaJuga, KartuIkon, Langkah, type ItemIkon } from "@/components/sections/Kartu";
 import { Konsultasi } from "@/components/sections/Konsultasi";
+import { KenapaAtrahdis } from "@/components/sections/KenapaAtrahdis";
 import { PageHero } from "@/components/sections/PageHero";
 import { meta } from "@/lib/seo";
 
@@ -148,6 +149,8 @@ export default function PerpanjanganSbu() {
         <JudulBagian eyebrow="Cara kerja" judul="Cara Perpanjangan SBU di Atrahdis" />
         <Langkah items={langkah} latar="muda" />
       </Bagian>
+
+      <KenapaAtrahdis />
 
       <Bagian id="biaya" latar="navy">
         <JudulBagian eyebrow="Biaya & waktu" judul="Biaya dan Lama Proses Perpanjangan SBU" terang />

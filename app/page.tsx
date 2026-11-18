@@ -7,6 +7,7 @@ import { Icon, IconBox, type IconName } from "@/components/ui/Icon";
 import { LogoKlien, StudiKasus } from "@/components/sections/Bukti";
 import { FAQ } from "@/components/sections/FAQ";
 import { PaketSbu } from "@/components/sections/Harga";
+import { KenapaAtrahdis } from "@/components/sections/KenapaAtrahdis";
 import { KartuArtikel, Langkah } from "@/components/sections/Kartu";
 import { Konsultasi } from "@/components/sections/Konsultasi";
 import { Founder, Kutipan, PetaLokasi } from "@/components/sections/Profil";
@@ -159,6 +160,8 @@ export default function Beranda() {
           ))}
         </div>
       </Bagian>
+
+      <KenapaAtrahdis />
 
       <PaketSbu
         eyebrow="Biaya transparan"
