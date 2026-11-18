@@ -142,7 +142,7 @@ export default function Tentang() {
               ]}
             />
             <p className="text-sm leading-relaxed text-teks-muted">
-              Untuk izin tenaga kerja asing (KITAS &amp; IMTA), lihat layanan saudara kami,{" "}
+              Untuk perusahaan PMA dan klien asing, lihat layanan saudara kami,{" "}
               <a href={site.sisterSite.href} className="font-bold">
                 VerityX
               </a>

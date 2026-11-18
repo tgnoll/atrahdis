@@ -67,7 +67,7 @@ const faq = [
   },
   {
     q: "Apakah Atrahdis juga mengurus SKK konstruksi?",
-    a: "Ya. Kami membantu pembuatan SKK tenaga ahli jenjang 5–9 yang dibutuhkan sebagai syarat SBU, termasuk KTA asosiasi.",
+    a: "Ya. Kami membantu pembuatan SKK tenaga ahli jenjang 4–9 yang dibutuhkan sebagai syarat SBU, termasuk KTA asosiasi.",
   },
 ];
 

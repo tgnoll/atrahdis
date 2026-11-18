@@ -29,7 +29,7 @@ export const menuLayanan: { href: string; label: string; ringkas: string; ikon: 
   {
     href: "/jasa-skk",
     label: "Jasa Pembuatan SKK",
-    ringkas: "SKK tenaga ahli jenjang 5–9",
+    ringkas: "SKK tenaga ahli jenjang 4–9",
     ikon: "orang",
   },
   {

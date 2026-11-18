@@ -28,7 +28,7 @@ const rincian: string[][] = [
     "Surveilans, update OSS, dan pengecekan KSWP",
   ],
   [
-    "SKK tenaga ahli jenjang 5–9",
+    "SKK tenaga ahli jenjang 4–9",
     "Untuk PJBU, PJTBU, dan PJSKBU",
     "KTA asosiasi bila belum ada",
   ],

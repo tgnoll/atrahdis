@@ -54,8 +54,8 @@ export const layanan: Layanan[] = [
     ikon: "orang",
     nama: "SKK tenaga ahli",
     judulKartu: "Jasa Pembuatan SKK Konstruksi",
-    ringkas: "Jenjang 5–9, syarat wajib SBU",
-    deskripsi: "SKK tenaga ahli jenjang 5–9 untuk PJBU, PJTBU, dan PJSKBU, serta KTA asosiasi.",
+    ringkas: "Jenjang 4–9, syarat wajib SBU",
+    deskripsi: "SKK tenaga ahli jenjang 4–9 untuk PJBU, PJTBU, dan PJSKBU, serta KTA asosiasi.",
     labelHarga: "mulai",
     harga: "Rp5,97 jt",
   },
@@ -115,6 +115,7 @@ export const paketSbu = [
 
 /** Harga SKK per jenjang (/jasa-skk). Per orang, per jenjang, per subklasifikasi. */
 export const hargaSkk = [
+  { jenjang: "Jenjang 4", harga: "Hubungi kami" }, // TODO tim: harga J4 belum ada
   { jenjang: "Jenjang 5 dan 6", harga: "Rp5.970.000" },
   { jenjang: "Jenjang 7", harga: "Rp7.470.000" },
   { jenjang: "Jenjang 8", harga: "Rp8.970.000" },

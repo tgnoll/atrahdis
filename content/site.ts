@@ -62,7 +62,7 @@ export const site = {
     klienLainnya: "118+", // dipakai di kalimat "dan 118+ perusahaan lainnya"; sama dengan jumlah perusahaan
   },
 
-  sisterSite: { label: "VerityX: KITAS & IMTA", href: "https://verityx.id" },
+  sisterSite: { label: "VerityX: PMA & klien asing", href: "https://verityx.id" },
 } as const;
 
 export const fullAddress = [

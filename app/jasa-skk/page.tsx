@@ -9,9 +9,9 @@ import { PageHero } from "@/components/sections/PageHero";
 import { meta } from "@/lib/seo";
 
 const DESKRIPSI =
-  "Jasa pembuatan SKK konstruksi jenjang 5–9 untuk tenaga ahli dan syarat SBU. Pemetaan jenjang dan subklasifikasi sampai sertifikat terbit.";
+  "Jasa pembuatan SKK konstruksi jenjang 4–9 untuk tenaga ahli dan syarat SBU. Pemetaan jenjang dan subklasifikasi sampai sertifikat terbit.";
 
-export const metadata = meta("Jasa Pembuatan SKK Konstruksi Jenjang 5–9 | Atrahdis", DESKRIPSI, "/jasa-skk");
+export const metadata = meta("Jasa Pembuatan SKK Konstruksi Jenjang 4–9 | Atrahdis", DESKRIPSI, "/jasa-skk");
 
 const harga = (h: string) => (tampilHarga ? h : HARGA_DISEMBUNYIKAN);
 
@@ -65,7 +65,7 @@ const faq = [
   {
     q: "Berapa biaya pembuatan SKK konstruksi?",
     a: tampilHarga
-      ? "Jenjang 5 dan 6 Rp5.970.000, Jenjang 7 Rp7.470.000, dan Jenjang 8 Rp8.970.000, per orang, per jenjang, per subklasifikasi. Jenjang 9 dihitung setelah konsultasi."
+      ? "Jenjang 5 dan 6 Rp5.970.000, Jenjang 7 Rp7.470.000, dan Jenjang 8 Rp8.970.000, per orang, per jenjang, per subklasifikasi. Jenjang 4 dan Jenjang 9 dihitung setelah konsultasi."
       : "Biaya dihitung per orang, per jenjang, per subklasifikasi. Rinciannya kami kirim setelah konsultasi.",
   },
   {
@@ -94,7 +94,7 @@ export default function JasaSkk() {
       <PageHero
         breadcrumb="Jasa SKK"
         path="/jasa-skk"
-        eyebrow="SKK konstruksi jenjang 5–9"
+        eyebrow="SKK konstruksi jenjang 4–9"
         judul="Jasa Pembuatan SKK Konstruksi untuk Tenaga Ahli dan Syarat SBU"
         pengantar={
           <>
@@ -192,7 +192,7 @@ export default function JasaSkk() {
           tombolKirim: "KIRIM & TERIMA HASIL PEMETAAN DI WHATSAPP",
           pertanyaan: [
             { label: "Untuk jabatan apa?", ringkas: "Jabatan", opsi: ["PJBU", "PJTBU", "PJSKBU", "Belum tahu"], wajib: true },
-            { label: "Jenjang yang dibutuhkan", ringkas: "Jenjang", opsi: ["Jenjang 5–6", "Jenjang 7", "Jenjang 8–9", "Belum tahu"] },
+            { label: "Jenjang yang dibutuhkan", ringkas: "Jenjang", opsi: ["Jenjang 4–6", "Jenjang 7", "Jenjang 8–9", "Belum tahu"] },
             { label: "Berapa orang tenaga ahli?", ringkas: "Jumlah", opsi: ["1 orang", "2–5 orang", "Lebih dari 5"] },
           ],
         }}
