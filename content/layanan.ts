@@ -89,7 +89,7 @@ export const paketSbu = [
   },
   {
     nama: "SBU Menengah",
-    harga: "Rp18 jt",
+    harga: "Mulai Rp18 jt",
     untuk: "Untuk tender Rp2–5 miliar",
     unggulan: true,
     termasuk: [
@@ -101,7 +101,7 @@ export const paketSbu = [
   },
   {
     nama: "SBU Besar",
-    harga: "Rp50 jt+",
+    harga: "Mulai Rp50 jt",
     untuk: "Untuk tender Rp10–50 miliar",
     unggulan: false,
     termasuk: [
