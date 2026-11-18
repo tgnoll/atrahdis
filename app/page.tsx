@@ -47,7 +47,7 @@ const faq = [
   {
     q: "Berapa biaya pembuatan SBU konstruksi?",
     a: tampilHarga
-      ? "SBU Kecil mulai Rp4,5 juta, SBU Menengah Rp18 juta, dan SBU Besar mulai Rp50 juta. Biaya final mengikuti jumlah subklasifikasi dan kondisi berkas, ditulis di kontrak setelah audit."
+      ? "SBU Kecil mulai sekitar Rp4,8 juta, SBU Menengah Rp18 juta, dan SBU Besar mulai Rp50 juta. Biaya final mengikuti jumlah subklasifikasi dan kondisi berkas, ditulis di kontrak setelah audit."
       : "Biaya mengikuti kualifikasi, jumlah subklasifikasi, dan kondisi berkas. Rinciannya ditulis di kontrak setelah audit berkas gratis.",
   },
   {

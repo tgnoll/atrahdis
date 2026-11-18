@@ -37,7 +37,7 @@ export const layanan: Layanan[] = [
     deskripsi:
       "SBU baru kualifikasi Kecil, Menengah, dan Besar, termasuk pemilihan subklasifikasi dan KBLI yang tepat.",
     labelHarga: "mulai",
-    harga: "Rp4,5 jt",
+    harga: "Rp4,8 jt",
   },
   {
     href: "/perpanjangan-sbu",
@@ -77,7 +77,7 @@ export const hargaTampil = (l: Pick<Layanan, "harga">) =>
 export const paketSbu = [
   {
     nama: "SBU Kecil",
-    harga: "Mulai Rp4,5 jt",
+    harga: "Mulai Rp4,8 jt",
     untuk: "Untuk kontraktor kualifikasi kecil",
     unggulan: false,
     termasuk: [
