@@ -62,7 +62,7 @@ docs/                keputusan-tertunda.md
 
 ## Yang belum ada (jujur soal isi preview)
 
-- **Form** membuka WhatsApp dengan pesan terisi (termasuk sumber iklan). Belum menyimpan ke Google Sheet "Leads Atrahdis".
+- **Form** membuka WhatsApp dengan pesan terisi (termasuk sumber iklan) dan menyimpan lead ke tab "Lead Web" di Google Sheet "Leads Atrahdis" lewat /api/lead dan Apps Script (`tools/apps-script-lead-web.gs`).
 - **GTM dan Meta Pixel belum dipasang**, jadi preview ini jangan dipakai sebagai tujuan iklan.
 - **Artikel blog** baru judul; halaman artikel menaut ke artikel asli di atrahdis.id.
 - **Gambar yang belum ada di repo:** foto Dimas (tampil inisial) dan gambar sampul artikel.
