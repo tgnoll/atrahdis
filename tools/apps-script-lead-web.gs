@@ -1,4 +1,7 @@
 /**
+ * @OnlyCurrentDoc
+ */
+/**
  * Apps Script untuk Sheet "Leads Atrahdis": menerima lead dari form web atrahdis
  * (lewat /api/lead) dan menulisnya ke tab "Lead Web". Tab dibuat otomatis kalau belum ada.
  *
