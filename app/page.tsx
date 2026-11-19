@@ -164,7 +164,7 @@ export default function Beranda() {
       <PaketSbu
         eyebrow="Biaya"
         judul="Biaya Pembuatan SBU Konstruksi 2026"
-        pengantar="Biaya mengikuti kualifikasi, jumlah subklasifikasi, dan kondisi berkas. Angka pastinya kami tulis di penawaran setelah audit gratis. Tender di atas Rp50 miliar: hubungi kami langsung."
+        pengantar="Biaya mengikuti kualifikasi, jumlah subklasifikasi, dan kondisi berkas. Angka pastinya kami tulis di penawaran setelah audit gratis."
       />
 
       <Konsultasi

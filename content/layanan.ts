@@ -59,7 +59,7 @@ export const layanan: Layanan[] = [
 export const paketSbu = [
   {
     nama: "SBU Kecil",
-    untuk: "Untuk kontraktor kualifikasi kecil",
+    untuk: "Penjualan tahunan sampai Rp15 miliar",
     unggulan: false,
     termasuk: [
       "Audit berkas sebelum pembayaran",
@@ -70,7 +70,7 @@ export const paketSbu = [
   },
   {
     nama: "SBU Menengah",
-    untuk: "Untuk tender Rp2–5 miliar",
+    untuk: "Untuk proyek Rp15–50 miliar",
     unggulan: true,
     termasuk: [
       "Cek syarat keuangan dan tenaga ahli",
@@ -81,7 +81,7 @@ export const paketSbu = [
   },
   {
     nama: "SBU Besar",
-    untuk: "Untuk tender Rp10–50 miliar",
+    untuk: "Untuk proyek di atas Rp50 miliar",
     unggulan: false,
     termasuk: [
       "Pemetaan syarat sebelum pengajuan",
