@@ -20,7 +20,7 @@ export function LogoKlien({ judul }: { judul: string }) {
                   height={k.tinggi ?? 48}
                   unoptimized={k.logo.endsWith(".svg")}
                   style={{ maxHeight: k.tinggi ?? 48 }}
-                  className="w-auto max-w-full select-none object-contain opacity-80 blur-[2px]"
+                  className="w-auto max-w-full select-none object-contain opacity-90 blur-[1px]"
                 />
               ) : (
                 <span className="text-center text-[15px] font-extrabold leading-tight text-teks-muted">
