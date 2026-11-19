@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Footer, TombolWA } from "@/components/layout/Footer";
 import { Header, TopBar } from "@/components/layout/Header";
 import { JsonLd, schemaUsaha } from "@/components/seo/JsonLd";
+import { Pelacak } from "@/components/seo/Pelacak";
 import { site, siteLive } from "@/content/site";
 import "./globals.css";
 
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main className="flex-1">{children}</main>
         <Footer />
         <TombolWA />
+        <Pelacak />
       </body>
     </html>
   );
