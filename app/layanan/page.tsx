@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { hargaTampil, layanan, tampilHarga } from "@/content/layanan";
+import { layanan } from "@/content/layanan";
 import { Bagian, JudulBagian, Tombol } from "@/components/ui/Bagian";
 import { CheckList, IconBox } from "@/components/ui/Icon";
 import { LogoKlien } from "@/components/sections/Bukti";
@@ -80,10 +80,6 @@ export default function Layanan() {
                     <h3 className="text-xl font-extrabold">{l.judulKartu}</h3>
                     <span className="text-sm text-teks-muted">{l.ringkas}</span>
                   </div>
-                  <span className="flex flex-none flex-col items-end">
-                    <span className="text-[11px] text-teks-muted">{tampilHarga && l.harga ? l.labelHarga : "biaya"}</span>
-                    <span className="font-extrabold text-oranye-teks">{hargaTampil(l)}</span>
-                  </span>
                 </div>
                 <CheckList items={rincian[i]} className="flex-1 text-[15px] leading-snug" />
                 {adaHalaman ? (

@@ -1,20 +1,13 @@
 /**
- * Layanan + harga yang tampil di situs.
+ * Layanan yang tampil di situs.
  *
- * Keputusan tim yang belum final disimpan sebagai flag di sini, supaya cukup
- * mengubah satu baris tanpa menyentuh komponen. Lihat docs/keputusan-tertunda.md.
+ * Harga TIDAK ditampilkan di halaman mana pun (KEPUTUSAN-FINAL butir 1, Nicx 19 Nov 2026).
+ * Angka harga hanya boleh muncul di kalkulator dan wajib diambil dari catalog_core.py,
+ * jadi file ini sengaja tidak menyimpan angka harga apa pun.
  */
 import type { IconName } from "@/components/ui/Icon";
 
-/**
- * Tampilkan harga ke publik?
- * true  = angka dari atrahdis.id/biaya tampil.
- * false = semua harga diganti "Biaya setelah audit".
- * MENUNGGU KEPUTUSAN TIM.
- */
-export const tampilHarga = true;
-
-export const HARGA_DISEMBUNYIKAN = "Setelah audit";
+export const HARGA_DISEMBUNYIKAN = "Biaya setelah audit";
 
 export type Layanan = {
   href: string;
@@ -23,8 +16,6 @@ export type Layanan = {
   judulKartu: string;
   ringkas: string;
   deskripsi: string;
-  labelHarga: "mulai" | "biaya";
-  harga?: string;
 };
 
 export const layanan: Layanan[] = [
@@ -36,8 +27,6 @@ export const layanan: Layanan[] = [
     ringkas: "Kualifikasi Kecil, Menengah, Besar",
     deskripsi:
       "SBU baru kualifikasi Kecil, Menengah, dan Besar, termasuk pemilihan subklasifikasi dan KBLI yang tepat.",
-    labelHarga: "mulai",
-    harga: "Rp4,8 jt",
   },
   {
     href: "/perpanjangan-sbu",
@@ -47,7 +36,6 @@ export const layanan: Layanan[] = [
     ringkas: "Sebelum masa berlaku habis",
     deskripsi:
       "Perpanjangan dan naik kualifikasi SBU, plus surveilans, update OSS, dan KSWP supaya SBU tetap aktif.",
-    labelHarga: "biaya",
   },
   {
     href: "/jasa-skk",
@@ -56,8 +44,6 @@ export const layanan: Layanan[] = [
     judulKartu: "Jasa Pembuatan SKK Konstruksi",
     ringkas: "Jenjang 4–9, syarat wajib SBU",
     deskripsi: "SKK tenaga ahli jenjang 4–9 untuk PJBU, PJTBU, dan PJSKBU, serta KTA asosiasi.",
-    labelHarga: "mulai",
-    harga: "Rp5,97 jt",
   },
   {
     href: "/layanan",
@@ -66,18 +52,13 @@ export const layanan: Layanan[] = [
     judulKartu: "Dokumen Pendukung Tender",
     ringkas: "KAP, ISO 37001, SMK3, Bank Garansi",
     deskripsi: "Laporan KAP, ISO 37001, SMK3, Bank Garansi, NIB, PKKPR, dan PBG untuk syarat tender.",
-    labelHarga: "biaya",
   },
 ];
-
-export const hargaTampil = (l: Pick<Layanan, "harga">) =>
-  tampilHarga && l.harga ? l.harga : HARGA_DISEMBUNYIKAN;
 
 /** Paket SBU per kualifikasi (beranda + /jasa-sbu). */
 export const paketSbu = [
   {
     nama: "SBU Kecil",
-    harga: "Mulai Rp4,8 jt",
     untuk: "Untuk kontraktor kualifikasi kecil",
     unggulan: false,
     termasuk: [
@@ -89,7 +70,6 @@ export const paketSbu = [
   },
   {
     nama: "SBU Menengah",
-    harga: "Mulai Rp18 jt",
     untuk: "Untuk tender Rp2–5 miliar",
     unggulan: true,
     termasuk: [
@@ -101,7 +81,6 @@ export const paketSbu = [
   },
   {
     nama: "SBU Besar",
-    harga: "Mulai Rp50 jt",
     untuk: "Untuk tender Rp10–50 miliar",
     unggulan: false,
     termasuk: [
@@ -113,14 +92,8 @@ export const paketSbu = [
   },
 ];
 
-/** Harga SKK per jenjang (/jasa-skk). Per orang, per jenjang, per subklasifikasi. */
-export const hargaSkk = [
-  { jenjang: "Jenjang 4", harga: "Hubungi kami" }, // TODO tim: harga J4 belum ada
-  { jenjang: "Jenjang 5 dan 6", harga: "Rp5.970.000" },
-  { jenjang: "Jenjang 7", harga: "Rp7.470.000" },
-  { jenjang: "Jenjang 8", harga: "Rp8.970.000" },
-  { jenjang: "Jenjang 9", harga: "Hubungi kami" }, // TODO tim: harga J9 belum ada
-];
+/** Jenjang SKK yang diurus (/jasa-skk). Biaya dihitung per orang, per jenjang, per subklasifikasi. */
+export const jenjangSkk = ["Jenjang 4", "Jenjang 5 dan 6", "Jenjang 7", "Jenjang 8", "Jenjang 9"];
 
 /** Empat langkah kerja yang sama di beranda dan /jasa-sbu. */
 export const langkahSbu = [

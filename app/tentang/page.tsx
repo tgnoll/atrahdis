@@ -13,7 +13,7 @@ export const metadata = meta(
   "/tentang",
 );
 
-// TODO tim: pastikan tahun (web lama menulis 2016, artboard lama 2017) dan isi tiap tonggak.
+// Tahun berdiri: 2016 mulai menangani SBU, 2017 PT berdiri (KEPUTUSAN-FINAL butir 11).
 const perjalanan = [
   { tahun: "2016", judul: "Mulai menangani SBU", isi: `${site.founder.name} mulai mengurus SBU konstruksi untuk kontraktor secara langsung.` },
   { tahun: "2017", judul: "PT berdiri", isi: `Layanan dilembagakan sebagai ${site.legalName}.` },
@@ -61,6 +61,8 @@ export default function Tentang() {
               [site.stats.sertifikat, "sertifikat diproses"],
               [site.stats.perusahaan, "perusahaan didampingi"],
               [site.stats.sejak, "mulai beroperasi"],
+              [site.stats.klaimGaransi, "klaim garansi dicairkan"],
+              [site.stats.klienKembali, "klien kembali di tahun berikutnya"],
             ].map(([angka, ket]) => (
               <div key={ket} className="flex min-w-0 flex-[1_1_200px] flex-col-reverse gap-1 rounded-[14px] border border-white/20 bg-white/[0.08] px-6 py-5">
                 <dt className="text-sm text-teks-redup">{ket}</dt>

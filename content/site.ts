@@ -36,30 +36,29 @@ export const site = {
     closes: "17:00",
   },
 
-  // TODO tim: email kantor belum ada di web lama. Kosong = tidak ditampilkan.
+  // Email TIDAK ditampilkan (KEPUTUSAN-FINAL butir 12). Kanal tunggal: WhatsApp.
   email: "",
 
   /**
-   * Peta. Sementara memakai pencarian nama + alamat.
-   * TODO tim: ganti dengan URL embed dari profil Google Business Atrahdis.
+   * Peta: alamat teks + link Google Maps, tanpa embed hasil pencarian (KEPUTUSAN-FINAL butir 13).
+   * Embed dari profil Google Business dipasang setelah Place ID diberikan.
    */
-  mapsEmbedUrl:
-    "https://www.google.com/maps?q=PT+Atrahdis+Idea+Nusantara+Beltway+Office+Park+Jakarta&output=embed",
   mapsLink:
     "https://www.google.com/maps/search/?api=1&query=PT+Atrahdis+Idea+Nusantara+Beltway+Office+Park+Jakarta",
 
   founder: {
-    // TODO tim: ejaan dipakai konsisten di seluruh situs ("Nicx" atau "Nicky").
+    // Ejaan "Nicx" di semua tempat (KEPUTUSAN-FINAL butir 4).
     name: "Nicx",
     role: "Founder & Principal Consultant",
   },
 
-  // Angka yang dikutip di beberapa halaman. Ubah di sini saja.
+  // Angka yang dikutip di beberapa halaman (KEPUTUSAN-FINAL butir 10, sesuai atrahdis.id). Ubah di sini saja.
   stats: {
     sejak: "2016",
     sertifikat: "280+",
     perusahaan: "118+",
-    klienLainnya: "118+", // dipakai di kalimat "dan 118+ perusahaan lainnya"; sama dengan jumlah perusahaan
+    klaimGaransi: "0",
+    klienKembali: "3 dari 5",
   },
 
   sisterSite: { label: "VerityX: PMA & klien asing", href: "https://verityx.id" },

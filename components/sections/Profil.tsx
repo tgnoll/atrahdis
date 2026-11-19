@@ -49,7 +49,7 @@ export function Kutipan({ children }: { children: string }) {
   );
 }
 
-/** Alamat + peta. Semua data dari content/site.ts. */
+/** Alamat + link Google Maps (tanpa embed peta). Semua data dari content/site.ts. */
 export function PetaLokasi() {
   return (
     <section id="lokasi" className="scroll-mt-24 bg-white">
@@ -88,13 +88,23 @@ export function PetaLokasi() {
             </Tombol>
           </div>
         </div>
-        <iframe
-          src={site.mapsEmbedUrl}
-          title={`Peta lokasi kantor ${site.legalName}`}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="min-h-[380px] min-w-0 flex-[1.3_1_480px] rounded-2xl border border-garis"
-        />
+        <a
+          href={site.mapsLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex min-h-[300px] min-w-0 flex-[1.3_1_480px] flex-col items-center justify-center gap-3 rounded-2xl bg-navy p-8 text-center text-white no-underline hover:text-white"
+        >
+          <Icon name="lokasi" className="text-oranye" />
+          <strong className="text-xl font-extrabold">{site.address.building}</strong>
+          <span className="text-[15px] leading-relaxed text-teks-redup">
+            {site.address.street}, {site.address.area}
+            <br />
+            {site.address.city} {site.address.postalCode}
+          </span>
+          <span className="mt-2 rounded-lg bg-oranye px-5 py-3 text-sm font-extrabold text-navy">
+            Buka di Google Maps →
+          </span>
+        </a>
       </div>
     </section>
   );

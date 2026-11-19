@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { artikel } from "@/content/blog";
-import { langkahSbu, layanan, tampilHarga } from "@/content/layanan";
+import { langkahSbu, layanan } from "@/content/layanan";
 import { site } from "@/content/site";
 import { Bagian, Eyebrow, JudulBagian, Tombol } from "@/components/ui/Bagian";
 import { Icon, IconBox, type IconName } from "@/components/ui/Icon";
@@ -46,13 +46,11 @@ const linimasa = [
 const faq = [
   {
     q: "Berapa biaya pembuatan SBU konstruksi?",
-    a: tampilHarga
-      ? "SBU Kecil mulai sekitar Rp4,8 juta, SBU Menengah mulai Rp18 juta, dan SBU Besar mulai Rp50 juta. Biaya final mengikuti jumlah subklasifikasi dan kondisi berkas, ditulis di kontrak setelah audit."
-      : "Biaya mengikuti kualifikasi, jumlah subklasifikasi, dan kondisi berkas. Rinciannya ditulis di kontrak setelah audit berkas gratis.",
+    a: "Biaya mengikuti kualifikasi, jumlah subklasifikasi, dan kondisi berkas. Rinciannya ditulis di penawaran setelah audit berkas gratis.",
   },
   {
     q: "Berapa lama proses pembuatan SBU konstruksi?",
-    a: "Tergantung kualifikasi, jumlah subklasifikasi, dan kelengkapan berkas. Estimasi waktunya kami tulis di kontrak setelah audit.",
+    a: "Bertingkat sesuai kondisi perusahaan. Tercepat 3 hari kerja untuk SBU Kecil jika berkas lengkap dan SKK sudah ada. Kualifikasi Kecil umumnya 2–4 minggu, sedangkan kualifikasi Besar atau PMA 4–8 minggu. Estimasi pasti ditulis di kontrak setelah audit.",
   },
   {
     q: "Apa saja syarat pembuatan SBU konstruksi?",
@@ -164,9 +162,9 @@ export default function Beranda() {
       <KenapaAtrahdis />
 
       <PaketSbu
-        eyebrow="Biaya transparan"
+        eyebrow="Biaya"
         judul="Biaya Pembuatan SBU Konstruksi 2026"
-        pengantar="Biaya final mengikuti jumlah subklasifikasi dan kondisi berkas, ditulis di kontrak setelah audit. Tender di atas Rp50 miliar: hubungi kami langsung."
+        pengantar="Biaya mengikuti kualifikasi, jumlah subklasifikasi, dan kondisi berkas. Angka pastinya kami tulis di penawaran setelah audit gratis. Tender di atas Rp50 miliar: hubungi kami langsung."
       />
 
       <Konsultasi

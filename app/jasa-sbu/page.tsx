@@ -48,7 +48,7 @@ const syarat = [
 const faq = [
   {
     q: "Berapa lama proses pembuatan SBU?",
-    a: "Tergantung kelengkapan berkas, kualifikasi, dan jumlah subklasifikasi. Estimasi kami tulis di penawaran setelah audit.",
+    a: "Bertingkat sesuai kondisi perusahaan. Tercepat 3 hari kerja untuk SBU Kecil jika berkas lengkap dan SKK sudah ada. Kualifikasi Kecil umumnya 2–4 minggu, sedangkan kualifikasi Besar atau PMA 4–8 minggu. Estimasi pasti ditulis di kontrak setelah audit.",
   },
   {
     q: "Berapa biaya jasa pembuatan SBU?",
@@ -66,9 +66,12 @@ const faq = [
   },
   {
     q: "Perusahaan saya di luar Jakarta, bisa?",
-    a: "Bisa. Seluruh proses berjalan online lewat WhatsApp dan email.",
+    a: "Bisa. Seluruh proses berjalan online lewat WhatsApp.",
   },
-  // TODO tim: tambahkan FAQ "Bagaimana sistem pembayarannya?" setelah skema DP/pelunasan diputuskan.
+  {
+    q: "Bagaimana sistem pembayarannya?",
+    a: "Standarnya DP 50% setelah penawaran dan kontrak disepakati. Sisanya dilunasi sebelum sertifikat diserahkan. Untuk perusahaan dengan proses pembayaran berlapis, skema DP bisa dibicarakan.",
+  },
 ];
 
 export default function JasaSbu() {
@@ -117,7 +120,7 @@ export default function JasaSbu() {
       <Bagian latar="muda">
         <JudulBagian
           judul="Proses jasa pembuatan SBU di Atrahdis"
-          pengantar="Empat langkah dari konsultasi sampai sertifikat di tangan. Estimasi waktu kami tulis di kontrak setelah audit."
+          pengantar="Empat langkah dari konsultasi sampai sertifikat di tangan. Estimasi waktu bertingkat sesuai kualifikasi dan ditulis di kontrak setelah audit."
         />
         <Langkah items={langkahSbu} />
       </Bagian>

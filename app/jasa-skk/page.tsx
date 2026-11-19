@@ -1,5 +1,5 @@
 import { ambilArtikel } from "@/content/blog";
-import { HARGA_DISEMBUNYIKAN, hargaSkk, tampilHarga } from "@/content/layanan";
+import { jenjangSkk } from "@/content/layanan";
 import { Bagian, JudulBagian } from "@/components/ui/Bagian";
 import { JsonLd, schemaLayanan } from "@/components/seo/JsonLd";
 import { FAQ } from "@/components/sections/FAQ";
@@ -13,7 +13,11 @@ const DESKRIPSI =
 
 export const metadata = meta("Jasa Pembuatan SKK Konstruksi Jenjang 4–9 | Atrahdis", DESKRIPSI, "/jasa-skk");
 
-const harga = (h: string) => (tampilHarga ? h : HARGA_DISEMBUNYIKAN);
+const komponenBiaya = [
+  { judul: "Jumlah tenaga ahli", isi: "Biaya dihitung per orang yang disertifikasi." },
+  { judul: "Jenjang SKK", isi: "Jenjang 4 sampai 9 punya syarat dan proses uji yang berbeda." },
+  { judul: "Subklasifikasi", isi: "Setiap subklasifikasi yang dibutuhkan SBU dihitung terpisah." },
+];
 
 const fungsi: ItemIkon[] = [
   {
@@ -64,9 +68,7 @@ const langkah = [
 const faq = [
   {
     q: "Berapa biaya pembuatan SKK konstruksi?",
-    a: tampilHarga
-      ? "Jenjang 5 dan 6 Rp5.970.000, Jenjang 7 Rp7.470.000, dan Jenjang 8 Rp8.970.000, per orang, per jenjang, per subklasifikasi. Jenjang 4 dan Jenjang 9 dihitung setelah konsultasi."
-      : "Biaya dihitung per orang, per jenjang, per subklasifikasi. Rinciannya kami kirim setelah konsultasi.",
+    a: "Biaya dihitung per orang, per jenjang, per subklasifikasi. Rinciannya kami kirim setelah konsultasi gratis.",
   },
   {
     q: "Apakah SKK bisa diurus bersamaan dengan SBU?",
@@ -108,16 +110,16 @@ export default function JasaSkk() {
         samping={
           <div className="flex flex-col rounded-2xl bg-white p-6">
             <span className="mb-3 text-[13px] font-extrabold tracking-[1.5px] text-teks-muted">
-              BIAYA PEMBUATAN SKK KONSTRUKSI
+              JENJANG SKK YANG KAMI URUS
             </span>
-            {hargaSkk.map((h) => (
-              <div key={h.jenjang} className="flex items-center justify-between gap-3 border-t border-garis py-[13px]">
-                <strong>{h.jenjang}</strong>
-                <span className="text-lg font-extrabold text-oranye-teks">{harga(h.harga)}</span>
+            {jenjangSkk.map((j) => (
+              <div key={j} className="flex items-center justify-between gap-3 border-t border-garis py-[13px]">
+                <strong>{j}</strong>
+                <span className="text-sm font-extrabold text-oranye-teks">Biaya setelah audit</span>
               </div>
             ))}
             <span className="mt-1.5 text-xs leading-normal text-teks-muted">
-              Per orang, per jenjang, per subklasifikasi.
+              Biaya dihitung per orang, per jenjang, per subklasifikasi.
             </span>
           </div>
         }
@@ -162,21 +164,15 @@ export default function JasaSkk() {
       <Bagian id="biaya" latar="navy">
         <JudulBagian eyebrow="Biaya SKK" judul="Biaya Pembuatan SKK Konstruksi 2026" terang />
         <div className="flex w-full flex-wrap items-stretch gap-4">
-          {hargaSkk.map((h) => (
-            <article key={h.jenjang} className="flex min-w-0 flex-[1_1_220px] flex-col gap-2 rounded-[14px] bg-white p-[26px] text-center">
-              <span className="font-extrabold">{h.jenjang}</span>
-              <strong className="text-[26px] font-extrabold">{harga(h.harga)}</strong>
-              <a
-                href="#konsultasi"
-                className="mt-2 rounded-lg bg-navy p-3 text-sm font-extrabold text-white no-underline hover:text-white"
-              >
-                Konsultasi {h.jenjang}
-              </a>
+          {komponenBiaya.map((k) => (
+            <article key={k.judul} className="flex min-w-0 flex-[1_1_220px] flex-col gap-2 rounded-[14px] bg-white p-[26px] text-center">
+              <strong className="text-xl font-extrabold">{k.judul}</strong>
+              <p className="text-sm leading-relaxed text-teks-muted">{k.isi}</p>
             </article>
           ))}
         </div>
         <p className="max-w-[720px] text-center text-sm leading-relaxed text-teks-redup">
-          Harga per orang, per jenjang, per subklasifikasi. Kami sarankan SKK diurus bersamaan dengan
+          Rincian biaya kami kirim setelah konsultasi gratis. Kami sarankan SKK diurus bersamaan dengan
           SBU supaya timeline lebih singkat dan tidak tertahan di tengah proses.
         </p>
       </Bagian>

@@ -1,7 +1,7 @@
-import { HARGA_DISEMBUNYIKAN, paketSbu, tampilHarga } from "@/content/layanan";
+import { HARGA_DISEMBUNYIKAN, paketSbu } from "@/content/layanan";
 import { CheckList } from "@/components/ui/Icon";
 
-/** Tiga paket SBU (Kecil/Menengah/Besar) di atas latar separuh navy. */
+/** Tiga paket SBU (Kecil/Menengah/Besar) tanpa nominal harga, di atas latar separuh navy. */
 export function PaketSbu({
   id = "biaya",
   eyebrow,
@@ -37,8 +37,8 @@ export function PaketSbu({
                 </span>
               )}
               <h3 className="text-center text-xl font-extrabold">{p.nama}</h3>
-              <span className="text-center text-[30px] font-extrabold leading-tight">
-                {tampilHarga ? p.harga : HARGA_DISEMBUNYIKAN}
+              <span className="text-center text-[22px] font-extrabold leading-tight text-oranye-teks">
+                {HARGA_DISEMBUNYIKAN}
               </span>
               <span className="text-center text-sm text-teks-muted">{p.untuk}</span>
               <a
