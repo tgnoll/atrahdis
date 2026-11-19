@@ -13,7 +13,7 @@ export function TopBar() {
           {site.legalName} · {site.tagline}
         </span>
         <span>
-          {site.hours.display} · WhatsApp{" "}
+          Konsultasi gratis via WhatsApp{" "}
           <a href={waLink()} className="font-bold text-white no-underline hover:text-oranye">
             {site.whatsapp.display}
           </a>

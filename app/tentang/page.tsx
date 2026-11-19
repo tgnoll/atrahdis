@@ -123,7 +123,6 @@ export default function Tentang() {
               ["Nama layanan", site.brand],
               ["NIB", site.nib],
               ["Alamat", fullAddress],
-              ["Jam kerja", site.hours.panjang],
             ].map(([k, v]) => (
               <div key={k} className="flex flex-wrap gap-x-6 gap-y-1 border-b border-garis py-3.5 last:border-b-0">
                 <dt className="w-40 flex-none text-sm font-bold text-teks-muted">{k}</dt>

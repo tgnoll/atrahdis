@@ -33,7 +33,6 @@ export function Footer() {
           <div className="flex flex-[1_1_260px] flex-col gap-2">
             <span className="font-extrabold text-white">Kontak</span>
             <span className="text-sm leading-normal text-teks-redup">{fullAddress}</span>
-            <span className="text-sm text-teks-redup">{site.hours.display}</span>
             <a href={waLink()} className="text-sm font-bold text-white hover:text-oranye">
               WhatsApp {site.whatsapp.display}
             </a>

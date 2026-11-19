@@ -73,10 +73,6 @@ export function PetaLokasi() {
               </address>
             </div>
             <div className="flex items-start gap-3">
-              <Icon name="jam" className="text-oranye-teks" />
-              <span>{site.hours.panjang}</span>
-            </div>
-            <div className="flex items-start gap-3">
               <Icon name="chat" className="text-oranye-teks" />
               <a href={waLink()} className="font-bold">
                 WhatsApp {site.whatsapp.display}

@@ -31,9 +31,9 @@ const kartu: { ikon: IconName; label: string; judul: string; isi: string; href: 
   },
   {
     ikon: "jam",
-    label: "JAM KERJA",
-    judul: "Senin–Jumat",
-    isi: "08.00–17.00 WIB. Kunjungan kantor dengan janji temu.",
+    label: "KUNJUNGAN KANTOR",
+    judul: "Dengan janji temu",
+    isi: "Atur jadwal kunjungan lewat WhatsApp lebih dulu.",
     href: waLink("Halo Atrahdis, saya ingin membuat janji temu di kantor."),
     aksi: "Buat janji temu →",
   },
@@ -43,7 +43,7 @@ const faq = [
   { q: "Apakah konsultasinya berbayar?", a: "Tidak. Konsultasi dan audit berkas awal gratis, tanpa komitmen." },
   {
     q: "Berapa lama pertanyaan saya dibalas?",
-    a: `Pertanyaan di WhatsApp dibalas dalam 5 menit selama jam kerja, ${site.hours.panjang}.`,
+    a: "Pertanyaan di WhatsApp dibalas dalam 5 menit selama jam kerja.",
   },
   {
     q: "Apakah saya harus datang ke kantor?",
