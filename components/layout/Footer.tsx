@@ -13,6 +13,9 @@ const kolomLayanan = [
 
 const kolomPerusahaan = [
   { href: "/tentang", label: "Tentang Kami" },
+  { href: "/kenapa-kami", label: "Kenapa Atrahdis" },
+  { href: "/tender", label: "Info Tender" },
+  { href: "/mitra", label: "Program Kemitraan" },
   { href: "/blog", label: "Blog" },
   { href: "/kontak", label: "Kontak" },
 ];

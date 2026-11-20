@@ -5,7 +5,7 @@ import { detailLayanan } from "@/content/layanan-detail";
 import { tools } from "@/content/tools";
 import { site } from "@/content/site";
 
-const halaman = ["", "/jasa-sbu", "/perpanjangan-sbu", "/jasa-skk", "/layanan", "/tentang", "/blog", "/kontak"];
+const halaman = ["", "/jasa-sbu", "/perpanjangan-sbu", "/jasa-skk", "/layanan", "/tentang", "/kenapa-kami", "/tender", "/mitra", "/blog", "/kontak"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
