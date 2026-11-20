@@ -7,6 +7,8 @@ import { Tombol } from "@/components/ui/Bagian";
 import { BacaJuga, LabelKategori } from "@/components/sections/Kartu";
 import { CtaStrip } from "@/components/sections/Profil";
 
+export const ensureStatic = "navigation";
+
 export function generateStaticParams() {
   return artikel.map((a) => ({ slug: a.slug }));
 }

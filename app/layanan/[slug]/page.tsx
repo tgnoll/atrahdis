@@ -4,6 +4,8 @@ import { cariDetailLayanan, detailLayanan } from "@/content/layanan-detail";
 import { HalamanLayanan } from "@/components/layanan/HalamanLayanan";
 import { meta } from "@/lib/seo";
 
+export const ensureStatic = "navigation";
+
 export function generateStaticParams() {
   return detailLayanan.map((d) => ({ slug: d.slug }));
 }

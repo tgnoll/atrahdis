@@ -4,6 +4,8 @@ import { cariKota, daftarKota } from "@/content/kota";
 import { HalamanKota, deskripsiKota, judulKota } from "@/components/kota/HalamanKota";
 import { meta } from "@/lib/seo";
 
+export const ensureStatic = "navigation";
+
 export function generateStaticParams() {
   return daftarKota.map((k) => ({ kota: k.slug }));
 }

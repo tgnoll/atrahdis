@@ -8,6 +8,8 @@ import { FormKonsultasi } from "@/components/sections/FormKonsultasi";
 import { AlatKalkulator, AlatNib, AlatOss, AlatPlaybook, AlatSkk } from "@/components/tools/Alat";
 import { meta } from "@/lib/seo";
 
+export const ensureStatic = "navigation";
+
 export function generateStaticParams() {
   return tools.map((t) => ({ slug: t.slug }));
 }
