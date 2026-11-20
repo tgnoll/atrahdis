@@ -8,6 +8,7 @@ const kolomLayanan = [
   { href: "/perpanjangan-sbu", label: "Perpanjangan SBU" },
   { href: "/jasa-skk", label: "Jasa SKK" },
   { href: "/layanan", label: "Semua layanan" },
+  { href: "/tools", label: "Tools gratis" },
 ];
 
 const kolomPerusahaan = [
