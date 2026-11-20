@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { layanan } from "@/content/layanan";
+import { detailLayanan, type DetailLayanan, type Kelompok } from "@/content/layanan-detail";
 import { Bagian, JudulBagian, Tombol } from "@/components/ui/Bagian";
 import { CheckList, IconBox } from "@/components/ui/Icon";
 import { LogoKlien } from "@/components/sections/Bukti";
@@ -49,6 +50,13 @@ const pendukung: ItemIkon[] = [
   { ikon: "kartuId", judul: "NIB", isi: "Pembuatan dan penyesuaian NIB dengan KBLI jasa konstruksi." },
   { ikon: "dokumen", judul: "PKKPR dan PBG", isi: "Dokumen kesesuaian ruang dan persetujuan bangunan gedung." },
 ];
+
+const kelompokLayanan = Object.entries(
+  detailLayanan.reduce<Partial<Record<Kelompok, DetailLayanan[]>>>((acc, d) => {
+    (acc[d.kelompok] ??= []).push(d);
+    return acc;
+  }, {}),
+) as [Kelompok, DetailLayanan[]][];
 
 export default function Layanan() {
   return (
@@ -107,6 +115,30 @@ export default function Layanan() {
       </Bagian>
 
       <Bagian>
+        <JudulBagian
+          eyebrow="Rincian layanan"
+          judul="Semua Layanan per Kelompok"
+          pengantar="Pilih layanan untuk melihat cakupan, dokumen yang perlu disiapkan, dan titik yang paling sering membuat gagal."
+        />
+        <div className="flex w-full flex-wrap items-start gap-5">
+          {kelompokLayanan.map(([kelompok, items]) => (
+            <div key={kelompok} className="flex min-w-0 flex-[1_1_260px] flex-col gap-3">
+              <h3 className="text-lg font-extrabold">{kelompok}</h3>
+              <ul className="flex flex-col gap-2 text-[15px]">
+                {items.map((d) => (
+                  <li key={d.slug}>
+                    <Link href={`/layanan/${d.slug}`} className="font-bold text-oranye-teks">
+                      {d.nama}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </Bagian>
+
+      <Bagian latar="muda">
         <JudulBagian
           eyebrow="Satu alur"
           judul="Kenapa Mengurus Semuanya di Satu Tempat"
