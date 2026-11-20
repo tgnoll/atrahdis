@@ -1,6 +1,6 @@
 ## TL;DR
 
-SBU Kecil, Menengah, dan Besar berbeda di **skala usaha**, **kompleksitas dokumen**, dan **timeline**. Berdasarkan **280+ kasus yang Nicx proses**, SBU K terbit 3 hari kerja, SBU M 14-21 hari, dan SBU B 30-60 hari. Pilih yang sesuai kesiapan dokumen, bukan gengsi.
+SBU Kecil, Menengah, dan Besar berbeda di **skala usaha**, **kompleksitas dokumen**, dan **timeline**. Berdasarkan **280+ kasus yang Nicx proses**, SBU K tercepat 3 hari kerja (umumnya 2–4 minggu), SBU M bertingkat sesuai hasil audit, dan SBU B umumnya 4–8 minggu. Pilih yang sesuai kesiapan dokumen, bukan gengsi.
 
 Untuk verifikasi status terbaru, Anda bisa langsung cek LPJK Online.
 
@@ -27,9 +27,9 @@ Supaya tidak abstrak, lihat perbedaannya dari empat sisi:
 
 | Kualifikasi | Timeline | Kompleksitas Dokumen | Sumber |
 | --- | --- | --- | --- |
-| SBU Kecil (K) | 3-7 hari kerja | Rendah | LPJK 2026, data Nicx |
-| SBU Menengah (M) | 14-21 hari kerja | Sedang | LPJK 2026, data Nicx |
-| SBU Besar (B) | 30-60 hari kerja | Tinggi | LPJK 2026, data Nicx |
+| SBU Kecil (K) | tercepat 3 hari kerja (umumnya 2–4 minggu) | Rendah | LPJK 2026, data Nicx |
+| SBU Menengah (M) | bertingkat, sesuai hasil audit | Sedang | LPJK 2026, data Nicx |
+| SBU Besar (B) | umumnya 4–8 minggu | Tinggi | LPJK 2026, data Nicx |
 
 *Biaya ditentukan setelah audit dokumen.*
 
@@ -87,8 +87,8 @@ Kalau empat jawaban itu belum jelas, keputusan kualifikasi masih terlalu dini.
 Untuk patokan umum:
 
 - **K**: sekitar 3 hari kerja jika berkas lengkap
-- **M**: sekitar 10 sampai 20 hari kerja
-- **B**: sekitar 30 sampai 60 hari kerja
+- **M**: bertingkat, sesuai hasil audit
+- **B**: umumnya 4–8 minggu
 
 Kalau Anda mendengar semua kualifikasi bisa selesai dalam waktu yang sama, Perusahaan Anda perlu lebih hati-hati.
 

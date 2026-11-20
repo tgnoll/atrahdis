@@ -150,7 +150,7 @@ Q: Bisa ganti konsultan kalau SBU ditolak berkali-kali?
 A: Ya, tapi pindah konsultan tidak otomatis memperbaiki masalah dokumen. Kalau penolakan karena dokumen perusahaan yang bermasalah, konsultan baru tetap harus memperbaiki dokumen tersebut. Bedanya: konsultan berpengalaman bisa audit lebih tajam sebelum submit.
 
 Q: Berapa lama waktu tunggu setelah submit ulang?
-A: Submit ulang koreksi biasanya diproses 3-7 hari kerja, lebih cepat dari pengajuan baru karena LPJK hanya verifikasi perbaikan yang diminta. Tapi kalau submit ulang sebagai pengajuan baru, waktunya sama dengan proses awal: 3-7 hari untuk K, 14-21 hari untuk M.
+A: Submit ulang koreksi biasanya diproses 3-7 hari kerja, lebih cepat dari pengajuan baru karena LPJK hanya verifikasi perbaikan yang diminta. Tapi kalau submit ulang sebagai pengajuan baru, waktunya sama dengan proses awal: tercepat 3 hari kerja (umumnya 2–4 minggu) untuk K, bertingkat sesuai hasil audit untuk M.
 
 Q: Apa bedanya SBU ditolak vs dikembalikan?
 A: Ditolak berarti LPJK menolak pengajuan karena tidak memenuhi syarat. Dikembalikan berarti LPJK mengembalikan berkas untuk perbaikan tanpa penolakan formal — biasanya karena dokumen tidak lengkap atau perlu klarifikasi. Dikembalikan lebih ringan dan lebih cepat diperbaiki.

@@ -39,9 +39,9 @@ Idealnya ajukan perpanjangan **30-60 hari** sebelum masa berlaku habis. Ini memb
 
 | Kualifikasi | Timeline Perpanjangan | Waktu Aman Mulai | Sumber |
 | --- | --- | --- | --- |
-| SBU Kecil (K) | 3-7 hari kerja | H-60 hari | LPJK 2026, data Nicx |
-| SBU Menengah (M) | 14-21 hari kerja | H-90 hari | LPJK 2026, data Nicx |
-| SBU Besar (B) | 21-30 hari kerja | H-120 hari | LPJK 2026, data Nicx |
+| SBU Kecil (K) | tercepat 3 hari kerja (umumnya 2–4 minggu) | H-60 hari | LPJK 2026, data Nicx |
+| SBU Menengah (M) | bertingkat, sesuai hasil audit | H-90 hari | LPJK 2026, data Nicx |
+| SBU Besar (B) | umumnya 4–8 minggu | H-120 hari | LPJK 2026, data Nicx |
 
 *Sumber: LPJK 2026, data internal Nicx (280+ kasus)*
 
@@ -103,7 +103,7 @@ Q: Berapa lama masa berlaku SBU konstruksi?
 A: SBU konstruksi berlaku 3 tahun sejak tanggal terbit. Perpanjangan sebaiknya diajukan 30-60 hari sebelum masa berlaku habis untuk menghindari gap. Nicx dari Atrahdis biasanya reminder klien 90 hari sebelum expired.
 
 Q: Apa yang harus dilakukan kalau SBU expired saat tender sudah dekat?
-A: Pertama, cek apakah SBU masih dalam grace period. Kalau tidak, proses perpanjangan SBU Kecil bisa 3-7 hari kerja, SBU Menengah 14-21 hari. Kalau tender dalam 1 minggu, kemungkinan besar tidak cukup waktu kecuali SBU K dengan dokumen 100% siap.
+A: Pertama, cek apakah SBU masih dalam grace period. Kalau tidak, proses perpanjangan SBU Kecil tercepat 3 hari kerja (umumnya 2–4 minggu), SBU Menengah bertingkat, sesuai hasil audit. Kalau tender dalam 1 minggu, kemungkinan besar tidak cukup waktu kecuali SBU K dengan dokumen 100% siap.
 
 Q: Bisa perpanjang SBU sebelum expired?
 A: Ya, dan itu sangat direkomendasikan. Ajukan perpanjangan 30-60 hari sebelum masa berlaku habis. Perpanjangan lebih cepat dan lebih hemat daripada mengajukan baru, karena verifikasi cek status perusahaan dan dokumen pendukung tanpa proses lengkap dari nol.

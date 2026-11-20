@@ -63,9 +63,9 @@ Berdasarkan data Atrahdis:
 
 | Kualifikasi | Estimasi Proses Perpanjangan |
 | --- | --- |
-| SBU Kecil (K) | 3-7 hari kerja setelah dokumen lengkap |
-| SBU Menengah (M) | 7-14 hari kerja setelah dokumen lengkap |
-| SBU Besar (B) | 14-21 hari kerja setelah dokumen lengkap |
+| SBU Kecil (K) | tercepat 3 hari kerja (umumnya 2–4 minggu) setelah dokumen lengkap |
+| SBU Menengah (M) | bertingkat, sesuai hasil audit setelah dokumen lengkap |
+| SBU Besar (B) | umumnya 4–8 minggu setelah dokumen lengkap |
 
 Ini lebih cepat dari pengajuan pertama kali karena LPJK sudah punya rekam jejak badan usaha Anda. Catatan: “setelah dokumen lengkap” — kalau ada revisi, timeline bergeser.
 

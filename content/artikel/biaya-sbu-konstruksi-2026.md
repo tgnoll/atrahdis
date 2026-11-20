@@ -48,9 +48,9 @@ Untuk kualifikasi besar, biaya naik bukan sekadar karena labelnya lebih tinggi. 
 
 | Kualifikasi | Biaya Mulai | Durasi Proses | Sumber |
 | --- | --- | --- | --- |
-| SBU Kecil (K) | Estimasi setelah audit | 3-7 hari kerja | LPJK 2026, data Nicx |
-| SBU Menengah (M) | Estimasi setelah audit | 14-21 hari kerja | LPJK 2026, data Nicx |
-| SBU Besar (B) | Estimasi setelah audit | 30-60 hari kerja | LPJK 2026, data Nicx |
+| SBU Kecil (K) | Estimasi setelah audit | tercepat 3 hari kerja (umumnya 2–4 minggu) | LPJK 2026, data Nicx |
+| SBU Menengah (M) | Estimasi setelah audit | bertingkat, sesuai hasil audit | LPJK 2026, data Nicx |
+| SBU Besar (B) | Estimasi setelah audit | umumnya 4–8 minggu | LPJK 2026, data Nicx |
 
 ## Biaya Tambahan Apa yang Paling Sering Muncul?
 

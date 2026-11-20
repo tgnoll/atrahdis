@@ -93,9 +93,9 @@ Berdasarkan data internal Atrahdis:
 
 | Kualifikasi | Waktu Persiapan Dokumen | Waktu Proses LPJK |
 | --- | --- | --- |
-| SBU Kecil (K) | 3-7 hari kerja | 3-7 hari kerja |
-| SBU Menengah (M) | 7-14 hari kerja | 14-21 hari kerja |
-| SBU Besar (B) | 14-30 hari kerja | 21-30 hari kerja |
+| SBU Kecil (K) | 3-7 hari kerja | tercepat 3 hari kerja (umumnya 2–4 minggu) |
+| SBU Menengah (M) | 7-14 hari kerja | bertingkat, sesuai hasil audit |
+| SBU Besar (B) | 14-30 hari kerja | umumnya 4–8 minggu |
 
 Waktu persiapan bisa jauh lebih pendek kalau dokumen dasar sudah rapi sebelumnya.
 

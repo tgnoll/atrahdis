@@ -7,9 +7,6 @@ const nextConfig: NextConfig = {
   // supaya link lama dan indeks Google tidak berakhir di 404.
   async redirects() {
     return [
-      { source: "/biaya", destination: "/tools/kalkulator-sbu", statusCode: 301 },
-      { source: "/sertifikat-klien", destination: "/kenapa-kami", statusCode: 301 },
-      { source: "/tentang/tim", destination: "/tentang", statusCode: 301 },
       { source: "/app", destination: "/kontak", statusCode: 301 },
       { source: "/app/:path*", destination: "/kontak", statusCode: 301 },
     ];

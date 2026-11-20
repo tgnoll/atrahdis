@@ -1,6 +1,6 @@
 ## TL;DR
 
-Upgrade SBU Kecil ke Menengah **bisa**, tapi tidak otomatis. Butuh bukti modal **di atas Rp 5 miliar**, **SKK J5-J6**, dan dokumen lebih detail. Timeline **14-21 hari kerja**, biaya ditentukan setelah audit dokumen. Berdasarkan **280+ kasus** Nicx, upgrade tanpa audit dokumen sering gagal di verifikasi pertama.
+Upgrade SBU Kecil ke Menengah **bisa**, tapi tidak otomatis. Butuh bukti modal **di atas Rp 5 miliar**, **SKK J5-J6**, dan dokumen lebih detail. Timeline **bertingkat, sesuai hasil audit**, biaya ditentukan setelah audit dokumen. Berdasarkan **280+ kasus** Nicx, upgrade tanpa audit dokumen sering gagal di verifikasi pertama.
 
 Untuk verifikasi status terbaru, Anda bisa langsung cek LPJK Online.
 
@@ -48,7 +48,7 @@ Riwayat SBU Kecil hanya membuktikan perusahaan Anda pernah lolos verifikasi — 
 | Verifikasi administrasi | 3-5 hari | 3-5 hari | Sama |
 | Verifikasi substansi | 5-10 hari | 5-10 hari | Sama |
 | Terbit | 1 hari | 1 hari | Sama |
-| **Total** | **14-21 hari** | **14-21 hari** | **Tidak ada bedanya** |
+| **Total** | **Bertingkat, sesuai audit** | **Bertingkat, sesuai audit** | **Tidak ada bedanya** |
 
 *Data internal Atrahdis 2026*
 
@@ -85,7 +85,7 @@ Satu perusahaan hanya boleh punya **satu SBU aktif** dalam satu waktu.
 1. **Audit kesiapan** — cek modal, SKK, keuangan
 2. **Perbaiki dokumen** — update KBLI, perpanjang SKK, rapikan keuangan
 3. **Ajukan SBU Menengah** — lewat LPJK Online, pilih pengajuan baru
-4. **Verifikasi** — 14-21 hari kerja
+4. **Verifikasi** — waktunya bertingkat sesuai kondisi berkas
 5. **Terbit SBU M** — SBU K otomatis non-aktif
 
 ## Risiko Upgrade yang Sering Terjadi
@@ -120,7 +120,7 @@ Q: Berapa biaya upgrade SBU Kecil ke Menengah?
 A: Biaya upgrade SBU Menengah ditentukan setelah audit dokumen. Prosesnya setara pengajuan baru dengan verifikasi lebih mendalam. Biaya final tergantung kondisi dokumen dan apakah perlu perbaikan KBLI, OSS, atau SKK.
 
 Q: Berapa lama proses upgrade SBU Kecil ke Menengah?
-A: Timeline upgrade sama dengan pengajuan SBU Menengah baru: 14-21 hari kerja kalau dokumen lengkap. Tidak lebih cepat hanya karena sudah punya SBU Kecil. LPJK tetap melakukan verifikasi lengkap untuk kualifikasi baru.
+A: Timeline upgrade sama dengan pengajuan SBU Menengah baru: bertingkat, sesuai hasil audit kalau dokumen lengkap. Tidak lebih cepat hanya karena sudah punya SBU Kecil. LPJK tetap melakukan verifikasi lengkap untuk kualifikasi baru.
 
 Q: Apakah SBU Kecil harus dicabut dulu sebelum upgrade ke Menengah?
 A: Tidak perlu dicabut secara manual. Ketika SBU Menengah disetujui, SBU Kecil yang lama otomatis tidak berlaku lagi. Satu perusahaan hanya bisa punya satu SBU aktif dalam satu waktu.

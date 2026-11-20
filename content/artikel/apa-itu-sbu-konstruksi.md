@@ -29,9 +29,9 @@ LPJK membagi SBU ke dalam tiga kualifikasi utama. Pilihannya menentukan nilai pr
 
 | Kualifikasi | Modal Usaha | Nilai Proyek Maksimal | Timeline |
 | --- | --- | --- | --- |
-| SBU Kecil (K) | < Rp 5 miliar | Sesuai klasifikasi | 3-7 hari kerja |
-| SBU Menengah (M) | Rp 5-25 miliar | Sesuai klasifikasi | 14-21 hari kerja |
-| SBU Besar (B) | > Rp 25 miliar | Sesuai klasifikasi | 30-60 hari kerja |
+| SBU Kecil (K) | < Rp 5 miliar | Sesuai klasifikasi | tercepat 3 hari kerja (umumnya 2–4 minggu) |
+| SBU Menengah (M) | Rp 5-25 miliar | Sesuai klasifikasi | bertingkat, sesuai hasil audit |
+| SBU Besar (B) | > Rp 25 miliar | Sesuai klasifikasi | umumnya 4–8 minggu |
 
 *Sumber: LPJK 2026, data internal Nicx (280+ kasus). Biaya ditentukan setelah audit dokumen.*
 

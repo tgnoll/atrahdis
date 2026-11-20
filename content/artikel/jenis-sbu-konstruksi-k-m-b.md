@@ -1,6 +1,6 @@
 ## TL;DR
 
-SBU Konstruksi ada **3 jenis**: Kecil (K) modal < Rp 5 miliar, Menengah (M) Rp 5-25 miliar, Besar (B) > Rp 25 miliar. Berdasarkan **280+ kasus** Nicx, timeline SBU K **3-7 hari**, M **14-21 hari**, B **30-60 hari**. Pilih berdasarkan kesiapan dokumen, bukan gengsi.
+SBU Konstruksi ada **3 jenis**: Kecil (K) modal < Rp 5 miliar, Menengah (M) Rp 5-25 miliar, Besar (B) > Rp 25 miliar. Berdasarkan **280+ kasus** Nicx, timeline SBU K **tercepat 3 hari kerja (umumnya 2–4 minggu)**, M **bertingkat sesuai hasil audit**, B **umumnya 4–8 minggu**. Pilih berdasarkan kesiapan dokumen, bukan gengsi.
 
 Untuk verifikasi status terbaru, Anda bisa langsung cek LPJK Online.
 
@@ -19,7 +19,7 @@ Ini tabel perbandingan lengkap yang Nicx gunakan saat konsultasi:
 | Aspek | SBU Kecil (K) | SBU Menengah (M) | SBU Besar (B) |
 | --- | --- | --- | --- |
 | **Modal Usaha** | < Rp 5 miliar | Rp 5-25 miliar | > Rp 25 miliar |
-| **Timeline** | 3-7 hari kerja | 14-21 hari kerja | 30-60 hari kerja |
+| **Timeline** | tercepat 3 hari kerja (umumnya 2–4 minggu) | Bertingkat, sesuai hasil audit | Umumnya 4–8 minggu |
 | **Laporan Keuangan** | Sederhana, tidak wajib KAP | Detail, audit KAP direkomendasikan | Wajib audit KAP |
 | **SKK Tenaga Ahli** | 1-3 orang | 3-5 orang | 5+ orang |
 | **Kompleksitas Verifikasi** | Rendah | Sedang | Tinggi |
@@ -84,9 +84,9 @@ Kalau butuh cakupan lebih luas atau level lebih tinggi, jalurnya adalah **upgrad
 
 | Jenis SBU | Timeline | Sumber |
 | --- | --- | --- |
-| Kecil (K) | 3-7 hari kerja | LPJK 2026, Nicx |
-| Menengah (M) | 14-21 hari kerja | LPJK 2026, Nicx |
-| Besar (B) | 30-60 hari kerja | LPJK 2026, Nicx |
+| Kecil (K) | tercepat 3 hari kerja (umumnya 2–4 minggu) | LPJK 2026, Nicx |
+| Menengah (M) | bertingkat, sesuai hasil audit | LPJK 2026, Nicx |
+| Besar (B) | umumnya 4–8 minggu | LPJK 2026, Nicx |
 
 *Estimasi berdasarkan data internal Atrahdis 2026. Biaya pengajuan dan perpanjangan ditentukan setelah audit dokumen.*
 
@@ -116,7 +116,7 @@ Q: Berapa biaya masing-masing jenis SBU?
 A: Biaya ditentukan setelah audit dokumen, karena bergantung pada kualifikasi, sub-bidang, dan kondisi berkas perusahaan. Kalau ada koreksi KBLI atau OSS, biaya tambahan bisa muncul di luar estimasi awal. Konsultasi dan audit awal gratis.
 
 Q: Jenis SBU mana yang paling cocok untuk perusahaan baru?
-A: Perusahaan baru biasanya cocok mulai dari SBU Kecil. Dokumen lebih ringan dan timeline lebih cepat (3-7 hari). Setelah punya pengalaman proyek dan modal bertambah, bisa upgrade ke Menengah atau Besar.
+A: Perusahaan baru biasanya cocok mulai dari SBU Kecil. Dokumen lebih ringan dan timeline lebih cepat (tercepat 3 hari kerja, umumnya 2–4 minggu). Setelah punya pengalaman proyek dan modal bertambah, bisa upgrade ke Menengah atau Besar.
 
 Q: Apakah satu perusahaan bisa punya lebih dari satu jenis SBU?
 A: Tidak. Satu perusahaan hanya bisa memiliki satu SBU aktif dengan satu kualifikasi. Tapi SBU bisa mencakup beberapa sub-bidang dalam satu kualifikasi. Kalau butuh cakupan lebih luas, upgrade kualifikasi adalah jalurnya.

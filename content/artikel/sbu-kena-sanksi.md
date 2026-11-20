@@ -77,9 +77,9 @@ Tapi yang lebih penting: **sanksi bisa dicegah.** Caranya tidak rumit:
 
 | Kualifikasi | Timeline Perpanjangan | Deadline Aman | Sumber |
 | --- | --- | --- | --- |
-| SBU Kecil (K) | 3-7 hari kerja | H-30 hari | LPJK 2026 |
-| SBU Menengah (M) | 14-21 hari kerja | H-60 hari | LPJK 2026 |
-| SBU Besar (B) | 21-30 hari kerja | H-90 hari | LPJK 2026 |
+| SBU Kecil (K) | tercepat 3 hari kerja (umumnya 2–4 minggu) | H-30 hari | LPJK 2026 |
+| SBU Menengah (M) | bertingkat, sesuai hasil audit | H-60 hari | LPJK 2026 |
+| SBU Besar (B) | umumnya 4–8 minggu | H-90 hari | LPJK 2026 |
 
 *Sumber: LPJK 2026, data internal Nicx*
 

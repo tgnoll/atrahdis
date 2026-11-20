@@ -1,6 +1,6 @@
 ## TL;DR
 
-Daftar SBU baru 2026 butuh **7 langkah**: cek NIB, KBLI, akta, NPWP, SKK, submit LPJK Online, tunggu verifikasi. SBU Kecil **3-7 hari kerja**, M **14-21 hari**, B **30-60 hari**. Berdasarkan **280+ kasus** Nicx, **60% pengajuan mandiri** kena koreksi minimal 2 kali.
+Daftar SBU baru 2026 butuh **7 langkah**: cek NIB, KBLI, akta, NPWP, SKK, submit LPJK Online, tunggu verifikasi. SBU Kecil **tercepat 3 hari kerja (umumnya 2–4 minggu)**, M **bertingkat sesuai hasil audit**, B **umumnya 4–8 minggu**. Berdasarkan **280+ kasus** Nicx, **60% pengajuan mandiri** kena koreksi minimal 2 kali.
 
 ## Cara Daftar SBU Baru: Gambaran Besar
 
@@ -80,9 +80,9 @@ Setelah submit, LPJK akan:
 
 | Kualifikasi | Timeline Ideal | Dengan 1 Koreksi | Sumber |
 | --- | --- | --- | --- |
-| SBU Kecil | 3-7 hari | 7-14 hari | LPJK 2026, Nicx |
-| SBU Menengah | 14-21 hari | 21-30 hari | LPJK 2026, Nicx |
-| SBU Besar | 30-60 hari | 45-75 hari | LPJK 2026, Nicx |
+| SBU Kecil | tercepat 3 hari kerja (umumnya 2–4 minggu) | 7-14 hari | LPJK 2026, Nicx |
+| SBU Menengah | bertingkat, sesuai hasil audit | 21-30 hari | LPJK 2026, Nicx |
+| SBU Besar | umumnya 4–8 minggu | 45-75 hari | LPJK 2026, Nicx |
 
 *Data internal Atrahdis 2026*
 
@@ -123,7 +123,7 @@ Anda tidak harus menjalani ini sendiri. Dengan bantuan audit dokumen awal, Anda 
 
 =====FAQ=====
 Q: Bagaimana cara daftar SBU konstruksi baru?
-A: Daftar SBU baru melalui 7 langkah: cek NIB aktif di OSS, verifikasi KBLI cocok, siapkan akta dan NPWP, siapkan SKK tenaga ahli, buat akun LPJK Online, submit dokumen dan bayar biaya, tunggu verifikasi dan terbit e-certificate. Proses SBU Kecil 3-7 hari, Menengah 14-21 hari, Besar 30-60 hari.
+A: Daftar SBU baru melalui 7 langkah: cek NIB aktif di OSS, verifikasi KBLI cocok, siapkan akta dan NPWP, siapkan SKK tenaga ahli, buat akun LPJK Online, submit dokumen dan bayar biaya, tunggu verifikasi dan terbit e-certificate. Proses SBU Kecil tercepat 3 hari kerja (umumnya 2–4 minggu), Menengah bertingkat sesuai hasil audit, Besar umumnya 4–8 minggu.
 
 Q: Bisa daftar SBU sendiri tanpa bantuan konsultan?
 A: Bisa, tapi butuh pemahaman teknis tentang KBLI, OSS, format dokumen LPJK, dan proses verifikasi. Berdasarkan data Atrahdis, 60% pengajuan mandiri mengalami koreksi minimal 2 kali. Konsultan seperti Nicx membantu audit dokumen sebelum submit untuk menghindari penolakan.
@@ -135,7 +135,7 @@ Q: Di mana daftar SBU konstruksi?
 A: SBU konstruksi didaftarkan melalui portal resmi LPJK Online (lpjk.net). Jangan percaya jasa yang mengklaim bisa daftar SBU tanpa perusahaan atau tanpa dokumen — itu penipuan. Proses resmi selalu melalui LPJK.
 
 Q: Berapa lama proses SBU baru per kualifikasi?
-A: SBU Kecil 3-7 hari kerja, SBU Menengah 14-21 hari kerja, SBU Besar 30-60 hari kerja. Timeline tergantung kelengkapan dokumen dan apakah LPJK meminta koreksi. Perpanjangan lebih cepat karena verifikasi lebih ringan.
+A: SBU Kecil tercepat 3 hari kerja (umumnya 2–4 minggu), SBU Menengah bertingkat sesuai hasil audit, SBU Besar umumnya 4–8 minggu. Timeline tergantung kelengkapan dokumen dan apakah LPJK meminta koreksi. Perpanjangan lebih cepat karena verifikasi lebih ringan.
 
 Q: Apa yang harus dilakukan kalau SBU baru ditolak LPJK?
 A: Baca notifikasi penolakan dengan cermat — LPJK selalu menyertakan alasan. Perbaiki dokumen yang bermasalah dan ajukan kembali. Kalau ditolak lebih dari 2 kali, sebaiknya audit menyeluruh dengan konsultan untuk identifikasi masalah fundamental.

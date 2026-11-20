@@ -1,6 +1,6 @@
 ## TL;DR
 
-Submit SBU ke LPJK dilakukan via portal SIKI di siki.lpjk.net. Proses online penuh — tidak perlu ke kantor LPJK. Dari submit hingga terbit: **3-7 hari kerja** (SBU K), **14-21 hari** (SBU M), **21-30 hari** (SBU B). Dokumen tidak lengkap = proses ulang dari awal.
+Submit SBU ke LPJK dilakukan via portal SIKI di siki.lpjk.net. Proses online penuh — tidak perlu ke kantor LPJK. Dari submit hingga terbit: **tercepat 3 hari kerja (umumnya 2–4 minggu)** (SBU K), **bertingkat sesuai hasil audit** (SBU M), **umumnya 4–8 minggu** (SBU B). Dokumen tidak lengkap = proses ulang dari awal.
 
 Untuk verifikasi status terbaru, Anda bisa langsung cek LPJK Online.
 
@@ -108,7 +108,7 @@ Q: Bagaimana cara submit SBU ke LPJK 2026?
 A: Proses submit SBU ke LPJK dilakukan melalui portal SIKI LPJK di siki.lpjk.net. Langkahnya: daftarkan akun badan usaha, isi data profil perusahaan, unggah dokumen sesuai kualifikasi K/M/B, pilih sub-bidang yang diajukan, kirim pengajuan, dan pantau status verifikasi. Seluruh proses dilakukan secara online — tidak ada kunjungan fisik ke kantor LPJK. Berdasarkan 280+ kasus yang Nicx proses, submit yang sudah disiapkan matang biasanya masuk proses verifikasi dalam 1-2 hari kerja.
 
 Q: Berapa lama dari submit hingga SBU terbit?
-A: Dari submit hingga SBU terbit: SBU Kecil 3-7 hari kerja, SBU Menengah 14-21 hari kerja, SBU Besar 21-30 hari kerja. Hitungan ini dimulai setelah dokumen dinyatakan lengkap oleh LPJK, bukan sejak upload pertama kali. Kalau ada revisi dokumen yang diminta, timeline otomatis bergeser. Nicx telah mengurus 280+ sertifikat dan waktu tercepat SBU Kecil yang pernah Nicx proses adalah 3 hari kerja dengan dokumen 100% lengkap sejak hari pertama.
+A: Dari submit hingga SBU terbit: SBU Kecil tercepat 3 hari kerja (umumnya 2–4 minggu), SBU Menengah bertingkat sesuai hasil audit, SBU Besar umumnya 4–8 minggu. Hitungan ini dimulai setelah dokumen dinyatakan lengkap oleh LPJK, bukan sejak upload pertama kali. Kalau ada revisi dokumen yang diminta, timeline otomatis bergeser. Nicx telah mengurus 280+ sertifikat dan waktu tercepat SBU Kecil yang pernah Nicx proses adalah 3 hari kerja dengan dokumen 100% lengkap sejak hari pertama.
 
 Q: Apa yang terjadi kalau dokumen submit SBU ditolak LPJK?
 A: Kalau LPJK meminta revisi atau menemukan ketidaksesuaian, pengajuan akan dikembalikan dengan catatan perbaikan. Perusahaan Anda harus memperbaiki dokumen sesuai catatan, lalu mengunggah ulang. Setiap siklus revisi rata-rata menambah 3-7 hari kerja ke timeline. Untuk menghindari ini, pastikan checklist dokumen sudah selesai 100% sebelum submit, dan KSWP serta KBLI sudah beres lebih dulu.

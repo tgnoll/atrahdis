@@ -1,6 +1,6 @@
 ## TL;DR
 
-SBU Menengah (M) bisa terbit **14-21 hari kerja** kalau dokumen lengkap. Berdasarkan **280+ kasus** Nicx, **65% SBU M** selesai dalam 14-18 hari. Verifikasi lebih mendalam dari SBU Kecil karena melibatkan cross-check data antar sistem dan evaluasi keuangan lebih detail.
+Waktu proses SBU Menengah (M) **bertingkat sesuai kondisi berkas**; estimasi pastinya ditulis di kontrak setelah audit dokumen. Berdasarkan **280+ kasus** Nicx, **65% SBU M** selesai dalam 14-18 hari. Verifikasi lebih mendalam dari SBU Kecil karena melibatkan cross-check data antar sistem dan evaluasi keuangan lebih detail.
 
 Untuk verifikasi status terbaru, Anda bisa langsung cek LPJK Online.
 
@@ -13,7 +13,7 @@ Kalau Anda tanya vendor dan jawabannya “7 hari pasti keluar” — hati-hati. 
 Timeline realistis:
 
 - **Minimum**: 14 hari kerja (dokumen 100% lengkap, zero koreksi)
-- **Rata-rata**: 14-21 hari kerja (1 kali koreksi kecil)
+- **Rata-rata**: bertingkat sesuai kondisi berkas (estimasi pasti ditulis setelah audit)
 - **Maksimum normal**: 30 hari kerja (2-3 kali koreksi)
 
 Berdasarkan data internal Atrahdis, hanya **35% pengajuan SBU M** yang lolos tanpa koreksi di putaran pertama.
@@ -28,7 +28,7 @@ Berdasarkan data internal Atrahdis, hanya **35% pengajuan SBU M** yang lolos tan
 | Verifikasi substansi | 5-10 hari | Cross-check data, keuangan, SKK | LPJK 2026 |
 | Koreksi (jika ada) | 3-7 hari per putaran | Perbaikan dan submit ulang | LPJK 2026 |
 | Terbit e-certificate | 1 hari | Setelah semua verifikasi lolos | LPJK 2026 |
-| **Total (dokumen lengkap)** | **14-21 hari kerja** | Tanpa koreksi | Nicx, 280+ kasus |
+| **Total (dokumen lengkap)** | **Bertingkat, sesuai audit** | Tanpa koreksi | Nicx, 280+ kasus |
 
 *Sumber: LPJK 2026, data internal Atrahdis*
 
@@ -97,13 +97,13 @@ Kalau tender Anda dalam 3-4 minggu dan dokumen belum diaudit, mulai sekarang. Ba
 
 ## Kesimpulan
 
-Durasi pengurusan SBU Menengah bergantung pada kesiapan dokumen Anda. Jika semua berkas sudah rapi dan tidak ada koreksi dari LPJK, proses bisa selesai dalam 14–21 hari kerja. Namun, satu dokumen yang tidak sinkron bisa menambah waktu secara signifikan.
+Durasi pengurusan SBU Menengah bergantung pada kesiapan dokumen Anda. Jika semua berkas sudah rapi dan tidak ada koreksi dari LPJK, proses bisa selesai lebih cepat; estimasi pastinya ditulis di kontrak setelah audit. Namun, satu dokumen yang tidak sinkron bisa menambah waktu secara signifikan.
 
 Anda tidak perlu menebak-nebak timeline. Konsultasi gratis dengan audit dokumen akan memberi Anda gambaran realistis sebelum submit.
 
 =====FAQ=====
 Q: Berapa lama proses SBU Menengah?
-A: SBU Menengah bisa terbit 14-21 hari kerja jika dokumen lengkap dan tidak ada koreksi. Berdasarkan 280+ kasus yang Nicx proses sejak 2016, 65% SBU M selesai dalam 14-18 hari kalau berkas rapi dari awal. Kalau ada koreksi dokumen, timeline bisa memanjang 7-14 hari tambahan.
+A: Waktu proses SBU Menengah bertingkat sesuai kondisi berkas, dan estimasi pastinya ditulis di kontrak setelah audit dokumen. Kalau ada koreksi dokumen, timeline bisa memanjang 7-14 hari tambahan.
 
 Q: Kenapa SBU Menengah lebih lama dari SBU Kecil?
 A: SBU Menengah memerlukan verifikasi lebih mendalam: konsistensi data antar sistem (OSS, DJP, AHU), pemeriksaan SKK level J5-J6, evaluasi laporan keuangan lebih detail, dan cross-check pengalaman proyek. LPJK melakukan pemeriksaan multi-layer untuk kualifikasi M.
@@ -118,4 +118,4 @@ Q: Apa yang terjadi kalau LPJK minta koreksi dokumen?
 A: LPJK akan memberitahu dokumen mana yang bermasalah. Perusahaan harus memperbaiki dan submit ulang. Tiap putaran koreksi biasanya menambah 3-7 hari kerja. Kalau koreksi lebih dari 2 kali, LPJK bisa mengembalikan berkas dan minta pengajuan baru.
 
 Q: Berapa lama masa berlaku SBU Menengah setelah terbit?
-A: SBU Menengah berlaku 3 tahun sejak tanggal terbit. Perpanjangan sebaiknya diajukan 30-60 hari sebelum expired. Perpanjangan lebih cepat (14-21 hari) karena verifikasi tidak seberat pengajuan baru.
+A: SBU Menengah berlaku 3 tahun sejak tanggal terbit. Perpanjangan sebaiknya diajukan 30-60 hari sebelum expired. Perpanjangan lebih cepat (bertingkat, sesuai hasil audit) karena verifikasi tidak seberat pengajuan baru.
