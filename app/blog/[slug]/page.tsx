@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { artikel, cariArtikel } from "@/content/blog";
-import { site } from "@/content/site";
-import { Tombol } from "@/components/ui/Bagian";
+import { bacaIsiArtikel } from "@/content/isi-artikel";
+import { Markdown } from "@/components/blog/Markdown";
+import { FAQ } from "@/components/sections/FAQ";
 import { BacaJuga, LabelKategori } from "@/components/sections/Kartu";
 import { CtaStrip } from "@/components/sections/Profil";
 
@@ -19,13 +20,11 @@ export async function generateMetadata({ params }: PageProps<"/blog/[slug]">): P
   return { title: a.judul, description: a.ringkas, alternates: { canonical: `/blog/${a.slug}` } };
 }
 
-/**
- * Halaman artikel. Isi artikel BELUM dipindahkan dari situs lama (tahap 6):
- * sementara menampilkan judul + tautan ke artikel asli di atrahdis.id.
- */
+/** Halaman artikel: isi dari content/artikel/<slug>.md (dipindah dari atrahdis.id). */
 export default async function ArtikelBlog({ params }: PageProps<"/blog/[slug]">) {
   const a = cariArtikel((await params).slug);
   if (!a) notFound();
+  const isi = await bacaIsiArtikel(a.slug);
 
   const terkait = artikel.filter((x) => x.slug !== a.slug && x.kategori === a.kategori).slice(0, 3);
 
@@ -49,18 +48,15 @@ export default async function ArtikelBlog({ params }: PageProps<"/blog/[slug]">)
           <h1 className="text-[30px] font-extrabold leading-tight md:text-[40px]">{a.judul}</h1>
           {a.ringkas && <p className="text-lg leading-relaxed text-teks-muted">{a.ringkas}</p>}
 
-          <div className="flex flex-col items-start gap-3 rounded-[14px] border border-dashed border-garis-input bg-latar-muda p-6">
-            <strong className="text-[17px]">Isi artikel sedang dipindahkan ke situs baru</strong>
-            <p className="text-[15px] leading-relaxed text-teks-muted">
-              Halaman ini masih versi preview. Artikel lengkapnya bisa dibaca di situs Atrahdis yang
-              sekarang.
-            </p>
-            <Tombol href={`${site.url}/blog/${a.slug}`} varian="navy" kecil>
-              Baca di atrahdis.id
-            </Tombol>
-          </div>
+          {isi && (
+            <div className="mt-4">
+              <Markdown isi={isi.body} />
+            </div>
+          )}
         </div>
       </article>
+
+      {isi && isi.faq.length > 0 && <FAQ judul="Pertanyaan yang Sering Diajukan" items={isi.faq} />}
 
       {terkait.length > 0 && (
         <section className="bg-latar-muda">
