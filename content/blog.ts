@@ -97,6 +97,79 @@ export const artikel: Artikel[] = [
     kategori: "Syarat SBU",
     tanggal: "26 Apr 2026",
   },
+  // Parity 20 Nov 2026: artikel yang ada di situs lama tapi belum terdaftar di sini.
+  {
+    slug: "berapa-lama-proses-sbu-menengah",
+    judul: "Berapa Lama Proses SBU Menengah? Timeline Detail 2026",
+    kategori: "Pengajuan SBU",
+    tanggal: "26 Apr 2026",
+  },
+  {
+    slug: "jenis-sbu-konstruksi-k-m-b",
+    judul: "Jenis SBU Konstruksi: Perbedaan Kecil, Menengah, Besar (K/M/B)",
+    kategori: "Kualifikasi SBU",
+    tanggal: "26 Apr 2026",
+  },
+  {
+    slug: "sanksi-bujk-tidak-punya-sbu",
+    judul: "Sanksi BUJK Tidak Punya SBU: Denda, Blacklist, dan Pencabutan Izin",
+    kategori: "Panduan SBU",
+    tanggal: "26 Apr 2026",
+  },
+  {
+    slug: "sbu-ditolak-lpjk-solusi",
+    judul: "SBU Ditolak LPJK: Kenapa, Solusi, dan Cara Mencegahnya",
+    kategori: "Pengajuan SBU",
+    tanggal: "26 Apr 2026",
+  },
+  {
+    slug: "sbu-kena-sanksi",
+    judul: "SBU Kena Sanksi Berapa? Denda UUJK dan Konsekuensi 2026",
+    kategori: "Panduan SBU",
+    tanggal: "26 Apr 2026",
+  },
+  {
+    slug: "sbu-konstruksi-vs-siujk",
+    judul: "SBU Konstruksi vs SIUJK: Perbedaan Regulasi dan Dampaknya",
+    kategori: "Panduan SBU",
+    tanggal: "26 Apr 2026",
+  },
+  {
+    slug: "submit-sbu-lpjk-2026",
+    judul: "Proses Submit SBU ke LPJK 2026: Panduan Lengkap",
+    kategori: "Pengajuan SBU",
+    tanggal: "26 Apr 2026",
+  },
+  {
+    slug: "tender-tanpa-sbu-risikonya",
+    judul: "Tender Konstruksi Tanpa SBU: Risiko dan Konsekuensi Hukumnya",
+    kategori: "Tender",
+    tanggal: "26 Apr 2026",
+  },
+  {
+    slug: "kbli-salah-bikin-sbu-ditolak",
+    judul: "Kenapa KBLI Salah Bisa Bikin SBU Ditolak LPJK",
+    kategori: "Syarat SBU",
+    tanggal: "22 Apr 2026",
+  },
+  {
+    slug: "kswp-sbu-ditolak",
+    judul: "KSWP Tidak Clear: Kenapa SBU Anda Bisa Ditolak",
+    kategori: "Syarat SBU",
+    tanggal: "22 Apr 2026",
+  },
+  {
+    slug: "sbu-k-3-hari-kerja",
+    judul: "SBU Kecil Bisa Terbit 3 Hari Kerja: Ini Syaratnya",
+    kategori: "Pengajuan SBU",
+    tanggal: "22 Apr 2026",
+  },
+  {
+    slug: "timeline-urus-sbu-2026",
+    judul: "Timeline Realistis Urus SBU: K vs M vs B (2026)",
+    kategori: "Pengajuan SBU",
+    tanggal: "22 Apr 2026",
+  },
 ];
 
 export const kategoriBlog = [
