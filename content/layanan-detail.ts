@@ -11,7 +11,12 @@
  */
 import { paketSbu } from "@/content/layanan";
 
-export type Kelompok = "Sertifikasi utama" | "Pendukung SBU" | "Maintenance compliance" | "Tender dan compliance";
+export type Kelompok =
+  | "Sertifikasi utama"
+  | "Pendukung SBU"
+  | "Maintenance compliance"
+  | "Tender dan compliance"
+  | "PMA dan badan usaha asing";
 
 export type Poin = { judul: string; isi: string; href?: string };
 
@@ -73,7 +78,8 @@ export const detailLayanan: DetailLayanan[] = [
         { judul: "SBU Menengah (M)", isi: paketSbu[1].untuk, href: "/layanan/SBU-M" },
         { judul: "SBU Besar (B)", isi: paketSbu[2].untuk, href: "/layanan/SBU-B" },
         { judul: "SKK Jenjang 5 dan 6", isi: "Sertifikat kompetensi kerja jenjang teknisi dan analis.", href: "/layanan/SKK-J5J6" },
-        { judul: "SKK Jenjang 7 dan 8", isi: "Sertifikat kompetensi kerja jenjang ahli muda dan madya.", href: "/layanan/SKK-J7" },
+        { judul: "SKK Jenjang 7", isi: "Sertifikat kompetensi kerja jenjang ahli muda.", href: "/layanan/SKK-J7" },
+        { judul: "SKK Jenjang 8", isi: "Sertifikat kompetensi kerja jenjang ahli madya.", href: "/layanan/SKK-J8" },
         { judul: "Perpanjangan SBU", isi: "Sebaiknya diurus sebelum masa berlaku habis.", href: "/perpanjangan-sbu" },
       ],
     },
@@ -415,6 +421,560 @@ export const detailLayanan: DetailLayanan[] = [
       FAQ_BIAYA,
     ],
     terkait: ["tender-dan-sbu", "dok-tender", "pendukung-sbu"],
+  },
+
+  // ───────── Sertifikasi utama: SKK dan kelistrikan ─────────
+  {
+    slug: "skk",
+    kelompok: "Sertifikasi utama",
+    nama: "SKK Konstruksi",
+    judul: "SKK Konstruksi Jenjang 5–9",
+    metaJudul: "Jasa SKK Konstruksi Jenjang 5–9 untuk SBU | Atrahdis",
+    metaDeskripsi:
+      "Pengurusan SKK tenaga ahli konstruksi jenjang 5 sampai 9: pemilihan jenjang sesuai kualifikasi SBU, syarat dokumen, dan estimasi waktu.",
+    pengantar:
+      "SKK wajib dimiliki tenaga ahli sebelum didaftarkan dalam pengajuan SBU. Jenjangnya harus cocok dengan kualifikasi SBU yang dituju, jadi kami tentukan lewat audit, bukan ditebak.",
+    poin: {
+      judul: "Jenjang SKK dan kecocokannya dengan SBU",
+      items: [
+        { judul: "Jenjang 5 dan 6", isi: "Untuk SBU Kecil dan sebagian subklasifikasi Menengah.", href: "/layanan/SKK-J5J6" },
+        { judul: "Jenjang 7", isi: "Untuk SBU Menengah dan sebagian Besar.", href: "/layanan/SKK-J7" },
+        { judul: "Jenjang 8", isi: "Untuk SBU Besar.", href: "/layanan/SKK-J8" },
+        { judul: "Jenjang 9", isi: "Tenaga ahli utama untuk subklasifikasi SBU Besar tertentu dan BUJKA." },
+      ],
+    },
+    gambaran: [
+      ["Dokumen lengkap dan valid", "Sekitar 7–14 hari kerja"],
+      ["Dokumen perlu diperbaiki", "Tambahan 7–14 hari kerja"],
+      ["Jenjang tidak sesuai kualifikasi", "Perlu audit ulang dan penentuan jenjang"],
+    ],
+    siapkan: [
+      "Ijazah sesuai bidang",
+      "Sertifikat pelatihan, bila ada",
+      "Bukti pengalaman proyek",
+      "KTP dan NPWP tenaga ahli",
+    ],
+    titikGagal: [
+      ["Subklasifikasi SKK beda dengan SBU", "Samakan subklasifikasi sebelum mendaftar"],
+      ["SKK kedaluwarsa saat SBU diajukan", "Perpanjang jika masa berlaku tinggal kurang dari 3 bulan"],
+      ["Jenjang terlalu rendah", "Tentukan jenjang dari kualifikasi SBU yang dituju"],
+      ["Dokumen pendukung tidak lengkap", "Lengkapi ijazah dan bukti pengalaman di awal"],
+    ],
+    faq: [
+      { q: "Apa itu SKK konstruksi?", a: "Sertifikat wajib bagi tenaga ahli yang didaftarkan dalam pengajuan SBU. Tanpa SKK aktif, pengajuan SBU tertolak." },
+      {
+        q: "Berapa SKK yang dibutuhkan untuk SBU?",
+        a: "Bergantung pada kualifikasi dan jumlah subklasifikasi. Sebagai gambaran, SBU Kecil minimal 1 SKK, Menengah sekitar 2–3 SKK jenjang 7, dan Besar sekitar 3–5 SKK.",
+      },
+      { q: "SKK yang sudah kedaluwarsa bisa diperpanjang?", a: "Bisa. Sebaiknya sebelum masa berlaku habis. Kalau sudah lewat, prosesnya sama dengan pengajuan baru." },
+      FAQ_BIAYA,
+    ],
+    terkait: ["SKK-J5J6", "SKK-J7", "SKK-J8", "/jasa-skk"],
+  },
+  ...(
+    [
+      ["SKK-J5J6", "SKK Jenjang 5 dan 6", "J5/J6", "Kecil, dan sebagian subklasifikasi Menengah", "Tenaga ahli tingkat teknisi dan analis.", "SBU-K"],
+      ["SKK-J7", "SKK Jenjang 7", "J7", "Menengah, dan sebagian subklasifikasi Besar", "Tenaga ahli tingkat ahli muda.", "SBU-M"],
+      ["SKK-J8", "SKK Jenjang 8", "J8", "Besar", "Tenaga ahli tingkat ahli madya.", "SBU-B"],
+    ] as const
+  ).map(
+    ([slug, nama, kode, untuk, tingkat, sbu]): DetailLayanan => ({
+      slug,
+      kelompok: "Sertifikasi utama",
+      nama,
+      judul: `SKK ${kode}`,
+      metaJudul: `Jasa ${nama} Konstruksi | Atrahdis`,
+      metaDeskripsi: `Pengurusan ${nama} untuk tenaga ahli SBU ${untuk.split(",")[0]}. Biaya bergantung pada jenjang dan subklasifikasi, dihitung setelah konsultasi.`,
+      pengantar: `${tingkat} Biasanya dipakai untuk SBU ${untuk}. Biaya bergantung pada jenjang dan subklasifikasi, rinciannya kami berikan lewat konsultasi.`,
+      gambaran: [
+        ["Cocok untuk", `SBU ${untuk}`],
+        ["Estimasi waktu", "Sekitar 7–14 hari kerja jika dokumen lengkap"],
+        ["Syarat utama", "Kombinasi pendidikan dan pengalaman sesuai jenjang"],
+        ["Subklasifikasi", "Harus sama dengan subklasifikasi SBU"],
+      ],
+      siapkan: ["Ijazah sesuai bidang", "Bukti pengalaman proyek", "Sertifikat pelatihan, bila ada", "KTP dan NPWP tenaga ahli"],
+      faq: [
+        { q: "Bagaimana memastikan jenjang ini yang tepat?", a: "Jenjang ditentukan dari kualifikasi dan subklasifikasi SBU yang dituju. Kami petakan saat audit supaya tidak terlalu rendah (SBU ditolak) atau terlalu tinggi (biaya tidak efisien)." },
+        FAQ_BIAYA,
+      ],
+      terkait: ["skk", sbu, "/jasa-skk"],
+    }),
+  ),
+  {
+    slug: "skttk",
+    kelompok: "Sertifikasi utama",
+    nama: "SKTTK Ketenagalistrikan",
+    judul: "SKTTK: Sertifikat Tenaga Teknik Ketenagalistrikan",
+    metaJudul: "Jasa SKTTK Tenaga Teknik Ketenagalistrikan | Atrahdis",
+    metaDeskripsi:
+      "Pengurusan SKTTK untuk PJT dan Tenaga Teknik ketenagalistrikan, syarat SBUJPTL. Pemetaan personil, asesmen di LSP terakreditasi DJK ESDM.",
+    pengantar:
+      "SKTTK adalah sertifikat milik personil, bukan perusahaan. Peran dan jumlah personil kami petakan lebih dulu, supaya asesmen tidak diulang dan pengajuan SBUJPTL tidak menunggu.",
+    gambaran: [
+      ["Masa berlaku", "3 tahun"],
+      ["Penerbit", "LSP terakreditasi DJK ESDM"],
+      ["Peran", "PJT (penanggung jawab teknik) atau Tenaga Teknik"],
+      ["Kebutuhan", "2–5 orang per badan usaha, tergantung bidang"],
+      ["Kedudukan", "Milik personil, ikut orangnya bila pindah"],
+    ],
+    langkah: {
+      judul: "Alur pengurusan",
+      items: [
+        { judul: "Petakan kebutuhan", isi: "Jumlah personil dan jenjang dihitung per bidang." },
+        { judul: "Cek ijazah dan pengalaman", isi: "Kesesuaian latar belakang personil diperiksa." },
+        { judul: "Daftar asesmen", isi: "Personil didaftarkan ke LSP." },
+        { judul: "Asesmen dan terbit", isi: "LSP menguji kompetensi lalu menerbitkan SKTTK." },
+      ],
+    },
+    siapkan: [
+      "KTP, NPWP, dan pas foto",
+      "Ijazah teknik (elektro, mesin, atau sipil) sesuai penugasan",
+      "CV dan pengalaman kerja di bidang kelistrikan",
+      "Surat penugasan dari perusahaan",
+      "Bukti pelatihan atau portofolio, bila diminta LSP",
+    ],
+    titikGagal: [
+      ["Ijazah tidak sesuai bidang", "Petakan kesesuaian sebelum mendaftar"],
+      ["Personil sudah dipakai perusahaan lain", "Cek penugasan ganda sebelum asesmen"],
+      ["Jumlah personil kurang", "Hitung dari awal, jangan menambah di tengah proses"],
+      ["SKTTK kedaluwarsa saat SBUJPTL diajukan", "Catat tanggal berakhir dan perpanjang lebih awal"],
+    ],
+    faq: [
+      { q: "Bisa pakai SKK konstruksi saja?", a: "Tidak. SKK untuk konstruksi di bawah LPJK, sedangkan SKTTK untuk ketenagalistrikan di bawah DJK ESDM." },
+      { q: "Bisa pinjam personil dari perusahaan lain?", a: "Harus tertulis dan tidak boleh tumpang tindih dengan penugasan di perusahaan lain." },
+      FAQ_BIAYA,
+    ],
+    terkait: ["sbujptl", "skk"],
+  },
+  {
+    slug: "sbujptl",
+    kelompok: "Sertifikasi utama",
+    nama: "SBUJPTL Ketenagalistrikan",
+    judul: "SBUJPTL: SBU Jasa Penunjang Tenaga Listrik",
+    metaJudul: "Jasa SBUJPTL Ketenagalistrikan DJK ESDM | Atrahdis",
+    metaDeskripsi:
+      "Pengurusan SBUJPTL untuk pekerjaan instalasi tenaga listrik dari Ditjen Ketenagalistrikan ESDM. Personil SKTTK disiapkan lebih dulu.",
+    pengantar:
+      "SBUJPTL tidak bisa diajukan tanpa SKTTK, dan urutannya tidak boleh dibalik. Personil bersertifikat kami siapkan lebih dulu supaya pengajuan badan usaha tidak terhenti.",
+    gambaran: [
+      ["Penerbit", "Ditjen Ketenagalistrikan, Kementerian ESDM"],
+      ["Estimasi waktu", "Sekitar 20–30 hari kerja"],
+      ["Masa berlaku", "5 tahun"],
+      ["Kualifikasi", "Besar, atau Menengah sesuai neraca audit KAP"],
+      ["Personil", "PJT dan Tenaga Teknik ber-SKTTK, 2–5 orang tergantung bidang"],
+    ],
+    siapkan: [
+      "Akta, SK Kemenkumham, dan NIB dengan KBLI ketenagalistrikan",
+      "NPWP dengan status KSWP valid",
+      "Laporan keuangan audit KAP",
+      "SKTTK untuk PJT dan Tenaga Teknik",
+      "Daftar peralatan dan bukti kepemilikannya",
+      "Struktur organisasi dengan fungsi teknik",
+    ],
+    titikGagal: [
+      ["SKTTK kurang atau jenjangnya tidak sesuai", "Hitung kebutuhan personil sejak awal"],
+      ["KBLI ketenagalistrikan tidak aktif di NIB", "Perbaiki NIB lebih dulu"],
+      ["Kualifikasi tidak sesuai neraca", "Lakukan audit KAP, jangan menebak"],
+      ["Menyamakan SBUJPTL dengan SBU LPJK", "Pisahkan rezim ESDM dan PU"],
+    ],
+    faq: [
+      { q: "SBU konstruksi LPJK bisa dipakai untuk pekerjaan listrik?", a: "Tidak. Instalasi tenaga listrik berada di rezim ESDM dan butuh sertifikat badan usaha sendiri." },
+      { q: "SKTTK bisa menyusul setelah pengajuan?", a: "Tidak. SKTTK adalah prasyarat, jadi berkas baru bisa diajukan setelah personil memenuhi syarat." },
+      FAQ_BIAYA,
+    ],
+    terkait: ["skttk", "keu-audit-kap"],
+  },
+
+  // ───────── Pendukung SBU ─────────
+  {
+    slug: "kta-asosiasi",
+    kelompok: "Pendukung SBU",
+    nama: "KTA Asosiasi",
+    judul: "KTA Asosiasi Konstruksi",
+    metaJudul: "Pengurusan KTA Asosiasi Konstruksi untuk SBU | Atrahdis",
+    metaDeskripsi:
+      "Pengurusan KTA asosiasi konstruksi baru dan perpanjangan, tenor 1 atau 3 tahun, dipetakan sesuai subklasifikasi SBU.",
+    pengantar:
+      "Keanggotaan asosiasi yang diterima sistem LPJK. Berkasnya kecil, tapi sering menahan seluruh pengajuan SBU.",
+    gambaran: [
+      ["Dipakai untuk", "Pengajuan baru dan perpanjangan"],
+      ["Tenor", "1 tahun atau 3 tahun"],
+      ["Kesesuaian", "Asosiasi harus cocok dengan subklasifikasi"],
+    ],
+    siapkan: [
+      "Akta pendirian dan SK Kemenkumham",
+      "NIB dengan KBLI jasa konstruksi",
+      "NPWP badan usaha",
+      "Daftar subklasifikasi yang dimohonkan",
+      "SKK PJT dan PJSK sebagai lampiran",
+    ],
+    titikGagal: [
+      ["Asosiasi tidak cocok dengan subklasifikasi", "Petakan subklasifikasi sebelum mendaftar"],
+      ["KTA habis tanpa diingat", "Pasang pengingat 90 hari sebelum jatuh tempo"],
+      ["Nama atau alamat beda dengan akta", "Samakan data perusahaan lebih dulu"],
+      ["Kelistrikan memakai KTA konstruksi", "Subklasifikasi kelistrikan punya jalur sendiri"],
+    ],
+    faq: [
+      { q: "Kenapa KTA penting kalau SBU sudah ada?", a: "KTA syarat administratif di pengajuan SBU. Tanpa KTA aktif, perpanjangan bisa tertahan." },
+      { q: "Asosiasi mana yang cocok?", a: "Tergantung subklasifikasi yang dimohonkan. Itu yang kami petakan dulu sebelum Anda mendaftar." },
+      FAQ_BIAYA,
+    ],
+    terkait: ["pendukung-sbu", "maintenance-compliance"],
+  },
+  {
+    slug: "keu-audit-kap",
+    kelompok: "Pendukung SBU",
+    nama: "Laporan Keuangan dan Audit KAP",
+    judul: "Neraca dan Laporan Keuangan (Audit KAP)",
+    metaJudul: "Laporan Keuangan dan Audit KAP untuk SBU | Atrahdis",
+    metaDeskripsi:
+      "Dua jalur laporan keuangan untuk SBU: memenuhi syarat kualifikasi, atau audit KAP formal dengan opini. Untuk Menengah, Spesialis, Besar, PMA, dan BUJKA.",
+    pengantar:
+      "Ada dua jalur: cukup memenuhi syarat kualifikasi, atau audit KAP formal dengan opini. Bedanya besar, jadi kami cek dulu mana yang Anda butuhkan.",
+    gambaran: [
+      ["Jalur", "KAP compliance (neraca) atau audit KAP formal (opini)"],
+      ["Wajib untuk", "Menengah, Spesialis, Besar, PMA, BUJKA"],
+      ["Kualifikasi Kecil", "Tidak wajib audit"],
+      ["Masa berlaku SKU", "36 bulan"],
+    ],
+    siapkan: [
+      "Neraca dan laba rugi 1–2 tahun terakhir",
+      "Buku besar atau laporan pembukuan",
+      "Rekening koran atau bukti aset",
+      "Akta, NIB, dan NPWP",
+      "Daftar proyek dan kontrak",
+    ],
+    titikGagal: [
+      ["Neraca tidak memenuhi ambang kualifikasi", "Hitung sebelum mengajukan, bukan sesudah ditolak"],
+      ["Menengah atau Besar tanpa opini WTP", "Jadwalkan audit lebih awal"],
+      ["Laporan tidak sinkron dengan SPT", "Rekonsiliasi pajak dulu"],
+    ],
+    faq: [
+      { q: "Kami sudah punya laporan keuangan, apa yang kurang?", a: "Yang dinilai apakah laporan memenuhi ambang kualifikasi, dan untuk Menengah atau Besar, beropini WTP dari KAP terdaftar." },
+      { q: "Berapa lama audit KAP?", a: "Umumnya 3–6 minggu, tergantung KAP dan kesiapan pembukuan. Karena itu dokumen Anda kami audit dulu." },
+      FAQ_BIAYA,
+    ],
+    terkait: ["pendukung-sbu", "SBU-M", "SBU-B"],
+  },
+
+  // ───────── Maintenance compliance ─────────
+  {
+    slug: "maintenance-compliance",
+    kelompok: "Maintenance compliance",
+    nama: "Maintenance Compliance",
+    judul: "Maintenance Compliance",
+    metaJudul: "Maintenance Compliance: LKPM, Surveilans, OSS | Atrahdis",
+    metaDeskripsi:
+      "Layanan berkala untuk menjaga kepatuhan setelah SBU dan NIB terbit: LKPM, surveilans LSBU, perubahan data SBU, dan perawatan OSS.",
+    pengantar:
+      "SBU yang sudah terbit belum berarti urusan selesai. Empat kewajiban berkala ini perlu dijaga supaya tidak berujung teguran, pembekuan OSS, atau sanksi.",
+    poin: {
+      judul: "Empat layanan maintenance",
+      items: [
+        { judul: "LKPM", isi: "Pelaporan ke OSS 4 kali setahun, termasuk saat tidak ada kegiatan.", href: "/layanan/lkpm" },
+        { judul: "Surveilans LSBU", isi: "Pemeriksaan berkala 1–2 kali setahun apakah SBU masih memenuhi syarat." },
+        { judul: "Perubahan data SBU", isi: "Saat direksi, alamat, subklasifikasi, atau kualifikasi berubah. Sekitar 3–7 hari kerja." },
+        { judul: "Perawatan OSS", isi: "Pemantauan status NIB, sinkronisasi KBLI, dan penanganan teguran.", href: "/layanan/oss-rba" },
+      ],
+    },
+    faq: [
+      { q: "Apa yang diperiksa saat surveilans LSBU?", a: "Legalitas perusahaan, SKK tenaga ahli yang masih berlaku, peralatan, dan kegiatan usaha. Ketidaksesuaian bisa membuat SBU dibekukan." },
+      { q: "Kenapa lebih baik dikontrak rutin?", a: "Pengingat, pengumpulan data, dan arsip bukti berjalan teratur. Biayanya lebih ringan dibanding membereskan masalah setelah terjadi." },
+      FAQ_BIAYA,
+    ],
+    terkait: ["lkpm", "oss-rba", "kta-asosiasi"],
+  },
+  {
+    slug: "lkpm",
+    kelompok: "Maintenance compliance",
+    nama: "Pelaporan LKPM",
+    judul: "Pelaporan LKPM Setiap Kuartal",
+    metaJudul: "Jasa Pelaporan LKPM Kuartalan di OSS | Atrahdis",
+    metaDeskripsi:
+      "Pelaporan LKPM kuartalan ke BKPM lewat OSS. Kami jaga kalendernya dan susun laporannya, Anda cukup kirim angka realisasi.",
+    pengantar:
+      "Izin bisa bermasalah bukan karena ditolak, tapi karena LKPM tidak pernah dilaporkan. Kami jaga kalender kuartalannya dan menyusun laporannya, Anda cukup mengirim angka realisasi.",
+    gambaran: [
+      ["Frekuensi", "4 kali setahun, selama izin berjalan"],
+      ["Periode lapor", "Tanggal 1–15 di bulan April, Juli, Oktober, dan Januari"],
+      ["Otoritas", "BKPM lewat OSS"],
+      ["Tetap wajib", "Walaupun tidak ada kegiatan di kuartal itu"],
+    ],
+    siapkan: [
+      "Akses OSS-RBA yang aktif",
+      "Nilai realisasi investasi kuartal berjalan",
+      "Jumlah tenaga kerja lokal dan asing",
+      "Status kegiatan usaha",
+      "Bukti pendukung seperti invoice, kontrak, atau foto progres",
+    ],
+    titikGagal: [
+      ["Akses OSS tidak bisa dibuka", "Pulihkan akses dulu sebelum menyusun laporan"],
+      ["Angka tidak sesuai laporan pajak", "Rekonsiliasi sebelum diajukan"],
+      ["Terlambat lapor", "Pasang pengingat dua minggu sebelum tenggat"],
+      ["Tahap usaha keliru", "Cek status izin sebelum menyusun"],
+    ],
+    faq: [
+      { q: "Belum ada kegiatan, tetap wajib lapor?", a: "Ya. Justru laporan yang tidak disampaikan yang memicu surat klarifikasi." },
+      { q: "Akses OSS mati, bisa langsung lapor?", a: "Belum. Akses harus dipulihkan dulu, biasanya dalam hitungan hari kerja." },
+      FAQ_BIAYA,
+    ],
+    terkait: ["oss-rba", "maintenance-compliance"],
+  },
+  {
+    slug: "oss-rba",
+    kelompok: "Maintenance compliance",
+    nama: "Pemulihan Akses OSS-RBA",
+    judul: "Pemulihan Akses OSS-RBA",
+    metaJudul: "Pemulihan Akses OSS-RBA, NIB Ada tapi Akun Terkunci | Atrahdis",
+    metaDeskripsi:
+      "NIB ada tapi akun OSS tidak bisa dibuka? Akses dipulihkan lewat perubahan penanggung jawab dan bukti kepemilikan, tanpa mendirikan PT baru.",
+    pengantar:
+      "NIB ada tapi tidak bisa login adalah masalah akses, bukan izin. Akses OSS dipulihkan lewat perubahan penanggung jawab dan bukti kepemilikan badan usaha, bukan dengan mendirikan PT baru.",
+    gambaran: [
+      ["Estimasi waktu", "Sekitar 3–5 hari kerja"],
+      ["Otoritas", "OSS / BKPM"],
+      ["Sifat pekerjaan", "Administratif, tidak mengubah KBLI kecuali diminta"],
+      ["Penentu kecepatan", "Kelengkapan bukti kepemilikan badan usaha"],
+    ],
+    siapkan: [
+      "NIB atau nomor akun OSS lama, bila ada",
+      "Akta dan SK Kemenkumham terbaru",
+      "KTP dan NPWP penanggung jawab baru",
+      "Surat penunjukan penanggung jawab dari direksi",
+      "Email aktif yang akan dipakai",
+    ],
+    titikGagal: [
+      ["Email pemulihan milik orang yang sudah tidak ada", "Siapkan perubahan penanggung jawab lebih dulu"],
+      ["Data OSS berbeda dengan akta", "Sinkronkan data sebelum mengajukan"],
+      ["Akun masih dipegang konsultan lama", "Ajukan pencabutan akses pihak lain"],
+    ],
+    faq: [
+      { q: "Kenapa tidak daftar ulang saja?", a: "NIB ganda berisiko. Satu badan usaha seharusnya punya satu rekam jejak perizinan." },
+      { q: "Apakah KBLI berubah saat pemulihan akses?", a: "Tidak, kecuali Anda memintanya." },
+      FAQ_BIAYA,
+    ],
+    terkait: ["lkpm", "maintenance-compliance"],
+  },
+
+  // ───────── Tender dan compliance ─────────
+  {
+    slug: "dok-tender",
+    kelompok: "Tender dan compliance",
+    nama: "Dokumen Prasyarat Tender",
+    judul: "Dokumen Prasyarat Tender",
+    metaJudul: "Dokumen Prasyarat Tender: PKKPR, PBG, BPJS, KSWP | Atrahdis",
+    metaDeskripsi:
+      "Audit dan pengurusan dokumen prasyarat tender di luar SBU: PKKPR, PBG/SLF, NIB/KBLI, BPJS, KSWP, dan Bank Garansi, sesuai RKS tiap paket.",
+    pengantar:
+      "Satu dokumen kedaluwarsa sudah cukup menggugurkan penawaran. Kami audit dokumen prasyarat di luar SBU sesuai RKS paket Anda, lalu bantu menuntaskan yang kurang.",
+    poin: {
+      judul: "Enam dokumen yang sering menentukan",
+      items: [
+        { judul: "PKKPR", isi: "Kesesuaian kegiatan pemanfaatan ruang." },
+        { judul: "PBG dan SLF", isi: "Termasuk untuk proyek yang dijadikan pengalaman." },
+        { judul: "NIB dan KBLI", isi: "KBLI harus sesuai syarat kualifikasi paket." },
+        { judul: "BPJS", isi: "Kepesertaan seluruh pekerja, tanpa tunggakan." },
+        { judul: "KSWP", isi: "Status pajak dibaca langsung dari sistem DJP." },
+        { judul: "Bank Garansi", isi: "Ajukan ke bank sejak awal, paling sering tertunda." },
+      ],
+    },
+    titikGagal: [
+      ["KSWP tidak valid karena tunggakan pajak", "Tuntaskan sebelum penawaran disusun"],
+      ["Peserta BPJS kurang atau ada tunggakan", "Cek kepesertaan seluruh pekerja"],
+      ["PBG belum terbit untuk proyek pengalaman", "Lengkapi legalitas proyek dulu"],
+      ["Dokumen lama dipakai tanpa dicek", "Cek masa berlaku pada tanggal penutupan"],
+    ],
+    faq: [
+      { q: "Dokumen sudah lengkap, perlu audit?", a: "Ya. Lengkap menurut perusahaan bisa berbeda dengan lengkap menurut RKS, dan daftar wajib berbeda di tiap tender." },
+      { q: "Dokumen yang kurang bisa menyusul?", a: "Tidak. Berkas dinilai saat pemasukan penawaran." },
+      { q: "Apa bedanya dengan Tender Desk?", a: "Layanan ini menangani dokumen prasyarat. Penyusunan penawaran ditangani Tender Desk." },
+      FAQ_BIAYA,
+    ],
+    terkait: ["tender-desk", "tender-dan-sbu", "smk3"],
+  },
+  {
+    slug: "ims-iso",
+    kelompok: "Tender dan compliance",
+    nama: "ISO 9001, 14001, 45001 (IMS)",
+    judul: "Sertifikasi ISO 9001, 14001, dan 45001 Terpadu",
+    metaJudul: "Sertifikasi ISO 9001, 14001, 45001 Terpadu (IMS) | Atrahdis",
+    metaDeskripsi:
+      "Pendampingan sertifikasi ISO 9001, 14001, dan 45001 sebagai satu sistem terpadu untuk tender BUMN dan pemerintah. Akreditasi KAN atau IAF.",
+    pengantar:
+      "Satu audit untuk tiga standar. ISO 9001 (mutu), 14001 (lingkungan), dan 45001 (K3) dikerjakan sebagai satu sistem terpadu, bukan tiga proyek terpisah.",
+    gambaran: [
+      ["Paket", "ISO 9001, 14001, dan 45001 terpadu"],
+      ["Masa berlaku", "3 tahun, dengan surveillance tiap tahun"],
+      ["Akreditasi", "KAN atau IAF, sesuai syarat tender"],
+      ["Ruang lingkup", "Harus mencakup pekerjaan yang ditawarkan"],
+    ],
+    siapkan: [
+      "Struktur organisasi dan uraian tugas",
+      "Kebijakan mutu, lingkungan, dan K3 yang ditandatangani manajemen",
+      "Prosedur dan instruksi kerja inti",
+      "Bukti implementasi: catatan rapat, inspeksi, pelatihan",
+      "Hasil audit internal dan tinjauan manajemen",
+    ],
+    titikGagal: [
+      ["Membeli sertifikat tanpa membangun sistem", "Penuhi standar dulu, sertifikat menyusul"],
+      ["Salah pilih KAN atau IAF", "Baca RKS sebelum memilih badan sertifikasi"],
+      ["Surveillance terlewat", "Pasang pengingat tahunan sejak sertifikat terbit"],
+      ["Ruang lingkup tidak mencakup pekerjaan", "Tetapkan ruang lingkup sesuai pekerjaan"],
+    ],
+    faq: [
+      { q: "KAN atau IAF, mana yang dibutuhkan?", a: "Bergantung syarat paket. KAN berbobot lebih tinggi di banyak tender, IAF prosesnya lebih cepat." },
+      { q: "Cukup ISO 9001 saja?", a: "Bergantung syarat paket. Sebagian tender hanya meminta 9001, sebagian meminta ketiganya." },
+      FAQ_BIAYA,
+    ],
+    terkait: ["iso-37001", "smk3", "dok-tender"],
+  },
+  {
+    slug: "smk3",
+    kelompok: "Tender dan compliance",
+    nama: "SMK3 Kemnaker",
+    judul: "SMK3 Kemnaker (PP 50/2012)",
+    metaJudul: "Pendampingan Sertifikasi SMK3 Kemnaker | Atrahdis",
+    metaDeskripsi:
+      "Pendampingan SMK3 berdasarkan PP 50/2012: gap assessment 64 kriteria, penyiapan AK3U dan P2K3, sampai audit eksternal Kemnaker.",
+    pengantar:
+      "SMK3 adalah sertifikasi sistem manajemen K3 berdasarkan PP 50/2012, diaudit lembaga yang ditunjuk Kemnaker. Rezimnya berbeda dari ISO 45001.",
+    gambaran: [
+      ["Dasar", "PP 50/2012 dan ketentuan Kemnaker"],
+      ["Kriteria", "64 kriteria di tingkat awal, lebih banyak di tingkat lanjut"],
+      ["Masa berlaku", "3 tahun, dengan bendera Kemnaker"],
+      ["Pilihan paket", "Pendampingan berkas saja, atau lengkap dengan pelatihan AK3U dan pengesahan P2K3"],
+    ],
+    siapkan: [
+      "Struktur organisasi dan bagan P2K3",
+      "Kebijakan K3 yang ditandatangani direksi",
+      "Identifikasi bahaya dan penilaian risiko (IBPR)",
+      "Program K3 beserta anggarannya",
+      "Bukti pelatihan AK3U",
+      "Catatan inspeksi, audit internal, dan kecelakaan atau near miss",
+    ],
+    titikGagal: [
+      ["Tidak ada personil AK3U", "Jadwalkan pelatihan lebih awal"],
+      ["P2K3 belum disahkan", "Urus pengesahan sebelum audit eksternal"],
+      ["IBPR disalin dari perusahaan lain", "Susun sesuai pekerjaan yang benar-benar dilakukan"],
+      ["ISO 45001 dianggap sama dengan SMK3", "Pisahkan keduanya"],
+    ],
+    faq: [
+      { q: "Sudah punya ISO 45001, perlu SMK3?", a: "Tergantung syarat paket. Banyak tender pemerintah menyebut SMK3 secara spesifik." },
+      { q: "Kalau dokumen lengkap, sudah cukup?", a: "Belum. Auditor meminta bukti lapangan, jadi catatan implementasi perlu disiapkan." },
+      FAQ_BIAYA,
+    ],
+    terkait: ["ims-iso", "dok-tender"],
+  },
+  {
+    slug: "sni",
+    kelompok: "Tender dan compliance",
+    nama: "Sertifikasi SNI (SPPT)",
+    judul: "Sertifikasi SNI (SPPT SNI)",
+    metaJudul: "Pendampingan Sertifikasi SPPT SNI Produk | Atrahdis",
+    metaDeskripsi:
+      "Pendampingan SPPT SNI untuk produk pabrik dalam dan luar negeri: penentuan standar, uji pendahuluan, uji laboratorium, dan audit pabrik.",
+    pengantar:
+      "Gagal uji laboratorium bisa dicegah kalau sampel diuji dulu sebelum diajukan. Kami jalankan uji pendahuluan dan perbaikan SOP produksi sebelum sampel dikirim.",
+    gambaran: [
+      ["Masa berlaku SPPT", "3–4 tahun, dengan surveillance"],
+      ["Cakupan", "Audit SOP produksi dan uji sampel di laboratorium terakreditasi"],
+      ["Otoritas", "BSN, laboratorium terakreditasi KAN, dan lembaga sertifikasi produk"],
+      ["Lokasi pabrik", "Dalam atau luar negeri, tahapannya berbeda"],
+    ],
+    siapkan: [
+      "Profil perusahaan dan legalitas pabrik",
+      "Spesifikasi produk dan nomor SNI yang dituju",
+      "SOP produksi dan bagan alir proses",
+      "Hasil uji internal, bila ada",
+      "Daftar mesin dan kapasitas produksi",
+    ],
+    titikGagal: [
+      ["Salah memilih standar SNI", "Verifikasi nomor SNI, jangan hanya dari kategori produk"],
+      ["Sampel tidak lolos uji", "Lakukan uji pendahuluan sebelum pengajuan"],
+      ["SOP tidak sesuai praktik produksi", "Audit internal sebelum audit sertifikasi"],
+      ["Pabrik luar negeri tanpa legalisasi", "Siapkan legalisasi sejak awal"],
+    ],
+    faq: [
+      { q: "Produk sudah diekspor, masih perlu SNI?", a: "Tetap perlu. Standar ekspor berbeda dengan skema SPPT SNI." },
+      { q: "Pabrik di luar negeri bisa?", a: "Bisa, dengan tahapan berbeda dan dokumen legalisasi yang disiapkan lebih awal." },
+      FAQ_BIAYA,
+    ],
+    terkait: ["ims-iso", "dok-tender"],
+  },
+
+  // ───────── PMA dan badan usaha asing ─────────
+  {
+    slug: "pt-pma",
+    kelompok: "PMA dan badan usaha asing",
+    nama: "Pendirian PT PMA",
+    judul: "Pendirian PT PMA",
+    metaJudul: "Pendirian PT PMA Siap SBU dan Izin Teknis | Atrahdis",
+    metaDeskripsi:
+      "Pendirian PT PMA dengan maksud dan tujuan akta sesuai KBLI, supaya SBU dan izin teknis tidak tertahan di dokumen pendirian.",
+    pengantar:
+      "Yang menentukan bukan aktanya, tapi apakah izin teknisnya bisa terbit. Maksud dan tujuan akta kami susun sesuai KBLI, supaya pengajuan SBU berikutnya tidak tertahan.",
+    gambaran: [
+      ["Estimasi waktu", "Sekitar 7–14 hari kerja untuk paket standar, setelah dokumen lengkap"],
+      ["Otoritas", "Kemenkumham, BKPM/OSS, dan DJP"],
+      ["Kualifikasi SBU", "PT PMA masuk kualifikasi Besar"],
+      ["Paket", "Standar, atau siap konstruksi dan tender dengan pemetaan kesiapan SBU"],
+    ],
+    siapkan: [
+      "KTP atau paspor seluruh pemegang saham",
+      "Struktur kepemilikan dan komposisi saham",
+      "Tiga alternatif nama PT dan KBLI yang dituju",
+      "Alamat domisili dan bukti sewa",
+      "Susunan direksi dan komisaris",
+    ],
+    titikGagal: [
+      ["Akta memakai template umum", "Rumuskan maksud dan tujuan sesuai KBLI konstruksi"],
+      ["Nama PT ditolak", "Siapkan tiga alternatif sejak awal"],
+      ["Modal disetor tidak sesuai ketentuan KBLI", "Konfirmasi per KBLI sebelum akta dibuat"],
+      ["LKPM terlewat", "Pasang pengingat kuartalan sejak serah terima"],
+    ],
+    faq: [
+      { q: "Sudah punya perusahaan di luar negeri, bisa dipakai?", a: "Tidak. Izin teknis hanya bisa diajukan badan hukum Indonesia." },
+      { q: "Apa bedanya dengan BUJKA?", a: "PT PMA adalah badan hukum Indonesia dengan modal asing. BUJKA adalah badan usaha asing yang beroperasi lewat kantor perwakilan." },
+      FAQ_BIAYA,
+    ],
+    terkait: ["bujka", "lkpm", "SBU-B"],
+  },
+  {
+    slug: "bujka",
+    kelompok: "PMA dan badan usaha asing",
+    nama: "BUJKA",
+    judul: "BUJKA (Badan Usaha Jasa Konstruksi Asing)",
+    metaJudul: "Pengurusan SBU BUJKA untuk Kontraktor Asing | Atrahdis",
+    metaDeskripsi:
+      "Pengurusan BUJKA untuk badan usaha konstruksi asing lewat kantor perwakilan: SKK jenjang 9, peralatan, dan laporan keuangan audit.",
+    pengantar:
+      "Untuk badan usaha asing yang ingin mengerjakan konstruksi di Indonesia lewat kantor perwakilan. Struktur dan syaratnya berbeda dari PT PMA.",
+    gambaran: [
+      ["Dipakai untuk", "Pengajuan baru dan perpanjangan"],
+      ["Personil", "SKK jenjang 9 untuk PJT dan PJSK per subklasifikasi"],
+      ["Peralatan", "5 unit"],
+      ["Entitas", "Wajib punya kantor perwakilan (KPPA)"],
+    ],
+    siapkan: [
+      "Akta pendirian perusahaan asing dan terjemahannya",
+      "Bukti registrasi atau legalisasi dari negara asal",
+      "Laporan keuangan audit",
+      "SKK jenjang 9 untuk PJT dan PJSK",
+      "Bukti kantor perwakilan (KPPA)",
+      "Pengalaman proyek di Indonesia (untuk perpanjangan)",
+    ],
+    titikGagal: [
+      ["SKK bukan jenjang 9", "Petakan personil sejak awal"],
+      ["Tidak punya KPPA yang sah", "Siapkan kantor perwakilan"],
+      ["Perpanjangan tanpa pengalaman di Indonesia", "Kumpulkan bukti proyek"],
+      ["Menganggap BUJKA sama dengan PT PMA", "Pisahkan struktur dan syaratnya"],
+    ],
+    faq: [
+      { q: "Bisa mulai tanpa SKK jenjang 9?", a: "Tidak. SKK jenjang 9 adalah prasyarat pengajuan." },
+      { q: "Apa yang dibutuhkan untuk perpanjangan?", a: "Pengalaman proyek di Indonesia. Ini yang paling sering jadi kendala." },
+      FAQ_BIAYA,
+    ],
+    terkait: ["pt-pma", "peralatan-konstruksi", "keu-audit-kap"],
   },
 ];
 
