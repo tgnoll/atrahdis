@@ -7,8 +7,6 @@ const nextConfig: NextConfig = {
   // supaya link lama dan indeks Google tidak berakhir di 404.
   async redirects() {
     return [
-      { source: "/app", destination: "/kontak", statusCode: 301 },
-      { source: "/app/:path*", destination: "/kontak", statusCode: 301 },
     ];
   },
   partialPrefetching: true,
